@@ -1,0 +1,12 @@
+{
+    "EnableAudio": false,
+    "LastGame": "Rebelstar1P",
+    "NumberMode": 2,
+    "PokesFolder": "./Pokes/",
+    "RZXFolder": "./RZX/",
+    "ShowOpcodeValues": false,
+    "ShowScanlineIndicator": false,
+    "SnapshotFolder": "./Games/",
+    "SnapshotFolder128": "./Games128/",
+    "WorkspaceRoot": "./"
+}
