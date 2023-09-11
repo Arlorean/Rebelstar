@@ -16555,12 +16555,12 @@
                 },
                 {
                     "Address": 134,
-                    "ByteSize": 24,
+                    "ByteSize": 26,
                     "DataType": 4
                 },
                 {
-                    "Address": 158,
-                    "ByteSize": 48,
+                    "Address": 160,
+                    "ByteSize": 46,
                     "DataType": 4
                 },
                 {
@@ -16570,157 +16570,17 @@
                 },
                 {
                     "Address": 239,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 248,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 257,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 266,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 275,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 284,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 293,
-                    "ByteSize": 8,
+                    "ByteSize": 62,
                     "DataType": 4
                 },
                 {
                     "Address": 301,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 310,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 319,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 328,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 337,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 346,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 355,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 364,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 373,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 382,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 391,
-                    "ByteSize": 8,
+                    "ByteSize": 98,
                     "DataType": 4
                 },
                 {
                     "Address": 399,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 408,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 417,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 426,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 435,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 444,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 453,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 462,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 471,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 480,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 489,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 498,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 507,
-                    "ByteSize": 8,
+                    "ByteSize": 116,
                     "DataType": 4
                 },
                 {
@@ -16785,137 +16645,32 @@
                 },
                 {
                     "Address": 577,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 586,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 595,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 604,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 613,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 622,
-                    "ByteSize": 9,
+                    "ByteSize": 54,
                     "DataType": 4
                 },
                 {
                     "Address": 631,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 640,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 649,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 658,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 667,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 676,
-                    "ByteSize": 9,
+                    "ByteSize": 54,
                     "DataType": 4
                 },
                 {
                     "Address": 685,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 694,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 703,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 712,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 721,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 730,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 739,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 748,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 757,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 766,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 775,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 784,
-                    "ByteSize": 8,
+                    "ByteSize": 107,
                     "DataType": 4
                 },
                 {
                     "Address": 792,
-                    "ByteSize": 30,
+                    "ByteSize": 22,
+                    "DataType": 4
+                },
+                {
+                    "Address": 814,
+                    "ByteSize": 8,
                     "DataType": 4
                 },
                 {
                     "Address": 822,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 831,
-                    "ByteSize": 8,
+                    "ByteSize": 17,
                     "DataType": 4
                 },
                 {
@@ -24189,7 +23944,9 @@
                 {
                     "Address": 731,
                     "ByteSize": 2,
-                    "DataType": 2
+                    "Comment": "0: YOU CANT MOVE THERE!",
+                    "DataType": 2,
+                    "OperandType": 1
                 },
                 {
                     "Address": 733,
@@ -24200,6 +23957,7 @@
                 {
                     "Address": 735,
                     "ByteSize": 2,
+                    "Comment": "1: NOT ENOUGH ACTION POINTS",
                     "DataType": 2
                 },
                 {
@@ -24211,6 +23969,7 @@
                 {
                     "Address": 739,
                     "ByteSize": 2,
+                    "Comment": "2: NO COMBAT, YOU ARE MOVING PAST A FRIENDLY UNIT",
                     "DataType": 2
                 },
                 {
@@ -24222,6 +23981,7 @@
                 {
                     "Address": 743,
                     "ByteSize": 2,
+                    "Comment": "3: YOU ARE TOO LARGE TO SQUEEZE PAST",
                     "DataType": 2
                 },
                 {
@@ -24233,6 +23993,7 @@
                 {
                     "Address": 747,
                     "ByteSize": 2,
+                    "Comment": "4: S=SELECT,0=END TURN, N=NEXT UNIT, I=INFO, J=CENTRE",
                     "DataType": 2
                 },
                 {
@@ -24244,6 +24005,7 @@
                 {
                     "Address": 751,
                     "ByteSize": 2,
+                    "Comment": "5: MORALE:, STAMINA:, ACTION POINTS:, PROTEC:",
                     "DataType": 2
                 },
                 {
@@ -24255,6 +24017,7 @@
                 {
                     "Address": 755,
                     "ByteSize": 2,
+                    "Comment": "6: K=CANCEL, I=INFO, F=FIRE MODE, M=DROP OBJECT, O=CHANGE OBJECT, P=PICKUP OBJECT, L=LOAD",
                     "DataType": 2
                 },
                 {
@@ -24266,6 +24029,7 @@
                 {
                     "Address": 759,
                     "ByteSize": 2,
+                    "Comment": "7: PANICKED",
                     "DataType": 2
                 },
                 {
@@ -24277,6 +24041,7 @@
                 {
                     "Address": 763,
                     "ByteSize": 2,
+                    "Comment": "8: SCARED",
                     "DataType": 2
                 },
                 {
@@ -24288,6 +24053,7 @@
                 {
                     "Address": 767,
                     "ByteSize": 2,
+                    "Comment": "9: AFRAID",
                     "DataType": 2
                 },
                 {
@@ -24299,6 +24065,7 @@
                 {
                     "Address": 771,
                     "ByteSize": 2,
+                    "Comment": "10: NERVOUS",
                     "DataType": 2
                 },
                 {
@@ -24310,6 +24077,7 @@
                 {
                     "Address": 775,
                     "ByteSize": 2,
+                    "Comment": "11: OK",
                     "DataType": 2
                 },
                 {
@@ -24321,6 +24089,7 @@
                 {
                     "Address": 779,
                     "ByteSize": 2,
+                    "Comment": "12: GREAT",
                     "DataType": 2
                 },
                 {
@@ -24332,6 +24101,7 @@
                 {
                     "Address": 783,
                     "ByteSize": 2,
+                    "Comment": "13: FEEBLE",
                     "DataType": 2
                 },
                 {
@@ -24343,6 +24113,7 @@
                 {
                     "Address": 787,
                     "ByteSize": 2,
+                    "Comment": "14: WEEK",
                     "DataType": 2
                 },
                 {
@@ -24354,6 +24125,7 @@
                 {
                     "Address": 791,
                     "ByteSize": 2,
+                    "Comment": "15: TIRED",
                     "DataType": 2
                 },
                 {
@@ -24365,6 +24137,7 @@
                 {
                     "Address": 795,
                     "ByteSize": 2,
+                    "Comment": "16: TIRING",
                     "DataType": 2
                 },
                 {
@@ -24376,6 +24149,7 @@
                 {
                     "Address": 799,
                     "ByteSize": 2,
+                    "Comment": "17: OK",
                     "DataType": 2
                 },
                 {
@@ -24387,6 +24161,7 @@
                 {
                     "Address": 803,
                     "ByteSize": 2,
+                    "Comment": "18: GREAT",
                     "DataType": 2
                 },
                 {
@@ -24398,6 +24173,7 @@
                 {
                     "Address": 807,
                     "ByteSize": 2,
+                    "Comment": "19: OBJECT IN USE:, Ammo:",
                     "DataType": 2
                 },
                 {
@@ -24409,6 +24185,7 @@
                 {
                     "Address": 811,
                     "ByteSize": 2,
+                    "Comment": "20: What do you want to use? Press 1-4, 0=None, K=Return",
                     "DataType": 2
                 },
                 {
@@ -24420,6 +24197,7 @@
                 {
                     "Address": 815,
                     "ByteSize": 2,
+                    "Comment": "21: (1), (2), (3), (4)",
                     "DataType": 2
                 },
                 {
@@ -24431,6 +24209,7 @@
                 {
                     "Address": 819,
                     "ByteSize": 2,
+                    "Comment": "22: NO ROOM TO DROP OBJECT",
                     "DataType": 2
                 },
                 {
@@ -24442,6 +24221,7 @@
                 {
                     "Address": 823,
                     "ByteSize": 2,
+                    "Comment": "23: ( ):    ",
                     "DataType": 2
                 },
                 {
@@ -24453,6 +24233,7 @@
                 {
                     "Address": 827,
                     "ByteSize": 2,
+                    "Comment": "24: Press 1- , K=Return",
                     "DataType": 2
                 },
                 {
@@ -24464,6 +24245,7 @@
                 {
                     "Address": 831,
                     "ByteSize": 2,
+                    "Comment": "25: YOU ALREADY CARRY FOUR THINGS",
                     "DataType": 2
                 },
                 {
@@ -24475,6 +24257,7 @@
                 {
                     "Address": 835,
                     "ByteSize": 2,
+                    "Comment": "26:OBJECT IS TOO HEAVY TO CARRY",
                     "DataType": 2
                 },
                 {
@@ -24486,6 +24269,7 @@
                 {
                     "Address": 839,
                     "ByteSize": 2,
+                    "Comment": "27: WOUNDED!",
                     "DataType": 2
                 },
                 {
@@ -24497,6 +24281,7 @@
                 {
                     "Address": 843,
                     "ByteSize": 2,
+                    "Comment": "28: BURDENED",
                     "DataType": 2
                 },
                 {
@@ -24508,6 +24293,7 @@
                 {
                     "Address": 847,
                     "ByteSize": 2,
+                    "Comment": "THE RAIDERS",
                     "DataType": 2
                 },
                 {
@@ -24519,6 +24305,7 @@
                 {
                     "Address": 851,
                     "ByteSize": 2,
+                    "Comment": "THE OPERA-TIVES",
                     "DataType": 2
                 },
                 {
