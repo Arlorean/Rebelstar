@@ -2126,19 +2126,16 @@
                 {
                     "Address": 62,
                     "ByteSize": 2,
-                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
                     "Address": 64,
                     "ByteSize": 2,
-                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
                     "Address": 66,
                     "ByteSize": 2,
-                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
@@ -2149,7 +2146,6 @@
                 {
                     "Address": 70,
                     "ByteSize": 2,
-                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
@@ -2165,19 +2161,16 @@
                 {
                     "Address": 76,
                     "ByteSize": 2,
-                    "Comment": "\n",
                     "DataType": 2
                 },
                 {
                     "Address": 78,
                     "ByteSize": 2,
-                    "Comment": "{Make the necessary tests and return if needed. Also",
                     "DataType": 2
                 },
                 {
                     "Address": 80,
                     "ByteSize": 2,
-                    "Comment": "Try to spend that number of action points",
                     "DataType": 2
                 },
                 {
@@ -7025,7 +7018,8 @@
                 },
                 {
                     "Address": 52,
-                    "ByteSize": 4
+                    "ByteSize": 4,
+                    "Comment": "Testing bit 7 of the unit stats"
                 },
                 {
                     "Address": 56,
@@ -7152,16 +7146,27 @@
                 },
                 {
                     "Address": 118,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "Get current action points"
                 },
                 {
                     "Address": 121,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "If Action Points = 1"
                 },
                 {
                     "Address": 123,
                     "ByteSize": 2,
                     "OperandType": 2
+                },
+                {
+                    "Address": 125,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 127,
+                    "ByteSize": 3,
+                    "Comment": "Force 1 action point to be 0 action points"
                 },
                 {
                     "Address": 130,
@@ -8890,7 +8895,7 @@
                 {
                     "Address": 39,
                     "LabelType": 2,
-                    "Name": "label_7827"
+                    "Name": "LoopThroughUnits"
                 },
                 {
                     "Address": 86,
@@ -8900,12 +8905,12 @@
                 {
                     "Address": 113,
                     "LabelType": 2,
-                    "Name": "label_7871"
+                    "Name": "CheckIfActionPointsHaveRunOut"
                 },
                 {
                     "Address": 130,
                     "LabelType": 2,
-                    "Name": "label_7882"
+                    "Name": "ActionPointsAtZero"
                 },
                 {
                     "Address": 133,
@@ -12581,6 +12586,11 @@
             ],
             "DataInfo": [
                 {
+                    "Address": 264,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
                     "Address": 700,
                     "ByteSize": 2,
                     "DataType": 2
@@ -12942,7 +12952,7 @@
                     "Address": 264,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_8108"
+                    "Name": "SelectedWeaponStatsForFireMode"
                 },
                 {
                     "Address": 266,
@@ -13074,7 +13084,7 @@
                 {
                     "Address": 658,
                     "LabelType": 1,
-                    "Name": "function_8292"
+                    "Name": "IfFiringAtSelfSet_Z"
                 },
                 {
                     "Address": 696,
@@ -14046,11 +14056,13 @@
                 },
                 {
                     "Address": 438,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Was 'D' pressed? (Move cursor E)"
                 },
                 {
                     "Address": 440,
                     "ByteSize": 2,
+                    "Comment": "If 'D' not pressed jump ahead",
                     "OperandType": 2
                 },
                 {
@@ -14074,7 +14086,8 @@
                 },
                 {
                     "Address": 451,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Was 'A' pressed? (Move cursor W)"
                 },
                 {
                     "Address": 453,
@@ -14102,7 +14115,8 @@
                 },
                 {
                     "Address": 464,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Was 'W' pressed? (Move cursor N)"
                 },
                 {
                     "Address": 466,
@@ -14130,7 +14144,8 @@
                 },
                 {
                     "Address": 477,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Was 'X' pressed? (Move cursor S)"
                 },
                 {
                     "Address": 479,
@@ -14158,7 +14173,8 @@
                 },
                 {
                     "Address": 490,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Was 'E' pressed? (Move cursor NE)"
                 },
                 {
                     "Address": 492,
@@ -14201,7 +14217,8 @@
                 },
                 {
                     "Address": 511,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Was 'Q' pressed? (Move cursor NW)"
                 },
                 {
                     "Address": 513,
@@ -14244,7 +14261,8 @@
                 },
                 {
                     "Address": 532,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Was 'Z' pressed? (Move cursor SW)"
                 },
                 {
                     "Address": 534,
@@ -14287,7 +14305,8 @@
                 },
                 {
                     "Address": 553,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Was 'C' pressed? (Move cursor SE)"
                 },
                 {
                     "Address": 555,
@@ -15295,15 +15314,18 @@
                 },
                 {
                     "Address": 1019,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Get weapon stat table index - 146=?, 153=Light Sabre, 154=Photon"
                 },
                 {
                     "Address": 1021,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "H=0"
                 },
                 {
                     "Address": 1023,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "L=Weapon Index, 7=Light Sabre, 8=Photon"
                 }
             ],
             "DataInfo": [
@@ -15553,7 +15575,7 @@
                 {
                     "Address": 232,
                     "LabelType": 1,
-                    "Name": "Scan Keyboard"
+                    "Name": "ScanKeyboard"
                 },
                 {
                     "Address": 236,
@@ -15598,7 +15620,7 @@
                 {
                     "Address": 391,
                     "LabelType": 1,
-                    "Name": "function_8587"
+                    "Name": "PauseExecutionBriefly"
                 },
                 {
                     "Address": 394,
@@ -15631,42 +15653,42 @@
                 {
                     "Address": 417,
                     "LabelType": 1,
-                    "Name": "function_85A1"
+                    "Name": "CheckForUnitMovementKeyPress"
                 },
                 {
                     "Address": 451,
                     "LabelType": 2,
-                    "Name": "label_85C3"
+                    "Name": "D_NotPressed"
                 },
                 {
                     "Address": 464,
                     "LabelType": 2,
-                    "Name": "label_85D0"
+                    "Name": "A_NotPressed"
                 },
                 {
                     "Address": 477,
                     "LabelType": 2,
-                    "Name": "label_85DD"
+                    "Name": "W_NotPressed"
                 },
                 {
                     "Address": 490,
                     "LabelType": 2,
-                    "Name": "label_85EA"
+                    "Name": "X_NotPressed"
                 },
                 {
                     "Address": 511,
                     "LabelType": 2,
-                    "Name": "label_85FF"
+                    "Name": "E_NotPressed"
                 },
                 {
                     "Address": 532,
                     "LabelType": 2,
-                    "Name": "label_8614"
+                    "Name": "Q_NotPressed"
                 },
                 {
                     "Address": 553,
                     "LabelType": 2,
-                    "Name": "label_8629"
+                    "Name": "Z_NotPressed"
                 },
                 {
                     "Address": 573,
@@ -15689,7 +15711,7 @@
                 {
                     "Address": 576,
                     "LabelType": 1,
-                    "Name": "function_8640"
+                    "Name": "MoveSelectedUnitCursor"
                 },
                 {
                     "Address": 607,
@@ -15811,8 +15833,9 @@
                 },
                 {
                     "Address": 1019,
+                    "Comment": "A=WeaponId, returns IX as weapon stats index",
                     "LabelType": 1,
-                    "Name": "function_87FB"
+                    "Name": "GetWeaponStats"
                 }
             ],
             "PageId": 49
@@ -15833,7 +15856,8 @@
                 },
                 {
                     "Address": 3,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Mutiply weapon index by 16 (16 stats to each weapon?)"
                 },
                 {
                     "Address": 4,
@@ -15846,11 +15870,13 @@
                 },
                 {
                     "Address": 9,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Add weapon table offset for selected weapon"
                 },
                 {
                     "Address": 11,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "IX is the weapon table entry address"
                 },
                 {
                     "Address": 12,
@@ -18867,7 +18893,7 @@
                 {
                     "Address": 258,
                     "LabelType": 1,
-                    "Name": "function_8D02"
+                    "Name": "UpdateView"
                 },
                 {
                     "Address": 281,
@@ -19030,7 +19056,7 @@
                 {
                     "Address": 795,
                     "LabelType": 1,
-                    "Name": "function_8F1B"
+                    "Name": "ChangeObject"
                 },
                 {
                     "Address": 872,
@@ -19211,7 +19237,7 @@
                 {
                     "Address": 60,
                     "ByteSize": 3,
-                    "Comment": "Store new action points left after equpui/unequip action"
+                    "Comment": "Store new action points left after equip/unequip action"
                 },
                 {
                     "Address": 63,
@@ -19975,7 +20001,7 @@
                 {
                     "Address": 75,
                     "LabelType": 1,
-                    "Name": "function_904B"
+                    "Name": "ShowEquippedItemIcon"
                 },
                 {
                     "Address": 106,
@@ -20053,7 +20079,7 @@
                 {
                     "Address": 310,
                     "LabelType": 1,
-                    "Name": "function_9136"
+                    "Name": "DropObject"
                 },
                 {
                     "Address": 513,
@@ -20369,6 +20395,7 @@
                 {
                     "Address": 672,
                     "ByteSize": 3,
+                    "Comment": "Did a movement happen?",
                     "OperandType": 1
                 },
                 {
@@ -20378,6 +20405,7 @@
                 {
                     "Address": 676,
                     "ByteSize": 3,
+                    "Comment": "Jump ahead if no movement has happened",
                     "OperandType": 2
                 },
                 {
@@ -20630,15 +20658,18 @@
                 },
                 {
                     "Address": 846,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "Get the cached cell underneath the unit"
                 },
                 {
                     "Address": 849,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Was it another unit (less than 200)?"
                 },
                 {
                     "Address": 851,
                     "ByteSize": 3,
+                    "Comment": "Move unit back if it finished on another unit",
                     "Flags": 8,
                     "OperandType": 2
                 },
@@ -20648,7 +20679,8 @@
                 },
                 {
                     "Address": 856,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Force the 'Z' flag to be set on return"
                 },
                 {
                     "Address": 857,
@@ -20736,7 +20768,7 @@
                 {
                     "Address": 77,
                     "LabelType": 1,
-                    "Name": "function_944D"
+                    "Name": "PickupObject"
                 },
                 {
                     "Address": 270,
@@ -20773,7 +20805,7 @@
                 {
                     "Address": 666,
                     "LabelType": 2,
-                    "Name": "label_969A"
+                    "Name": "CheckForMovementKeys"
                 },
                 {
                     "Address": 695,
@@ -21213,7 +21245,8 @@
                 },
                 {
                     "Address": 288,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "A=Weapon Skill"
                 },
                 {
                     "Address": 291,
@@ -21221,11 +21254,13 @@
                 },
                 {
                     "Address": 293,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Return if weapon skill is 255"
                 },
                 {
                     "Address": 294,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "A=Current object in use"
                 },
                 {
                     "Address": 297,
@@ -21233,7 +21268,8 @@
                 },
                 {
                     "Address": 298,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Return if no object in use"
                 },
                 {
                     "Address": 299,
@@ -21244,6 +21280,7 @@
                 {
                     "Address": 302,
                     "ByteSize": 4,
+                    "Comment": "Store selected weapon stats pointer in memory",
                     "OperandType": 1
                 },
                 {
@@ -21295,12 +21332,13 @@
                 },
                 {
                     "Address": 331,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "A=Key code of key pressed"
                 },
                 {
                     "Address": 332,
                     "ByteSize": 2,
-                    "Comment": "Is Key '2' Pressed?"
+                    "Comment": "Is Key '2' Pressed? - Snap Shot"
                 },
                 {
                     "Address": 334,
@@ -21310,7 +21348,7 @@
                 {
                     "Address": 336,
                     "ByteSize": 2,
-                    "Comment": "Is Key '1' Pressed?"
+                    "Comment": "Is Key '1' Pressed? - Aimed Shot"
                 },
                 {
                     "Address": 338,
@@ -21320,7 +21358,7 @@
                 {
                     "Address": 340,
                     "ByteSize": 2,
-                    "Comment": "Is Key 'U' Pressed?"
+                    "Comment": "Is Key 'U' Pressed? - Opportunity Fire"
                 },
                 {
                     "Address": 342,
@@ -21330,7 +21368,7 @@
                 {
                     "Address": 344,
                     "ByteSize": 2,
-                    "Comment": "Is Key 'I' Pressed?"
+                    "Comment": "Is Key 'I' Pressed? - Info"
                 },
                 {
                     "Address": 346,
@@ -21341,7 +21379,7 @@
                 {
                     "Address": 349,
                     "ByteSize": 2,
-                    "Comment": "Is Key 'K' Pressed?"
+                    "Comment": "Is Key 'K' Pressed? - Cancel Fire Mode"
                 },
                 {
                     "Address": 351,
@@ -21453,6 +21491,68 @@
                 {
                     "Address": 407,
                     "ByteSize": 1
+                },
+                {
+                    "Address": 408,
+                    "ByteSize": 3,
+                    "Flags": 8,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 411,
+                    "ByteSize": 2,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 413,
+                    "ByteSize": 3,
+                    "Flags": 8,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 416,
+                    "ByteSize": 2,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 418,
+                    "ByteSize": 3,
+                    "Flags": 8,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 421,
+                    "ByteSize": 1,
+                    "Comment": "Return if fire cursor is aimed at self"
+                },
+                {
+                    "Address": 422,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 425,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 426,
+                    "ByteSize": 4,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 430,
+                    "ByteSize": 3,
+                    "Flags": 8,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 433,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 434,
+                    "ByteSize": 2,
+                    "OperandType": 2
                 },
                 {
                     "Address": 436,
@@ -22539,12 +22639,12 @@
                 {
                     "Address": 188,
                     "LabelType": 1,
-                    "Name": "function_98BC"
+                    "Name": "SetFireModeCursorCircle"
                 },
                 {
                     "Address": 284,
                     "LabelType": 1,
-                    "Name": "function_991C"
+                    "Name": "FireMode"
                 },
                 {
                     "Address": 322,
@@ -22554,37 +22654,42 @@
                 {
                     "Address": 325,
                     "LabelType": 2,
-                    "Name": "label_9945"
+                    "Name": "ScanKeyboardInFireMode"
                 },
                 {
                     "Address": 355,
                     "LabelType": 2,
-                    "Name": "label_9963"
+                    "Name": "AimedShot"
                 },
                 {
                     "Address": 360,
                     "LabelType": 2,
-                    "Name": "label_9968"
+                    "Name": "SnapShot"
                 },
                 {
                     "Address": 365,
                     "LabelType": 2,
-                    "Name": "label_996D"
+                    "Name": "CancelFireMode"
                 },
                 {
                     "Address": 408,
                     "LabelType": 2,
-                    "Name": "label_9998"
+                    "Name": "OpportunityFire"
                 },
                 {
                     "Address": 418,
                     "LabelType": 1,
-                    "Name": "function_99A2"
+                    "Name": "ExecuteAimedShot"
                 },
                 {
                     "Address": 436,
                     "LabelType": 1,
-                    "Name": "function_99B4"
+                    "Name": "ExecuteSnapShot"
+                },
+                {
+                    "Address": 460,
+                    "LabelType": 2,
+                    "Name": "label_99CC"
                 },
                 {
                     "Address": 508,
@@ -23587,7 +23692,7 @@
                 {
                     "Address": 434,
                     "LabelType": 1,
-                    "Name": "function_9DB2"
+                    "Name": "LoadWeapon"
                 },
                 {
                     "Address": 611,
@@ -23886,7 +23991,8 @@
                 },
                 {
                     "Address": 788,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "Get current object in use"
                 },
                 {
                     "Address": 791,
@@ -23934,6 +24040,12 @@
                     "OperandType": 2
                 }
             ],
+            "CommentBlocks": [
+                {
+                    "Address": 788,
+                    "Comment": "Get current object in use"
+                }
+            ],
             "LabelInfo": [
                 {
                     "Address": 129,
@@ -23969,6 +24081,11 @@
                     "Address": 135,
                     "LabelType": 1,
                     "Name": "function_A087"
+                },
+                {
+                    "Address": 172,
+                    "LabelType": 1,
+                    "Name": "function_A0AC"
                 },
                 {
                     "Address": 405,
@@ -24607,11 +24724,13 @@
                 {
                     "Address": 777,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "BC=14h (20 bytes to copy)",
+                    "OperandType": 3
                 },
                 {
                     "Address": 780,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Copy bytes"
                 },
                 {
                     "Address": 782,
@@ -24626,68 +24745,83 @@
                 {
                     "Address": 786,
                     "ByteSize": 3,
+                    "Comment": "A=1st of copied 20 bytes",
                     "OperandType": 1
                 },
                 {
                     "Address": 789,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "B=A (1st of copied 20 bytes)"
                 },
                 {
                     "Address": 790,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Store 1st copied byte on stack in BC"
                 },
                 {
                     "Address": 791,
                     "ByteSize": 3,
+                    "Comment": "A=2nd copied byte",
                     "OperandType": 1
                 },
                 {
                     "Address": 794,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "B=A (2nd copied byte)"
                 },
                 {
                     "Address": 795,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Store 2nd copied byte on stack in BC"
                 },
                 {
                     "Address": 796,
                     "ByteSize": 3,
+                    "Comment": "A=4th copied byte",
                     "OperandType": 1
                 },
                 {
                     "Address": 799,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "B=A (4th copied byte)"
                 },
                 {
                     "Address": 800,
                     "ByteSize": 3,
+                    "Comment": "HL=Address of 5th copied byte",
                     "OperandType": 1
                 },
                 {
                     "Address": 803,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "DE=2",
+                    "OperandType": 3
                 },
                 {
                     "Address": 806,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Store 4th copied byte on stack in BC"
                 },
                 {
                     "Address": 807,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "B=5th copied byte"
                 },
                 {
                     "Address": 808,
                     "ByteSize": 3,
+                    "Comment": "A=3rd copied byte",
                     "OperandType": 1
                 },
                 {
                     "Address": 811,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "C=A (3rd copied byte)"
                 },
                 {
                     "Address": 812,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "C=C-1"
                 },
                 {
                     "Address": 813,
@@ -24798,7 +24932,8 @@
                 },
                 {
                     "Address": 855,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "End of play sound loop"
                 },
                 {
                     "Address": 859,
@@ -24952,7 +25087,7 @@
                 {
                     "Address": 66,
                     "LabelType": 1,
-                    "Name": "function_A442"
+                    "Name": "FireModeUnitInfo"
                 },
                 {
                     "Address": 82,
@@ -24962,7 +25097,7 @@
                 {
                     "Address": 92,
                     "LabelType": 1,
-                    "Name": "function_A45C"
+                    "Name": "ShowUnitInfo"
                 },
                 {
                     "Address": 102,
@@ -24980,44 +25115,32 @@
                     "Name": "function_A551"
                 },
                 {
+                    "Address": 631,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "EquipObjectSoundEffect"
+                },
+                {
                     "Address": 753,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_A6F1"
-                },
-                {
-                    "Address": 754,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_A6F2"
-                },
-                {
-                    "Address": 755,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_A6F3"
-                },
-                {
-                    "Address": 756,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_A6F4"
+                    "Name": "Array20Bytes"
                 },
                 {
                     "Address": 773,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_A705"
+                    "Name": "SoundCounterOfSomeKind"
                 },
                 {
                     "Address": 774,
                     "LabelType": 1,
-                    "Name": "function_A706"
+                    "Name": "Copy20Bytes"
                 },
                 {
                     "Address": 783,
                     "LabelType": 1,
-                    "Name": "function_A70F"
+                    "Name": "PlaySoundAtAddress_HL"
                 },
                 {
                     "Address": 786,
@@ -25042,12 +25165,12 @@
                 {
                     "Address": 811,
                     "LabelType": 2,
-                    "Name": "label_A72B"
+                    "Name": "CountdownToZero_B"
                 },
                 {
                     "Address": 812,
                     "LabelType": 2,
-                    "Name": "label_A72C"
+                    "Name": "CountDownToZero_C"
                 },
                 {
                     "Address": 844,
@@ -30787,6 +30910,30 @@
                     "Address": 48,
                     "LabelType": 0,
                     "Name": "CharacterBitmapsStartingWithSPACE"
+                },
+                {
+                    "Address": 51,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_C033"
+                },
+                {
+                    "Address": 52,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_C034"
+                },
+                {
+                    "Address": 53,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_C035"
+                },
+                {
+                    "Address": 59,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_C03B"
                 },
                 {
                     "Address": 848,
@@ -45569,10 +45716,66 @@
             "LabelInfo": [
                 {
                     "Address": 510,
-                    "Comment": "Read when finding next unit",
+                    "Comment": "16 bytes per weapon - 92h (146) is first weapon",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "IX_F1FE"
+                    "Name": "Weapon0Stats"
+                },
+                {
+                    "Address": 526,
+                    "Comment": "16 bytes per weapon - 93h (147) is second weapon",
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "Weapon1Stats"
+                },
+                {
+                    "Address": 542,
+                    "Comment": "16 bytes per weapon - 94h (148)",
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "Weapon2Stats"
+                },
+                {
+                    "Address": 558,
+                    "Comment": "16 bytes per weapon - 95h (149)",
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "Weapon3Stats"
+                },
+                {
+                    "Address": 574,
+                    "Comment": "16 bytes per weapon - 96h (150)",
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "Weapon4Stats"
+                },
+                {
+                    "Address": 590,
+                    "Comment": "16 bytes per weapon - 97h (151)",
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "Weapon5Stats"
+                },
+                {
+                    "Address": 606,
+                    "Comment": "16 bytes per weapon - 98h (152)",
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "Weapon6Stats"
+                },
+                {
+                    "Address": 622,
+                    "Comment": "16 bytes per weapon - 99h (153) - Weapon 7",
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "LightSabreStats"
+                },
+                {
+                    "Address": 638,
+                    "Comment": "16 bytes per weapon - 9Ah (154) - Weapon 8",
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "PhotonStats"
                 },
                 {
                     "Address": 1000,
