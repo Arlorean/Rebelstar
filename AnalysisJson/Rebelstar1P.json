@@ -11714,7 +11714,8 @@
                 },
                 {
                     "Address": 319,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "A=44h (68) - Screen Color Attrribute Value For Message?"
                 },
                 {
                     "Address": 321,
@@ -11724,7 +11725,8 @@
                 {
                     "Address": 324,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "HL=(x=18, y=0) - Screen Position to start writing message to",
+                    "OperandType": 4
                 },
                 {
                     "Address": 327,
@@ -12979,8 +12981,16 @@
                 },
                 {
                     "Address": 700,
-                    "ByteSize": 2,
-                    "DataType": 2
+                    "Comment": "Y",
+                    "OperandType": 4
+                },
+                {
+                    "Address": 701,
+                    "Comment": "X"
+                },
+                {
+                    "Address": 703,
+                    "DataType": 10
                 },
                 {
                     "Address": 704,
@@ -13497,7 +13507,7 @@
                     "Address": 700,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_82BC"
+                    "Name": "ScreenCharacterPositionToWriteToXY"
                 },
                 {
                     "Address": 702,
@@ -13509,7 +13519,7 @@
                     "Address": 703,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_82BF"
+                    "Name": "MessageScreenColorAttribute"
                 },
                 {
                     "Address": 704,
@@ -16371,7 +16381,8 @@
                 },
                 {
                     "Address": 58,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "DE=Pointer to message ASCII text"
                 },
                 {
                     "Address": 59,
@@ -16379,7 +16390,8 @@
                 },
                 {
                     "Address": 60,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "A=Length of message text in bytes"
                 },
                 {
                     "Address": 61,
@@ -16429,7 +16441,8 @@
                 },
                 {
                     "Address": 84,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Is the character to display a '/'?"
                 },
                 {
                     "Address": 86,
@@ -16443,7 +16456,8 @@
                 },
                 {
                     "Address": 91,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Increment 'Y' to move down to next line"
                 },
                 {
                     "Address": 92,
@@ -16473,7 +16487,8 @@
                 },
                 {
                     "Address": 106,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Increment 'X' to move along to next column"
                 },
                 {
                     "Address": 107,
@@ -16487,6 +16502,7 @@
                 {
                     "Address": 111,
                     "ByteSize": 2,
+                    "Comment": "Continue until all characters from message are written",
                     "OperandType": 2
                 },
                 {
@@ -16548,6 +16564,25 @@
                 }
             ],
             "DataInfo": [
+                {
+                    "Address": 31,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 33,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 34,
+                    "Comment": "Y",
+                    "OperandType": 4
+                },
+                {
+                    "Address": 35,
+                    "Comment": "X",
+                    "DataType": 10
+                },
                 {
                     "Address": 114,
                     "ByteSize": 20,
@@ -16719,19 +16754,19 @@
                     "Address": 31,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_881F"
+                    "Name": "MessageTextToDisplayPointer"
                 },
                 {
                     "Address": 33,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_8821"
+                    "Name": "MessageTextToDisplayLength"
                 },
                 {
                     "Address": 34,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_8822"
+                    "Name": "ScreenPositionToStartNextLineAt"
                 },
                 {
                     "Address": 36,
@@ -16754,9 +16789,14 @@
                     "Name": "label_884B"
                 },
                 {
+                    "Address": 88,
+                    "LabelType": 2,
+                    "Name": "MoveToNextLine"
+                },
+                {
                     "Address": 100,
                     "LabelType": 2,
-                    "Name": "label_8864"
+                    "Name": "DisplayNextCharacterInMessage"
                 },
                 {
                     "Address": 110,
@@ -20970,7 +21010,7 @@
                     "Address": 294,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_9526"
+                    "Name": "MenuRowColorAttributeValues"
                 },
                 {
                     "Address": 595,
@@ -22482,7 +22522,7 @@
                 {
                     "Address": 804,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "OperandType": 4
                 },
                 {
                     "Address": 807,
