@@ -2172,6 +2172,7 @@
                 {
                     "Address": 70,
                     "ByteSize": 2,
+                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
@@ -2192,6 +2193,7 @@
                 {
                     "Address": 78,
                     "ByteSize": 2,
+                    "Comment": "Draw action points left to screen",
                     "DataType": 2
                 },
                 {
@@ -8202,7 +8204,8 @@
                 },
                 {
                     "Address": 652,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "HL=ActionPointsMax"
                 },
                 {
                     "Address": 653,
@@ -8214,7 +8217,8 @@
                 },
                 {
                     "Address": 655,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "HL=8*ActionPointsMax"
                 },
                 {
                     "Address": 656,
@@ -8222,7 +8226,8 @@
                 },
                 {
                     "Address": 658,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "DE=WeaponStat06 or WeaponStat07 (Aimed or Snap shot factor)"
                 },
                 {
                     "Address": 659,
@@ -9167,7 +9172,7 @@
                 {
                     "Address": 650,
                     "LabelType": 1,
-                    "Name": "function_7A8A"
+                    "Name": "CalculateShotActionPoints_APMax_A_WeaponShotFactor_B_Returns_C"
                 },
                 {
                     "Address": 662,
@@ -11746,7 +11751,8 @@
                 },
                 {
                     "Address": 335,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Cyan on black"
                 },
                 {
                     "Address": 337,
@@ -11755,7 +11761,8 @@
                 },
                 {
                     "Address": 340,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "1=AIMED SHOT,,2=SNAP SHOT,,U=OPPORTUNITY FIRE,K=CANCEL,I=INFO"
                 },
                 {
                     "Address": 342,
@@ -11765,7 +11772,8 @@
                 },
                 {
                     "Address": 345,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "White on black"
                 },
                 {
                     "Address": 347,
@@ -11775,7 +11783,8 @@
                 {
                     "Address": 350,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "X=18h(24),Y=0Fh(15)",
+                    "OperandType": 4
                 },
                 {
                     "Address": 353,
@@ -11784,7 +11793,8 @@
                 },
                 {
                     "Address": 356,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Cost=,,,Cost="
                 },
                 {
                     "Address": 358,
@@ -11794,7 +11804,8 @@
                 },
                 {
                     "Address": 361,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Yellow on black"
                 },
                 {
                     "Address": 363,
@@ -11808,12 +11819,14 @@
                 },
                 {
                     "Address": 370,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "Current Object in use"
                 },
                 {
                     "Address": 373,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "X=24,Y=0",
+                    "OperandType": 4
                 },
                 {
                     "Address": 376,
@@ -11823,7 +11836,8 @@
                 },
                 {
                     "Address": 379,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "Weapon Skill"
                 },
                 {
                     "Address": 382,
@@ -11836,16 +11850,19 @@
                 },
                 {
                     "Address": 388,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "Weapon Skill %Chance To Hit Multiplier"
                 },
                 {
                     "Address": 391,
                     "ByteSize": 2,
+                    "Comment": "A=WeaponSkill*WeaponStat(IX+04h)",
                     "OperandType": 2
                 },
                 {
                     "Address": 393,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "Base Weapon %Chance To Hit"
                 },
                 {
                     "Address": 396,
@@ -11855,7 +11872,8 @@
                 {
                     "Address": 399,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "X=24,Y=4",
+                    "OperandType": 4
                 },
                 {
                     "Address": 402,
@@ -11865,12 +11883,14 @@
                 {
                     "Address": 405,
                     "ByteSize": 3,
+                    "Comment": "Draw %Chance to hit to screen",
                     "Flags": 8,
                     "OperandType": 2
                 },
                 {
                     "Address": 408,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "Action Points for Aimed Shot Factor (Photon=32, Light Sabre=0)"
                 },
                 {
                     "Address": 411,
@@ -11890,7 +11910,8 @@
                 },
                 {
                     "Address": 421,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "A=Action Points for Aimed Shot"
                 },
                 {
                     "Address": 422,
@@ -11900,7 +11921,8 @@
                 {
                     "Address": 425,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "X=29,Y=15",
+                    "OperandType": 4
                 },
                 {
                     "Address": 428,
@@ -11910,12 +11932,14 @@
                 {
                     "Address": 431,
                     "ByteSize": 3,
+                    "Comment": "Draw action points for aimed shot to screen",
                     "Flags": 8,
                     "OperandType": 2
                 },
                 {
                     "Address": 434,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "Action Points Max"
                 },
                 {
                     "Address": 437,
@@ -11924,7 +11948,8 @@
                 },
                 {
                     "Address": 441,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "Action Points for Snap Shot Factor"
                 },
                 {
                     "Address": 444,
@@ -11934,7 +11959,8 @@
                 },
                 {
                     "Address": 447,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Action Points for Snap Shot"
                 },
                 {
                     "Address": 448,
@@ -11944,7 +11970,8 @@
                 {
                     "Address": 451,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "X=29,Y=18",
+                    "OperandType": 4
                 },
                 {
                     "Address": 454,
@@ -11960,7 +11987,8 @@
                 {
                     "Address": 460,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "X=24,Y=6",
+                    "OperandType": 4
                 },
                 {
                     "Address": 463,
@@ -11974,18 +12002,21 @@
                 },
                 {
                     "Address": 470,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "A=Ammo Count for current object"
                 },
                 {
                     "Address": 473,
                     "ByteSize": 3,
+                    "Comment": "Draw ammo count to screen",
                     "Flags": 8,
                     "OperandType": 2
                 },
                 {
                     "Address": 476,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "X=24,Y=9",
+                    "OperandType": 4
                 },
                 {
                     "Address": 479,
@@ -11994,11 +12025,13 @@
                 },
                 {
                     "Address": 482,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "Action Points Remaining"
                 },
                 {
                     "Address": 485,
                     "ByteSize": 3,
+                    "Comment": "Draw action points left to screen",
                     "Flags": 8,
                     "OperandType": 2
                 },
@@ -13409,7 +13442,7 @@
                 {
                     "Address": 319,
                     "LabelType": 1,
-                    "Name": "function_813F"
+                    "Name": "DrawFireModeMenu"
                 },
                 {
                     "Address": 388,
@@ -15588,7 +15621,8 @@
                 },
                 {
                     "Address": 980,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "E=Weapon Id (154=Photon)"
                 },
                 {
                     "Address": 981,
@@ -16216,7 +16250,7 @@
                 {
                     "Address": 975,
                     "LabelType": 1,
-                    "Name": "function_87CF"
+                    "Name": "DisplayWeaponName_A_Pos_HL"
                 },
                 {
                     "Address": 990,
@@ -16580,8 +16614,7 @@
                 },
                 {
                     "Address": 35,
-                    "Comment": "X",
-                    "DataType": 10
+                    "Comment": "X"
                 },
                 {
                     "Address": 114,
@@ -19133,7 +19166,7 @@
                 {
                     "Address": 442,
                     "LabelType": 1,
-                    "Name": "DrawActionPointsStoredIn_A"
+                    "Name": "DrawNumberStoredIn_A"
                 },
                 {
                     "Address": 473,
@@ -46507,6 +46540,14 @@
                 {
                     "Address": 302,
                     "DataType": 5
+                },
+                {
+                    "Address": 641,
+                    "Comment": "Base %Chance To Hit"
+                },
+                {
+                    "Address": 642,
+                    "Comment": "Chance to Hit (multiplied by weapon skill)"
                 },
                 {
                     "Address": 1000,
