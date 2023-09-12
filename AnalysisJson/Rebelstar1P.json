@@ -3199,9 +3199,19 @@
             ],
             "DataInfo": [
                 {
-                    "Address": 56,
+                    "Address": 52,
                     "ByteSize": 2,
                     "Comment": "Push 4818h",
+                    "DataType": 2
+                },
+                {
+                    "Address": 54,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 56,
+                    "ByteSize": 2,
                     "DataType": 2
                 },
                 {
@@ -3217,24 +3227,22 @@
                 {
                     "Address": 62,
                     "ByteSize": 2,
-                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
                     "Address": 64,
                     "ByteSize": 2,
+                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
                     "Address": 66,
                     "ByteSize": 2,
-                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
                     "Address": 68,
                     "ByteSize": 2,
-                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
@@ -7981,7 +7989,7 @@
                 {
                     "Address": 924,
                     "LabelType": 1,
-                    "Name": "function_779C"
+                    "Name": "DrawFireModeCursor"
                 },
                 {
                     "Address": 949,
@@ -8904,7 +8912,8 @@
                 },
                 {
                     "Address": 458,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "A=FFh on exit, inicating no key pressed"
                 },
                 {
                     "Address": 459,
@@ -12583,6 +12592,35 @@
                     "OperandType": 2
                 },
                 {
+                    "Address": 195,
+                    "ByteSize": 3,
+                    "Flags": 8,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 198,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 200,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 203,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 205,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 208,
+                    "ByteSize": 2,
+                    "OperandType": 2
+                },
+                {
                     "Address": 210,
                     "ByteSize": 2
                 },
@@ -12796,7 +12834,7 @@
                 {
                     "Address": 319,
                     "ByteSize": 2,
-                    "Comment": "A=44h (68) - Screen Color Attrribute Value For Message?"
+                    "Comment": "Green on Black"
                 },
                 {
                     "Address": 321,
@@ -12806,7 +12844,7 @@
                 {
                     "Address": 324,
                     "ByteSize": 3,
-                    "Comment": "HL=(x=18, y=0) - Screen Position to start writing message to",
+                    "Comment": "X=18,Y=0",
                     "OperandType": 4
                 },
                 {
@@ -12828,7 +12866,7 @@
                 {
                     "Address": 335,
                     "ByteSize": 2,
-                    "Comment": "Cyan on black"
+                    "Comment": "Cyan on Black"
                 },
                 {
                     "Address": 337,
@@ -14085,6 +14123,38 @@
             ],
             "DataInfo": [
                 {
+                    "Address": 135,
+                    "Comment": "Y"
+                },
+                {
+                    "Address": 136,
+                    "Comment": "X"
+                },
+                {
+                    "Address": 137,
+                    "Comment": "Set to 0 when in fire mode"
+                },
+                {
+                    "Address": 258,
+                    "Comment": "Y"
+                },
+                {
+                    "Address": 259,
+                    "Comment": "X"
+                },
+                {
+                    "Address": 260,
+                    "Comment": "Y"
+                },
+                {
+                    "Address": 261,
+                    "Comment": "X"
+                },
+                {
+                    "Address": 262,
+                    "Comment": "X"
+                },
+                {
                     "Address": 264,
                     "ByteSize": 2,
                     "DataType": 2
@@ -14373,9 +14443,10 @@
                 },
                 {
                     "Address": 133,
+                    "Comment": "from (8,8) to (167,167)  (A7h,A7h)",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_8085"
+                    "Name": "FireModeCursorViewPixelPositionXY_2"
                 },
                 {
                     "Address": 134,
@@ -14385,15 +14456,17 @@
                 },
                 {
                     "Address": 135,
+                    "Comment": "from (8,8) to (167,167)  (A7h,A7h)",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_8087"
+                    "Name": "FireModeCursorViewPixelPositionXY"
                 },
                 {
                     "Address": 137,
+                    "Comment": "; Toggles between 0 and 1 so it flashes",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_8089"
+                    "Name": "DisplayFireModeCursor"
                 },
                 {
                     "Address": 138,
@@ -14427,33 +14500,28 @@
                 },
                 {
                     "Address": 255,
+                    "Comment": "Set to 1 when in fire mode",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_80FF"
+                    "Name": "IsFireModeEnabled"
                 },
                 {
                     "Address": 258,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_8102"
+                    "Name": "FireModeCachedViewStartPositionXY"
                 },
                 {
                     "Address": 260,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_8104"
-                },
-                {
-                    "Address": 261,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_8105"
+                    "Name": "FireModePixelPositionXY"
                 },
                 {
                     "Address": 262,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_8106"
+                    "Name": "FireModeCachedMapCursorPositionXY"
                 },
                 {
                     "Address": 264,
@@ -14483,7 +14551,7 @@
                 {
                     "Address": 271,
                     "LabelType": 1,
-                    "Name": "function_810F"
+                    "Name": "ConvertPositionsFromCharactersToPixels"
                 },
                 {
                     "Address": 312,
@@ -15495,11 +15563,13 @@
                 },
                 {
                     "Address": 407,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Is Fire Mode Enabled?"
                 },
                 {
                     "Address": 408,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Return if Fire Mode is enabled"
                 },
                 {
                     "Address": 409,
@@ -16975,6 +17045,14 @@
                     "Address": 224,
                     "ByteSize": 2,
                     "DataType": 2
+                },
+                {
+                    "Address": 574,
+                    "Comment": "Set to A7h (167) when in fire mode"
+                },
+                {
+                    "Address": 575,
+                    "Comment": "Set to 8 when in fire mode"
                 }
             ],
             "LabelInfo": [
@@ -17035,7 +17113,7 @@
                     "Address": 222,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "MapCursorXYPosition"
+                    "Name": "MapCursorPositionXY"
                 },
                 {
                     "Address": 223,
@@ -17141,13 +17219,13 @@
                     "Address": 399,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_858F"
+                    "Name": "WasMoveKeyPressed"
                 },
                 {
                     "Address": 400,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_8590"
+                    "Name": "WasDiagonalMoveKeyPressed"
                 },
                 {
                     "Address": 401,
@@ -17204,13 +17282,13 @@
                     "Address": 574,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_863E"
+                    "Name": "InFireMode_167"
                 },
                 {
                     "Address": 575,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_863F"
+                    "Name": "InFireMode_0"
                 },
                 {
                     "Address": 576,
@@ -17339,7 +17417,7 @@
                     "Address": 1019,
                     "Comment": "A=WeaponId, returns IX as weapon stats index",
                     "LabelType": 1,
-                    "Name": "GetWeaponStats"
+                    "Name": "GetStatsForWeapon_X_Into_IX"
                 }
             ],
             "PageId": 49
@@ -17923,7 +18001,7 @@
                 {
                     "Address": 114,
                     "LabelType": 3,
-                    "Name": "Text Messages"
+                    "Name": "TextMessages"
                 },
                 {
                     "Address": 941,
@@ -21386,7 +21464,7 @@
                 {
                     "Address": 57,
                     "LabelType": 2,
-                    "Name": "label_9039"
+                    "Name": "ProcessActionsPoints"
                 },
                 {
                     "Address": 66,
@@ -21485,7 +21563,7 @@
                 {
                     "Address": 514,
                     "LabelType": 1,
-                    "Name": "Spend_B_ActionPoints_NZ_success"
+                    "Name": "TrySpend_B_ActionPoints_NZ_success"
                 },
                 {
                     "Address": 541,
@@ -22149,6 +22227,48 @@
                     "ByteSize": 1
                 }
             ],
+            "DataInfo": [
+                {
+                    "Address": 295,
+                    "ByteSize": 117,
+                    "DataType": 4
+                },
+                {
+                    "Address": 412,
+                    "ByteSize": 82,
+                    "DataType": 4
+                },
+                {
+                    "Address": 494,
+                    "ByteSize": 19,
+                    "DataType": 4
+                },
+                {
+                    "Address": 513,
+                    "ByteSize": 17,
+                    "DataType": 4
+                },
+                {
+                    "Address": 530,
+                    "ByteSize": 17,
+                    "DataType": 4
+                },
+                {
+                    "Address": 547,
+                    "ByteSize": 17,
+                    "DataType": 4
+                },
+                {
+                    "Address": 564,
+                    "ByteSize": 15,
+                    "DataType": 4
+                },
+                {
+                    "Address": 579,
+                    "ByteSize": 16,
+                    "DataType": 4
+                }
+            ],
             "LabelInfo": [
                 {
                     "Address": 0,
@@ -22181,6 +22301,12 @@
                     "Global": true,
                     "LabelType": 0,
                     "Name": "SelectedUnitWoundedFlag"
+                },
+                {
+                    "Address": 295,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "TextMessageFrom34"
                 },
                 {
                     "Address": 595,
@@ -22500,6 +22626,7 @@
                 {
                     "Address": 209,
                     "ByteSize": 3,
+                    "Comment": "A=MapCursorPositionX (Character Based)",
                     "OperandType": 1
                 },
                 {
@@ -22516,11 +22643,13 @@
                 },
                 {
                     "Address": 218,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "A=X*16"
                 },
                 {
                     "Address": 220,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "A=X*16+8 - Pixel X position on map"
                 },
                 {
                     "Address": 222,
@@ -22535,6 +22664,7 @@
                 {
                     "Address": 228,
                     "ByteSize": 3,
+                    "Comment": "A=MapCursorPositionY (Character Based)",
                     "OperandType": 1
                 },
                 {
@@ -22551,11 +22681,13 @@
                 },
                 {
                     "Address": 237,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "A=Y*16"
                 },
                 {
                     "Address": 239,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "A=Y*16+8 - Pixel Y position on map"
                 },
                 {
                     "Address": 241,
@@ -22651,7 +22783,7 @@
                 {
                     "Address": 293,
                     "ByteSize": 1,
-                    "Comment": "Return if weapon skill is 255"
+                    "Comment": "Return if weapon skill is 255 (Seen on enemy robots)"
                 },
                 {
                     "Address": 294,
@@ -22706,6 +22838,7 @@
                 {
                     "Address": 319,
                     "ByteSize": 3,
+                    "Comment": "Draw Fire Mode View of the map (where relevant to LOS) and units (as circles)",
                     "Flags": 8,
                     "OperandType": 2
                 },
@@ -25505,7 +25638,7 @@
                 {
                     "Address": 847,
                     "ByteSize": 2,
-                    "Comment": "THE RAIDERS",
+                    "Comment": "29: THE RAIDERS",
                     "DataType": 2
                 },
                 {
@@ -25517,7 +25650,7 @@
                 {
                     "Address": 851,
                     "ByteSize": 2,
-                    "Comment": "THE OPERA-TIVES",
+                    "Comment": "30: THE OPERA-TIVES",
                     "DataType": 2
                 },
                 {
@@ -25525,6 +25658,208 @@
                     "ByteSize": 2,
                     "DataType": 2,
                     "OperandType": 3
+                },
+                {
+                    "Address": 855,
+                    "ByteSize": 2,
+                    "Comment": "31: <NOT USED>",
+                    "DataType": 2
+                },
+                {
+                    "Address": 857,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 859,
+                    "ByteSize": 2,
+                    "Comment": "32: <NOT USED>",
+                    "DataType": 2
+                },
+                {
+                    "Address": 861,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 863,
+                    "ByteSize": 2,
+                    "Comment": "33: <NOT USED>",
+                    "DataType": 2
+                },
+                {
+                    "Address": 865,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 867,
+                    "ByteSize": 2,
+                    "Comment": "34: %Chance OnTarget,,AMMO:,,ACTION POINTS:",
+                    "DataType": 2
+                },
+                {
+                    "Address": 869,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 871,
+                    "ByteSize": 2,
+                    "Comment": "35: ",
+                    "DataType": 2
+                },
+                {
+                    "Address": 873,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 875,
+                    "ByteSize": 2,
+                    "Comment": "36: ",
+                    "DataType": 2
+                },
+                {
+                    "Address": 877,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 879,
+                    "ByteSize": 2,
+                    "Comment": "37: ",
+                    "DataType": 2
+                },
+                {
+                    "Address": 881,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 883,
+                    "ByteSize": 2,
+                    "Comment": "38:",
+                    "DataType": 2
+                },
+                {
+                    "Address": 885,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 887,
+                    "ByteSize": 2,
+                    "Comment": "39:",
+                    "DataType": 2
+                },
+                {
+                    "Address": 889,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 891,
+                    "ByteSize": 2,
+                    "Comment": "40:",
+                    "DataType": 2
+                },
+                {
+                    "Address": 893,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 895,
+                    "ByteSize": 2,
+                    "Comment": "41:",
+                    "DataType": 2
+                },
+                {
+                    "Address": 897,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 899,
+                    "ByteSize": 2,
+                    "Comment": "42:",
+                    "DataType": 2
+                },
+                {
+                    "Address": 901,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 903,
+                    "ByteSize": 2,
+                    "Comment": "43:",
+                    "DataType": 2
+                },
+                {
+                    "Address": 905,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 907,
+                    "ByteSize": 2,
+                    "Comment": "44:",
+                    "DataType": 2
+                },
+                {
+                    "Address": 909,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 911,
+                    "ByteSize": 2,
+                    "Comment": "45:",
+                    "DataType": 2
+                },
+                {
+                    "Address": 913,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 915,
+                    "ByteSize": 2,
+                    "Comment": "46:",
+                    "DataType": 2
+                },
+                {
+                    "Address": 917,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 919,
+                    "ByteSize": 38,
+                    "DataType": 4
+                },
+                {
+                    "Address": 957,
+                    "ByteSize": 106,
+                    "DataType": 4
                 }
             ],
             "LabelInfo": [
@@ -25639,6 +25974,12 @@
                     "Global": true,
                     "LabelType": 0,
                     "Name": "MessagePointerTable"
+                },
+                {
+                    "Address": 919,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "TextMessagesFrom42"
                 }
             ],
             "PageId": 55
@@ -25965,6 +26306,28 @@
                 {
                     "Address": 788,
                     "Comment": "Get current object in use"
+                }
+            ],
+            "DataInfo": [
+                {
+                    "Address": 39,
+                    "ByteSize": 16,
+                    "DataType": 4
+                },
+                {
+                    "Address": 55,
+                    "Comment": "Unused Space for some reason...",
+                    "DataType": 4
+                },
+                {
+                    "Address": 56,
+                    "ByteSize": 20,
+                    "DataType": 4
+                },
+                {
+                    "Address": 76,
+                    "ByteSize": 53,
+                    "DataType": 4
                 }
             ],
             "LabelInfo": [
@@ -48973,7 +49336,7 @@
                     "Comment": "16 bytes per weapon - 92h (146) is first weapon",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "Weapon0Stats"
+                    "Name": "LaserGunStats"
                 },
                 {
                     "Address": 526,
