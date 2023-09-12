@@ -243,6 +243,41 @@
             "Height": 50,
             "IgnoreCharacter": 0,
             "Width": 80
+        },
+        {
+            "AddressRef": 4092723204,
+            "CharacterSetRef": 65535,
+            "Height": 1,
+            "IgnoreCharacter": 0,
+            "Width": 10
+        },
+        {
+            "AddressRef": 4093378564,
+            "CharacterSetRef": 65535,
+            "Height": 1,
+            "IgnoreCharacter": 0,
+            "Width": 10
+        },
+        {
+            "AddressRef": 4094033924,
+            "CharacterSetRef": 65535,
+            "Height": 1,
+            "IgnoreCharacter": 0,
+            "Width": 10
+        },
+        {
+            "AddressRef": 4094689284,
+            "CharacterSetRef": 65535,
+            "Height": 1,
+            "IgnoreCharacter": 0,
+            "Width": 10
+        },
+        {
+            "AddressRef": 4095344644,
+            "CharacterSetRef": 65535,
+            "Height": 1,
+            "IgnoreCharacter": 0,
+            "Width": 10
         }
     ],
     "Pages": [
@@ -16307,7 +16342,8 @@
                 },
                 {
                     "Address": 14,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "HL=Map Cell ID (0=empty space)"
                 },
                 {
                     "Address": 15,
@@ -16319,7 +16355,8 @@
                 },
                 {
                     "Address": 17,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "HL=8*MapCellID"
                 },
                 {
                     "Address": 18,
@@ -16327,7 +16364,8 @@
                 },
                 {
                     "Address": 20,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "DE=Map Cell ID (0=empty space)"
                 },
                 {
                     "Address": 21,
@@ -16335,7 +16373,8 @@
                 },
                 {
                     "Address": 22,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "HL=8*MapCellID+2*MapCellID -> 10*MapCellID"
                 },
                 {
                     "Address": 23,
@@ -18298,6 +18337,7 @@
                 {
                     "Address": 665,
                     "ByteSize": 3,
+                    "Comment": "Show action points",
                     "Flags": 8,
                     "OperandType": 2
                 },
@@ -18407,7 +18447,8 @@
                 },
                 {
                     "Address": 722,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "White on Black"
                 },
                 {
                     "Address": 724,
@@ -18417,7 +18458,8 @@
                 {
                     "Address": 727,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "X=24,Y=8",
+                    "OperandType": 4
                 },
                 {
                     "Address": 730,
@@ -18426,7 +18468,8 @@
                 },
                 {
                     "Address": 733,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "Action Points"
                 },
                 {
                     "Address": 736,
@@ -18436,15 +18479,18 @@
                 },
                 {
                     "Address": 739,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "Cached Map Cell Under Unit"
                 },
                 {
                     "Address": 742,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Is the map cell id under the unit less than 146?"
                 },
                 {
                     "Address": 744,
                     "ByteSize": 2,
+                    "Comment": "If the cached map cell under the unit is less than 146 then jump ahead",
                     "OperandType": 2
                 },
                 {
@@ -18467,7 +18513,8 @@
                 {
                     "Address": 755,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "X=24,Y=10",
+                    "OperandType": 4
                 },
                 {
                     "Address": 758,
@@ -19250,12 +19297,12 @@
                 {
                     "Address": 712,
                     "LabelType": 1,
-                    "Name": "function_8EC8"
+                    "Name": "DisplayActionPoints"
                 },
                 {
                     "Address": 752,
                     "LabelType": 2,
-                    "Name": "label_8EF0"
+                    "Name": "DisplayProtec"
                 },
                 {
                     "Address": 772,
@@ -47114,6 +47161,12 @@
             "PageId": 75
         },
         {
+            "CommentBlocks": [
+                {
+                    "Address": 1000,
+                    "Comment": "Empty Space"
+                }
+            ],
             "DataInfo": [
                 {
                     "Address": 55,
@@ -47829,35 +47882,22 @@
                 },
                 {
                     "Address": 1000,
-                    "ByteSize": 5,
+                    "ByteSize": 10,
                     "CharSetAddressRef": 65535,
-                    "DataType": 6,
-                    "EmptyCharNo": 0
-                },
-                {
-                    "Address": 1005,
-                    "ByteSize": 5,
-                    "CharSetAddressRef": 65535,
+                    "Comment": "Empty Space",
                     "DataType": 6,
                     "EmptyCharNo": 0
                 },
                 {
                     "Address": 1010,
-                    "ByteSize": 5,
-                    "CharSetAddressRef": 65535,
-                    "DataType": 6,
-                    "EmptyCharNo": 0
-                },
-                {
-                    "Address": 1015,
-                    "ByteSize": 5,
+                    "ByteSize": 10,
                     "CharSetAddressRef": 65535,
                     "DataType": 6,
                     "EmptyCharNo": 0
                 },
                 {
                     "Address": 1020,
-                    "ByteSize": 5,
+                    "ByteSize": 10,
                     "CharSetAddressRef": 65535,
                     "DataType": 6,
                     "EmptyCharNo": 0
@@ -47929,10 +47969,10 @@
                 },
                 {
                     "Address": 1000,
-                    "Comment": "Read from when finding next unit",
+                    "Comment": "Table of 10 bytes per map cell",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "MapSceneryDamageValues"
+                    "Name": "MapCellStats"
                 }
             ],
             "PageId": 76
@@ -47962,42 +48002,21 @@
                 },
                 {
                     "Address": 6,
-                    "ByteSize": 5,
-                    "CharSetAddressRef": 65535,
-                    "DataType": 6,
-                    "EmptyCharNo": 0
-                },
-                {
-                    "Address": 11,
-                    "ByteSize": 5,
+                    "ByteSize": 10,
                     "CharSetAddressRef": 65535,
                     "DataType": 6,
                     "EmptyCharNo": 0
                 },
                 {
                     "Address": 16,
-                    "ByteSize": 5,
-                    "CharSetAddressRef": 65535,
-                    "DataType": 6,
-                    "EmptyCharNo": 0
-                },
-                {
-                    "Address": 21,
-                    "ByteSize": 5,
+                    "ByteSize": 10,
                     "CharSetAddressRef": 65535,
                     "DataType": 6,
                     "EmptyCharNo": 0
                 },
                 {
                     "Address": 26,
-                    "ByteSize": 5,
-                    "CharSetAddressRef": 65535,
-                    "DataType": 6,
-                    "EmptyCharNo": 0
-                },
-                {
-                    "Address": 31,
-                    "ByteSize": 5,
+                    "ByteSize": 10,
                     "CharSetAddressRef": 65535,
                     "DataType": 6,
                     "EmptyCharNo": 0
