@@ -8855,11 +8855,13 @@
                 },
                 {
                     "Address": 442,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Update random number counter"
                 },
                 {
                     "Address": 443,
                     "ByteSize": 3,
+                    "Comment": "Scan keyboard into E",
                     "Flags": 8,
                     "OperandType": 2
                 },
@@ -8869,11 +8871,13 @@
                 },
                 {
                     "Address": 447,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Was any key pressed?"
                 },
                 {
                     "Address": 449,
                     "ByteSize": 2,
+                    "Comment": "Loop back if any key pressed",
                     "OperandType": 2
                 },
                 {
@@ -10026,6 +10030,11 @@
                     "Comment": "Written by random number generator"
                 },
                 {
+                    "Address": 537,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
                     "Address": 560,
                     "ByteSize": 2,
                     "DataType": 2
@@ -10156,12 +10165,13 @@
                 {
                     "Address": 435,
                     "LabelType": 1,
-                    "Name": "function_79B3"
+                    "Name": "WaitForNoKeysToBePressed"
                 },
                 {
                     "Address": 439,
+                    "Comment": "Prevent repeated dropping, swaping, picking of objects by keyboard repeat",
                     "LabelType": 2,
-                    "Name": "label_79B7"
+                    "Name": "WaitUntilNoKeyPressedLoop"
                 },
                 {
                     "Address": 459,
@@ -10184,12 +10194,12 @@
                     "Address": 537,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7A19"
+                    "Name": "FrameCounterForRNG"
                 },
                 {
                     "Address": 539,
                     "LabelType": 1,
-                    "Name": "function_7A1B"
+                    "Name": "UpdateRandomNumberTable"
                 },
                 {
                     "Address": 560,
