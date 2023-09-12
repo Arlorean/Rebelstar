@@ -3238,6 +3238,7 @@
                 {
                     "Address": 66,
                     "ByteSize": 2,
+                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
@@ -17981,7 +17982,7 @@
                 {
                     "Address": 75,
                     "LabelType": 2,
-                    "Name": "label_884B"
+                    "Name": "HandleNextOrNewLineCharacter"
                 },
                 {
                     "Address": 88,
@@ -22231,41 +22232,49 @@
                 {
                     "Address": 295,
                     "ByteSize": 117,
+                    "Comment": "34",
                     "DataType": 4
                 },
                 {
                     "Address": 412,
                     "ByteSize": 82,
+                    "Comment": "35",
                     "DataType": 4
                 },
                 {
                     "Address": 494,
                     "ByteSize": 19,
+                    "Comment": "36",
                     "DataType": 4
                 },
                 {
                     "Address": 513,
                     "ByteSize": 17,
+                    "Comment": "37",
                     "DataType": 4
                 },
                 {
                     "Address": 530,
                     "ByteSize": 17,
+                    "Comment": "38",
                     "DataType": 4
                 },
                 {
                     "Address": 547,
                     "ByteSize": 17,
+                    "Comment": "39",
                     "DataType": 4
                 },
                 {
                     "Address": 564,
                     "ByteSize": 15,
+                    "Comment": "40",
                     "DataType": 4
                 },
                 {
                     "Address": 579,
                     "ByteSize": 16,
+                    "Comment": "41",
                     "DataType": 4
                 }
             ],
@@ -25854,11 +25863,13 @@
                 {
                     "Address": 919,
                     "ByteSize": 38,
+                    "Comment": "42",
                     "DataType": 4
                 },
                 {
                     "Address": 957,
                     "ByteSize": 106,
+                    "Comment": "43",
                     "DataType": 4
                 }
             ],
@@ -26312,6 +26323,7 @@
                 {
                     "Address": 39,
                     "ByteSize": 16,
+                    "Comment": "44",
                     "DataType": 4
                 },
                 {
@@ -26322,11 +26334,13 @@
                 {
                     "Address": 56,
                     "ByteSize": 20,
+                    "Comment": "45",
                     "DataType": 4
                 },
                 {
                     "Address": 76,
                     "ByteSize": 53,
+                    "Comment": "46",
                     "DataType": 4
                 }
             ],
