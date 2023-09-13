@@ -1570,7 +1570,7 @@
                     "Address": 54,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "AsciiCharacterBitmapsPointer"
+                    "Name": "DrawBitmapPointer"
                 },
                 {
                     "Address": 61,
@@ -7712,7 +7712,8 @@
                 },
                 {
                     "Address": 926,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "DE=Map Element Id"
                 },
                 {
                     "Address": 927,
@@ -7729,7 +7730,8 @@
                 },
                 {
                     "Address": 932,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "HL=Base Address + 3*MapElementId"
                 },
                 {
                     "Address": 933,
@@ -7931,6 +7933,13 @@
                     "Comment": "Unit stats 27h (39): Bit 7 = 7 ???, Bit 4 = 4 ??? (Dead or in reserve maybe?)"
                 }
             ],
+            "DataInfo": [
+                {
+                    "Address": 922,
+                    "ByteSize": 2,
+                    "DataType": 2
+                }
+            ],
             "LabelInfo": [
                 {
                     "Address": 304,
@@ -7983,12 +7992,12 @@
                     "Address": 922,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "DrawMapShotViewIndicator (?)"
+                    "Name": "MapElementGraphicsTablePointer"
                 },
                 {
                     "Address": 924,
                     "LabelType": 1,
-                    "Name": "DrawFireModeCursor"
+                    "Name": "DrawMapElementId_A"
                 },
                 {
                     "Address": 949,
@@ -12152,6 +12161,14 @@
                     "OperandType": 3
                 },
                 {
+                    "Address": 376,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 378,
+                    "OperandType": 3
+                },
+                {
                     "Address": 400,
                     "ByteSize": 2,
                     "DataType": 2
@@ -12248,29 +12265,31 @@
                 },
                 {
                     "Address": 372,
-                    "Comment": "In gloabl pixel coords",
+                    "Comment": "In global pixel coords",
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "FireTargetPixelPositionXCopy"
+                },
+                {
+                    "Address": 374,
+                    "Comment": "In global pixel coords",
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "FireTargetPixelPositionYCopy"
+                },
+                {
+                    "Address": 376,
+                    "Comment": "In view relative pixels",
                     "Global": true,
                     "LabelType": 0,
                     "Name": "FireOriginPixelPositionXCopy"
                 },
                 {
-                    "Address": 374,
-                    "Comment": "In Gloabl Pixel coords",
+                    "Address": 378,
+                    "Comment": "In view relative pixels",
                     "Global": true,
                     "LabelType": 0,
                     "Name": "FireOriginPixelPositionYCopy"
-                },
-                {
-                    "Address": 376,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_7D78"
-                },
-                {
-                    "Address": 378,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_7D7A"
                 },
                 {
                     "Address": 380,
@@ -14241,28 +14260,33 @@
                 },
                 {
                     "Address": 696,
-                    "Comment": "Y"
+                    "Comment": "Y",
+                    "OperandType": 3
                 },
                 {
                     "Address": 697,
-                    "Comment": "X"
+                    "Comment": "X",
+                    "OperandType": 3
                 },
                 {
                     "Address": 698,
-                    "Comment": "Y"
+                    "Comment": "Y",
+                    "OperandType": 3
                 },
                 {
                     "Address": 699,
-                    "Comment": "X"
+                    "Comment": "X",
+                    "OperandType": 3
                 },
                 {
                     "Address": 700,
                     "Comment": "Y",
-                    "OperandType": 4
+                    "OperandType": 3
                 },
                 {
                     "Address": 701,
-                    "Comment": "X"
+                    "Comment": "X",
+                    "OperandType": 3
                 },
                 {
                     "Address": 703,
@@ -14605,19 +14629,26 @@
                     "Address": 258,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireModeCachedViewStartPositionXY"
+                    "Name": "FireCachedViewStartCharacterPositionXY"
                 },
                 {
                     "Address": 260,
+                    "Comment": "View relative pixel coords of firing unit",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireModePixelPositionXY"
+                    "Name": "FireOriginPixelPositionXY"
+                },
+                {
+                    "Address": 261,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_8105"
                 },
                 {
                     "Address": 262,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireModeCachedMapCursorPositionXY"
+                    "Name": "FireCachedCursorCharacterPositionXY"
                 },
                 {
                     "Address": 264,
@@ -14637,14 +14668,14 @@
                     "Comment": "View top left in character space",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireModeViewStartPositionXY"
+                    "Name": "FireModeViewStartCharacterPositionXY"
                 },
                 {
                     "Address": 269,
-                    "Comment": "In Pixel space",
+                    "Comment": "View relative in pixel space",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireModeTargetCursorPositionXY"
+                    "Name": "FireModeTargetCursorPixelPositionXY"
                 },
                 {
                     "Address": 271,
@@ -14656,14 +14687,14 @@
                     "Comment": "In global pixel space",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireOriginPixelPositionX"
+                    "Name": "FireTargetPixelPositionX"
                 },
                 {
                     "Address": 314,
                     "Comment": "In global pixel space",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireOriginPixelPositionY"
+                    "Name": "FireTargetPixelPositionY"
                 },
                 {
                     "Address": 316,
@@ -14765,16 +14796,17 @@
                 },
                 {
                     "Address": 696,
-                    "Comment": "View lop left in character space",
+                    "Comment": "View lop left in global character space",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "ViewStartPositionXY"
+                    "Name": "ViewStartCharacterPositionXY"
                 },
                 {
                     "Address": 698,
+                    "Comment": "Set to 0,0 when drawing grid and loops until it gets to 11,11",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "ShotUnitMapCursorPositionXY"
+                    "Name": "DrawGridViewCursorPositionXY"
                 },
                 {
                     "Address": 700,
@@ -14792,14 +14824,14 @@
                     "Address": 703,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "MessageScreenColorAttribute"
+                    "Name": "DrawColorAttribute"
                 },
                 {
                     "Address": 704,
-                    "Comment": "The address the unit will be at after the current move is completed",
+                    "Comment": "Used for map cell queries, such as when rendering the grid",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "SelectedUnitNextMapAddress"
+                    "Name": "CurrentMapElementAddress"
                 },
                 {
                     "Address": 754,
@@ -14995,6 +15027,7 @@
                 {
                     "Address": 60,
                     "ByteSize": 4,
+                    "Comment": "DE=XY of First character of view (top left)",
                     "OperandType": 1
                 },
                 {
@@ -15011,7 +15044,8 @@
                 {
                     "Address": 70,
                     "ByteSize": 2,
-                    "Comment": "B = 11 decimal (The size of the view)"
+                    "Comment": "B = 11 decimal (The size of the view)",
+                    "OperandType": 3
                 },
                 {
                     "Address": 72,
@@ -15020,7 +15054,8 @@
                 {
                     "Address": 73,
                     "ByteSize": 2,
-                    "Comment": "B = 11 decimal (The size of the view)"
+                    "Comment": "B = 11 decimal (The size of the view)",
+                    "OperandType": 3
                 },
                 {
                     "Address": 75,
@@ -15033,7 +15068,8 @@
                 },
                 {
                     "Address": 79,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "OperandType": 3
                 },
                 {
                     "Address": 81,
@@ -15042,7 +15078,8 @@
                 },
                 {
                     "Address": 84,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "OperandType": 3
                 },
                 {
                     "Address": 86,
@@ -15055,11 +15092,13 @@
                 },
                 {
                     "Address": 90,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "A=Map cell ID"
                 },
                 {
                     "Address": 91,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Advance to next cell address (in X direction)"
                 },
                 {
                     "Address": 92,
@@ -15079,7 +15118,8 @@
                 },
                 {
                     "Address": 101,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Increment X coordinate"
                 },
                 {
                     "Address": 102,
@@ -15093,6 +15133,7 @@
                 {
                     "Address": 106,
                     "ByteSize": 2,
+                    "Comment": "Draw all 11 characters of the grid row",
                     "OperandType": 2
                 },
                 {
@@ -15104,11 +15145,12 @@
                     "Address": 111,
                     "ByteSize": 3,
                     "Comment": "DE = 69 decimal (width of map not including border)",
-                    "OperandType": 1
+                    "OperandType": 3
                 },
                 {
                     "Address": 114,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Move HL from last character of row to first character of next row down"
                 },
                 {
                     "Address": 115,
@@ -15122,6 +15164,7 @@
                 {
                     "Address": 119,
                     "ByteSize": 2,
+                    "Comment": "Draw all 11 rows of the grid",
                     "OperandType": 2
                 },
                 {
@@ -17171,7 +17214,7 @@
                     "Address": 36,
                     "Comment": "Get's the map element address in HL - DE has ViewStartPositionXY",
                     "LabelType": 1,
-                    "Name": "GetMapElementAddressInHL"
+                    "Name": "GetMapElementAddressFrom_DE_Into_HL"
                 },
                 {
                     "Address": 50,
@@ -17186,12 +17229,12 @@
                 {
                     "Address": 72,
                     "LabelType": 2,
-                    "Name": "label_8448"
+                    "Name": "DrawGridYLoop"
                 },
                 {
                     "Address": 86,
                     "LabelType": 2,
-                    "Name": "label_8456"
+                    "Name": "DrawGridXLoop"
                 },
                 {
                     "Address": 122,
@@ -17226,6 +17269,12 @@
                     "Global": true,
                     "LabelType": 0,
                     "Name": "ViewCursorPositionXY"
+                },
+                {
+                    "Address": 223,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_84DF"
                 },
                 {
                     "Address": 224,
@@ -23516,6 +23565,7 @@
                 {
                     "Address": 578,
                     "ByteSize": 3,
+                    "Comment": "View start in global character coords",
                     "OperandType": 1
                 },
                 {
@@ -34998,6 +35048,81 @@
             "PageId": 68
         },
         {
+            "DataInfo": [
+                {
+                    "Address": 496,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 498,
+                    "DataType": 10
+                },
+                {
+                    "Address": 499,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 502,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 505,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 508,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 511,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 514,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 517,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 520,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 523,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 526,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 529,
+                    "ByteSize": 2,
+                    "DataType": 2
+                }
+            ],
+            "LabelInfo": [
+                {
+                    "Address": 496,
+                    "Comment": "(3 bytes per entry) Bitmap address followed by Color Attribute bytes",
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "MapElementGraphicsTable"
+                }
+            ],
             "PageId": 69
         },
         {
