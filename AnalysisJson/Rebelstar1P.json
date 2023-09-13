@@ -3232,13 +3232,11 @@
                 {
                     "Address": 64,
                     "ByteSize": 2,
-                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
                     "Address": 66,
                     "ByteSize": 2,
-                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
@@ -12142,6 +12140,18 @@
                     "OperandType": 4
                 },
                 {
+                    "Address": 372,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 374,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
                     "Address": 400,
                     "ByteSize": 2,
                     "DataType": 2
@@ -12238,15 +12248,17 @@
                 },
                 {
                     "Address": 372,
+                    "Comment": "In gloabl pixel coords",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7D74"
+                    "Name": "FireOriginPixelPositionXCopy"
                 },
                 {
                     "Address": 374,
+                    "Comment": "In Gloabl Pixel coords",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7D76"
+                    "Name": "FireOriginPixelPositionYCopy"
                 },
                 {
                     "Address": 376,
@@ -12724,7 +12736,7 @@
                 {
                     "Address": 271,
                     "ByteSize": 3,
-                    "Comment": "ViewX",
+                    "Comment": "ViewX in character space",
                     "OperandType": 1
                 },
                 {
@@ -12733,7 +12745,8 @@
                 },
                 {
                     "Address": 276,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "HL=X of view left in character space"
                 },
                 {
                     "Address": 277,
@@ -12749,12 +12762,13 @@
                 },
                 {
                     "Address": 280,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "HL=X of view left in pixel space (*16)"
                 },
                 {
                     "Address": 281,
                     "ByteSize": 3,
-                    "Comment": "MapCursorX",
+                    "Comment": "View cursor X in pixel space",
                     "OperandType": 1
                 },
                 {
@@ -12763,21 +12777,24 @@
                 },
                 {
                     "Address": 286,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "DE=X view cursor position in pixel space"
                 },
                 {
                     "Address": 287,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "HL=X unit cursor position in global pixel space"
                 },
                 {
                     "Address": 288,
                     "ByteSize": 3,
+                    "Comment": "X origin of firing unit in as a global pixel coordinate",
                     "OperandType": 1
                 },
                 {
                     "Address": 291,
                     "ByteSize": 3,
-                    "Comment": "ViewY",
+                    "Comment": "ViewY in character space",
                     "OperandType": 1
                 },
                 {
@@ -13540,7 +13557,8 @@
                 },
                 {
                     "Address": 669,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "E=Y in character space (pixels/16)"
                 },
                 {
                     "Address": 670,
@@ -13565,7 +13583,8 @@
                 },
                 {
                     "Address": 681,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "E=X in character space (pixels/16)"
                 },
                 {
                     "Address": 682,
@@ -13588,7 +13607,8 @@
                 },
                 {
                     "Address": 690,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Get map element at cursor character position (probably another unit)"
                 },
                 {
                     "Address": 691,
@@ -13597,11 +13617,13 @@
                 },
                 {
                     "Address": 694,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Is it the current unit, then set Z flag"
                 },
                 {
                     "Address": 695,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Z flag is true if firing at self"
                 },
                 {
                     "Address": 754,
@@ -14137,28 +14159,101 @@
                 },
                 {
                     "Address": 258,
-                    "Comment": "Y"
+                    "Comment": "Y",
+                    "OperandType": 3
                 },
                 {
                     "Address": 259,
-                    "Comment": "X"
+                    "Comment": "X",
+                    "OperandType": 3
                 },
                 {
                     "Address": 260,
-                    "Comment": "Y"
+                    "Comment": "Y",
+                    "OperandType": 3
                 },
                 {
                     "Address": 261,
-                    "Comment": "X"
+                    "Comment": "X",
+                    "OperandType": 3
                 },
                 {
                     "Address": 262,
-                    "Comment": "X"
+                    "Comment": "X",
+                    "OperandType": 3
+                },
+                {
+                    "Address": 263,
+                    "OperandType": 3
                 },
                 {
                     "Address": 264,
                     "ByteSize": 2,
                     "DataType": 2
+                },
+                {
+                    "Address": 266,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 267,
+                    "Comment": "Y",
+                    "OperandType": 3
+                },
+                {
+                    "Address": 268,
+                    "Comment": "X",
+                    "OperandType": 3
+                },
+                {
+                    "Address": 269,
+                    "Comment": "Y",
+                    "OperandType": 3
+                },
+                {
+                    "Address": 270,
+                    "Comment": "X",
+                    "OperandType": 3
+                },
+                {
+                    "Address": 312,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 314,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 316,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 317,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 318,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 696,
+                    "Comment": "Y"
+                },
+                {
+                    "Address": 697,
+                    "Comment": "X"
+                },
+                {
+                    "Address": 698,
+                    "Comment": "Y"
+                },
+                {
+                    "Address": 699,
+                    "Comment": "X"
                 },
                 {
                     "Address": 700,
@@ -14539,12 +14634,14 @@
                 },
                 {
                     "Address": 267,
+                    "Comment": "View top left in character space",
                     "Global": true,
                     "LabelType": 0,
                     "Name": "FireModeViewStartPositionXY"
                 },
                 {
                     "Address": 269,
+                    "Comment": "In Pixel space",
                     "Global": true,
                     "LabelType": 0,
                     "Name": "FireModeTargetCursorPositionXY"
@@ -14552,19 +14649,21 @@
                 {
                     "Address": 271,
                     "LabelType": 1,
-                    "Name": "ConvertPositionsFromCharactersToPixels"
+                    "Name": "CalculateUnitGlobalPositionInPixels"
                 },
                 {
                     "Address": 312,
+                    "Comment": "In global pixel space",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireOriginPositionXY (?)"
+                    "Name": "FireOriginPixelPositionX"
                 },
                 {
                     "Address": 314,
+                    "Comment": "In global pixel space",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireTargetPositionXY"
+                    "Name": "FireOriginPixelPositionY"
                 },
                 {
                     "Address": 316,
@@ -14666,15 +14765,10 @@
                 },
                 {
                     "Address": 696,
+                    "Comment": "View lop left in character space",
                     "Global": true,
                     "LabelType": 0,
                     "Name": "ViewStartPositionXY"
-                },
-                {
-                    "Address": 697,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_82B9"
                 },
                 {
                     "Address": 698,
@@ -17043,9 +17137,25 @@
                     "DataType": 5
                 },
                 {
+                    "Address": 222,
+                    "Comment": "Y"
+                },
+                {
+                    "Address": 223,
+                    "Comment": "X"
+                },
+                {
                     "Address": 224,
                     "ByteSize": 2,
                     "DataType": 2
+                },
+                {
+                    "Address": 226,
+                    "Comment": "Y"
+                },
+                {
+                    "Address": 227,
+                    "Comment": "X"
                 },
                 {
                     "Address": 574,
@@ -17112,21 +17222,16 @@
                 },
                 {
                     "Address": 222,
+                    "Comment": "This is in pixel space when in fire mode and is view relative",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "MapCursorPositionXY"
-                },
-                {
-                    "Address": 223,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_84DF"
+                    "Name": "ViewCursorPositionXY"
                 },
                 {
                     "Address": 224,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_84E0"
+                    "Name": "CurrentCursorBitmap"
                 },
                 {
                     "Address": 226,
@@ -23136,7 +23241,8 @@
                 },
                 {
                     "Address": 455,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "A=%ChanceOnTarget/2"
                 },
                 {
                     "Address": 457,
@@ -23156,7 +23262,8 @@
                 },
                 {
                     "Address": 467,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Is the ammo count Zero?"
                 },
                 {
                     "Address": 468,
@@ -23247,6 +23354,7 @@
                 {
                     "Address": 508,
                     "ByteSize": 3,
+                    "Comment": "HL=XY cursor position in pixel space",
                     "OperandType": 1
                 },
                 {
@@ -23257,6 +23365,7 @@
                 {
                     "Address": 514,
                     "ByteSize": 3,
+                    "Comment": "HL=XY top left of view in character space",
                     "OperandType": 1
                 },
                 {
@@ -23272,6 +23381,7 @@
                 {
                     "Address": 523,
                     "ByteSize": 3,
+                    "Comment": "Object in use offset",
                     "OperandType": 4
                 },
                 {
@@ -23343,7 +23453,7 @@
                 {
                     "Address": 550,
                     "ByteSize": 3,
-                    "Comment": "Get some weapon stat"
+                    "Comment": "Get some weapon stat - 0 for light sabre, 5 for Weapon6 and 255 for all other weapons"
                 },
                 {
                     "Address": 553,
@@ -23351,7 +23461,8 @@
                 },
                 {
                     "Address": 555,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "HL=WeaponStat02"
                 },
                 {
                     "Address": 556,
@@ -24360,7 +24471,7 @@
                 {
                     "Address": 491,
                     "LabelType": 2,
-                    "Name": "label_99EB"
+                    "Name": "NoAmmoLeftPauseLoop"
                 },
                 {
                     "Address": 508,
@@ -24376,7 +24487,7 @@
                 {
                     "Address": 528,
                     "LabelType": 2,
-                    "Name": "label_9A10"
+                    "Name": "FindObjectInUseSlotLoop"
                 },
                 {
                     "Address": 656,
@@ -49414,6 +49525,18 @@
                     "Global": true,
                     "LabelType": 0,
                     "Name": "MapCellStats"
+                },
+                {
+                    "Address": 1010,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F3F2"
+                },
+                {
+                    "Address": 1020,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F3FC"
                 }
             ],
             "PageId": 76
@@ -50161,6 +50284,156 @@
                 }
             ],
             "LabelInfo": [
+                {
+                    "Address": 6,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F406"
+                },
+                {
+                    "Address": 16,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F410"
+                },
+                {
+                    "Address": 26,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F41A"
+                },
+                {
+                    "Address": 36,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F424"
+                },
+                {
+                    "Address": 46,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F42E"
+                },
+                {
+                    "Address": 56,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F438"
+                },
+                {
+                    "Address": 66,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F442"
+                },
+                {
+                    "Address": 76,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F44C"
+                },
+                {
+                    "Address": 86,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F456"
+                },
+                {
+                    "Address": 96,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F460"
+                },
+                {
+                    "Address": 106,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F46A"
+                },
+                {
+                    "Address": 116,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F474"
+                },
+                {
+                    "Address": 126,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F47E"
+                },
+                {
+                    "Address": 136,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F488"
+                },
+                {
+                    "Address": 146,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F492"
+                },
+                {
+                    "Address": 156,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F49C"
+                },
+                {
+                    "Address": 166,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F4A6"
+                },
+                {
+                    "Address": 176,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F4B0"
+                },
+                {
+                    "Address": 186,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F4BA"
+                },
+                {
+                    "Address": 196,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F4C4"
+                },
+                {
+                    "Address": 206,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F4CE"
+                },
+                {
+                    "Address": 216,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F4D8"
+                },
+                {
+                    "Address": 226,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F4E2"
+                },
+                {
+                    "Address": 236,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F4EC"
+                },
+                {
+                    "Address": 246,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F4F6"
+                },
                 {
                     "Address": 256,
                     "Global": true,
