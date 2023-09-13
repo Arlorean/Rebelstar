@@ -10924,7 +10924,8 @@
                 {
                     "Address": 440,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "+1",
+                    "OperandType": 3
                 },
                 {
                     "Address": 443,
@@ -10962,7 +10963,8 @@
                 {
                     "Address": 461,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "-1",
+                    "OperandType": 3
                 },
                 {
                     "Address": 464,
@@ -11000,7 +11002,8 @@
                 {
                     "Address": 482,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "+1",
+                    "OperandType": 3
                 },
                 {
                     "Address": 485,
@@ -11038,7 +11041,8 @@
                 {
                     "Address": 503,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "-1",
+                    "OperandType": 3
                 },
                 {
                     "Address": 506,
@@ -11665,7 +11669,8 @@
                 {
                     "Address": 824,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "View is a max of 88x88 pixels in size",
+                    "OperandType": 3
                 },
                 {
                     "Address": 827,
@@ -12151,6 +12156,16 @@
                     "OperandType": 4
                 },
                 {
+                    "Address": 281,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 307,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 1
+                },
+                {
                     "Address": 368,
                     "ByteSize": 2,
                     "DataType": 2,
@@ -12189,12 +12204,59 @@
                 {
                     "Address": 380,
                     "ByteSize": 2,
-                    "Comment": "Y Difference between Fire Origin and Target",
+                    "Comment": "X pixel difference between Fire Origin and Target",
                     "DataType": 2,
                     "OperandType": 3
                 },
                 {
                     "Address": 382,
+                    "ByteSize": 2,
+                    "Comment": "Y pixel difference between Fire Origin and Target",
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 384,
+                    "ByteSize": 2,
+                    "Comment": "+1 or -1 (65536)",
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 386,
+                    "ByteSize": 2,
+                    "Comment": "+1 or -1 (65536)",
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 388,
+                    "ByteSize": 2,
+                    "Comment": "+1,0,-1 (65536)",
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 390,
+                    "ByteSize": 2,
+                    "Comment": "+1,0,-1 (65536)",
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 392,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 394,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 396,
                     "ByteSize": 2,
                     "DataType": 2,
                     "OperandType": 3
@@ -12267,10 +12329,22 @@
                     "Name": "label_7CD5"
                 },
                 {
+                    "Address": 217,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "FireLineBuffer"
+                },
+                {
+                    "Address": 305,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_7D31"
+                },
+                {
                     "Address": 307,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7D33"
+                    "Name": "FireLineBufferPointer"
                 },
                 {
                     "Address": 309,
@@ -12284,12 +12358,14 @@
                 },
                 {
                     "Address": 368,
+                    "Comment": "In global pixel coords",
                     "Global": true,
                     "LabelType": 0,
                     "Name": "FireSourcePixelPositionX"
                 },
                 {
                     "Address": 370,
+                    "Comment": "In gloabl pixel coords",
                     "Global": true,
                     "LabelType": 0,
                     "Name": "FireSourcePixelPositionY"
@@ -12299,82 +12375,82 @@
                     "Comment": "In global pixel coords",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireTargetPixelPositionXCopy"
+                    "Name": "FireTargetPixelPositionX"
                 },
                 {
                     "Address": 374,
                     "Comment": "In global pixel coords",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireTargetPixelPositionYCopy"
+                    "Name": "FireTargetPixelPositionY"
                 },
                 {
                     "Address": 376,
                     "Comment": "In view relative pixels",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireOriginPixelPositionXCopy"
+                    "Name": "FireSourceViewPixelPositionX"
                 },
                 {
                     "Address": 378,
                     "Comment": "In view relative pixels",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireOriginPixelPositionYCopy"
+                    "Name": "FireSourceViewPixelPositionY"
                 },
                 {
                     "Address": 380,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireTargetPixelOffsetX"
+                    "Name": "FireLineLengthX"
                 },
                 {
                     "Address": 382,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireTargetPixelOffsetY"
+                    "Name": "FireLineLengthY"
                 },
                 {
                     "Address": 384,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7D80"
+                    "Name": "FireLineYDirection"
                 },
                 {
                     "Address": 386,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7D82"
+                    "Name": "FireLineXDirection"
                 },
                 {
                     "Address": 388,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7D84"
+                    "Name": "FireLineStepY"
                 },
                 {
                     "Address": 390,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7D86"
+                    "Name": "FireLineStepX"
                 },
                 {
                     "Address": 392,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7D88"
+                    "Name": "FireLineLengthLongest_Halved"
                 },
                 {
                     "Address": 394,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7D8A"
+                    "Name": "FireLineLengthLongest"
                 },
                 {
                     "Address": 396,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7D8C"
+                    "Name": "FireLineLengthShortest"
                 },
                 {
                     "Address": 398,
@@ -12396,7 +12472,7 @@
                 {
                     "Address": 425,
                     "LabelType": 1,
-                    "Name": "function_7DA9"
+                    "Name": "CalculateFireLineDirection"
                 },
                 {
                     "Address": 448,
@@ -12419,9 +12495,14 @@
                     "Name": "label_7DFD"
                 },
                 {
+                    "Address": 521,
+                    "LabelType": 2,
+                    "Name": "FireLineLengthXIsLongest"
+                },
+                {
                     "Address": 547,
                     "LabelType": 2,
-                    "Name": "label_7E23"
+                    "Name": "FireLineLengthYIsLongest"
                 },
                 {
                     "Address": 571,
@@ -12431,7 +12512,7 @@
                 {
                     "Address": 597,
                     "LabelType": 1,
-                    "Name": "function_7E55"
+                    "Name": "ExecutingTheShotLogicOfSomeKind"
                 },
                 {
                     "Address": 605,
@@ -12476,7 +12557,7 @@
                 {
                     "Address": 818,
                     "LabelType": 1,
-                    "Name": "function_7F32"
+                    "Name": "ClearFireLineBuffer"
                 },
                 {
                     "Address": 832,
@@ -14754,14 +14835,14 @@
                     "Comment": "In global pixel space",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireTargetPixelPositionX"
+                    "Name": "FireCursorPixelPositionX"
                 },
                 {
                     "Address": 314,
                     "Comment": "In global pixel space",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireTargetPixelPositionY"
+                    "Name": "FireCursorPixelPositionY"
                 },
                 {
                     "Address": 316,
