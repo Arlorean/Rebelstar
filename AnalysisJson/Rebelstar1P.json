@@ -3243,6 +3243,7 @@
                 {
                     "Address": 68,
                     "ByteSize": 2,
+                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
@@ -3268,7 +3269,6 @@
                 {
                     "Address": 78,
                     "ByteSize": 2,
-                    "Comment": "Get random number from [0-100)",
                     "DataType": 2
                 },
                 {
@@ -12151,6 +12151,18 @@
                     "OperandType": 4
                 },
                 {
+                    "Address": 368,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 370,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
                     "Address": 372,
                     "ByteSize": 2,
                     "DataType": 2,
@@ -12164,10 +12176,27 @@
                 },
                 {
                     "Address": 376,
+                    "ByteSize": 2,
+                    "DataType": 2,
                     "OperandType": 3
                 },
                 {
                     "Address": 378,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 380,
+                    "ByteSize": 2,
+                    "Comment": "Y Difference between Fire Origin and Target",
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 382,
+                    "ByteSize": 2,
+                    "DataType": 2,
                     "OperandType": 3
                 },
                 {
@@ -12257,13 +12286,13 @@
                     "Address": 368,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7D70"
+                    "Name": "FireSourcePixelPositionX"
                 },
                 {
                     "Address": 370,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7D72"
+                    "Name": "FireSourcePixelPositionY"
                 },
                 {
                     "Address": 372,
@@ -12297,13 +12326,13 @@
                     "Address": 380,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7D7C"
+                    "Name": "FireTargetPixelOffsetX"
                 },
                 {
                     "Address": 382,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7D7E"
+                    "Name": "FireTargetPixelOffsetY"
                 },
                 {
                     "Address": 384,
@@ -13201,44 +13230,45 @@
                 {
                     "Address": 492,
                     "ByteSize": 1,
-                    "Comment": "B=%CHanceToHit"
+                    "Comment": "B=%CHanceToHit - e.g. 20% for Elane F (WS=4) Laser Gun snap shot "
                 },
                 {
                     "Address": 493,
                     "ByteSize": 2,
-                    "Comment": "A=55h (85)"
+                    "Comment": "A=85"
                 },
                 {
                     "Address": 495,
                     "ByteSize": 1,
-                    "Comment": "A=85+%ChanceToHit"
+                    "Comment": "A=85+%ChanceToHit - e.g. 105%"
                 },
                 {
                     "Address": 496,
                     "ByteSize": 2,
-                    "Comment": "B=%ChanceToHit / 2"
+                    "Comment": "B=%ChanceToHit / 2 - e.g. 10%"
                 },
                 {
                     "Address": 498,
                     "ByteSize": 1,
-                    "Comment": "A=85+3*(%ChanceToHit)/2"
+                    "Comment": "A=85+3*(%ChanceToHit)/2 - e.g. 115%"
                 },
                 {
                     "Address": 499,
                     "ByteSize": 3,
+                    "Comment": "e.g. 115%",
                     "OperandType": 1
                 },
                 {
                     "Address": 502,
                     "ByteSize": 3,
-                    "Comment": "Get Random number from 0 to (85+3*(%ChanceToHit)/2",
+                    "Comment": "Get Random number from [0,(85+3*(%ChanceToHit)/2) - e.g. [0,115) in an example A=30",
                     "Flags": 8,
                     "OperandType": 2
                 },
                 {
                     "Address": 505,
                     "ByteSize": 2,
-                    "Comment": "Add to random number 41h (65)"
+                    "Comment": "Add 65 to random number - e.g. [65,180) in an example 95"
                 },
                 {
                     "Address": 507,
@@ -13246,11 +13276,13 @@
                 },
                 {
                     "Address": 509,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "e.g. DE=RAND[65,180) in an example 95"
                 },
                 {
                     "Address": 510,
                     "ByteSize": 3,
+                    "Comment": "e.g. 1683",
                     "OperandType": 1
                 },
                 {
@@ -13276,7 +13308,7 @@
                 {
                     "Address": 523,
                     "ByteSize": 2,
-                    "Comment": "Divide HL by 8"
+                    "Comment": "Divide HL by 8 - e.g. 210"
                 },
                 {
                     "Address": 525,
@@ -13288,7 +13320,8 @@
                 },
                 {
                     "Address": 528,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "e.g. HL=210 - RAND[65,180) in an example 210-95=115"
                 },
                 {
                     "Address": 530,
@@ -13302,11 +13335,13 @@
                 {
                     "Address": 533,
                     "ByteSize": 2,
+                    "Comment": "C=INT(HL/DE) - e.g. 2",
                     "OperandType": 2
                 },
                 {
                     "Address": 535,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "HL=Remainder of DIV(HL/DE)"
                 },
                 {
                     "Address": 536,
@@ -13314,7 +13349,8 @@
                 },
                 {
                     "Address": 538,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "DE=DE/2 e.g. DE= RAND[65,180]/2 is an example 95/2 = 47"
                 },
                 {
                     "Address": 540,
@@ -13322,16 +13358,19 @@
                 },
                 {
                     "Address": 541,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Subtract half to see if we should round up or not"
                 },
                 {
                     "Address": 543,
                     "ByteSize": 2,
+                    "Comment": "Jump ahead if we should not round up",
                     "OperandType": 2
                 },
                 {
                     "Address": 545,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Round up to next character - e.g. C=3"
                 },
                 {
                     "Address": 546,
@@ -13339,7 +13378,8 @@
                 },
                 {
                     "Address": 548,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "DE=C - e.g. DE=3"
                 },
                 {
                     "Address": 549,
@@ -13370,11 +13410,13 @@
                 {
                     "Address": 562,
                     "ByteSize": 2,
+                    "Comment": "Head or Tails?",
                     "OperandType": 2
                 },
                 {
                     "Address": 564,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Add Random Pixel Offset"
                 },
                 {
                     "Address": 565,
@@ -13386,7 +13428,8 @@
                 },
                 {
                     "Address": 567,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Subtract Random Pixel Offset"
                 },
                 {
                     "Address": 569,
@@ -14261,6 +14304,24 @@
                     "OperandType": 3
                 },
                 {
+                    "Address": 570,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 572,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 574,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
                     "Address": 576,
                     "OperandType": 3
                 },
@@ -14734,17 +14795,17 @@
                 {
                     "Address": 489,
                     "LabelType": 1,
-                    "Name": "function_81E9"
+                    "Name": "OffsetAxisRandomlyInto_HL"
                 },
                 {
                     "Address": 527,
                     "LabelType": 2,
-                    "Name": "label_820F"
+                    "Name": "CalculateRandomPixelOffsetDivisionLoop"
                 },
                 {
                     "Address": 535,
                     "LabelType": 2,
-                    "Name": "label_8217"
+                    "Name": "RandomPixelOffsetCalculated"
                 },
                 {
                     "Address": 546,
@@ -14752,27 +14813,35 @@
                     "Name": "label_8222"
                 },
                 {
+                    "Address": 564,
+                    "LabelType": 2,
+                    "Name": "Heads"
+                },
+                {
                     "Address": 566,
                     "LabelType": 2,
-                    "Name": "label_8236"
+                    "Name": "Tails"
                 },
                 {
                     "Address": 570,
+                    "Comment": "2*Max(OffsetX,OffsetY) + Min(OffsetX,OffsetY) - not sure why yet but this sems to be a ray that goes a bit past the intended target",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_823A"
+                    "Name": "LengthOfFireLine"
                 },
                 {
                     "Address": 572,
+                    "Comment": "This is larger, the more offtarget the shot was (the further the RNG was from the %OnTarget ",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_823C"
+                    "Name": "MultipleOfLengthOfFireLine"
                 },
                 {
                     "Address": 574,
+                    "Comment": "Global pixel value - X or Y depending on call",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_823E"
+                    "Name": "AxisPixelPositionToRandomlyOffset"
                 },
                 {
                     "Address": 576,
@@ -14806,6 +14875,12 @@
                     "Global": true,
                     "LabelType": 0,
                     "Name": "ViewStartCharacterPositionXY"
+                },
+                {
+                    "Address": 697,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_82B9"
                 },
                 {
                     "Address": 698,
@@ -23706,11 +23781,13 @@
                 },
                 {
                     "Address": 647,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "HL=TargetPixelOffsetX, C=(TargetX>SourceX)"
                 },
                 {
                     "Address": 649,
                     "ByteSize": 2,
+                    "Comment": "If TargetX > SourceX (i.e. target is East), jump ahead",
                     "OperandType": 2
                 },
                 {
@@ -23762,11 +23839,13 @@
                 },
                 {
                     "Address": 677,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "HL=TargetPixelOffsetY, C=(TargetY>SourceY)"
                 },
                 {
                     "Address": 679,
                     "ByteSize": 2,
+                    "Comment": "If TargetY > SourceY (i.e. target is South), jump ahead",
                     "OperandType": 2
                 },
                 {
@@ -23818,7 +23897,8 @@
                 },
                 {
                     "Address": 707,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "C=(TargetOffsetX > TargetOffsetY)"
                 },
                 {
                     "Address": 709,
@@ -23841,7 +23921,8 @@
                 },
                 {
                     "Address": 719,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "HL=TargetOffsetY*2+TargetOffsetX"
                 },
                 {
                     "Address": 720,
@@ -23869,7 +23950,8 @@
                 },
                 {
                     "Address": 733,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "HL=TargetOffsetX*2+TargetOffsetY"
                 },
                 {
                     "Address": 734,
@@ -23879,19 +23961,23 @@
                 {
                     "Address": 737,
                     "ByteSize": 3,
+                    "Comment": "e.g. 64",
                     "OperandType": 1
                 },
                 {
                     "Address": 740,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "A=%OffTarget / 2 - e.g. 32"
                 },
                 {
                     "Address": 742,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "A=A+1 - e.g. 33"
                 },
                 {
                     "Address": 743,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "B=A - e.g. 33"
                 },
                 {
                     "Address": 744,
@@ -23910,6 +23996,7 @@
                 {
                     "Address": 752,
                     "ByteSize": 2,
+                    "Comment": "HL=B*LengthOfFireLine - e.g.33*51=1683 (XOffset=17,YOffset=17)",
                     "OperandType": 2
                 },
                 {
@@ -23925,6 +24012,7 @@
                 {
                     "Address": 760,
                     "ByteSize": 3,
+                    "Comment": "Used in the OffsetAxisRandomlyInto_HL function",
                     "OperandType": 1
                 },
                 {
@@ -23936,6 +24024,7 @@
                 {
                     "Address": 766,
                     "ByteSize": 3,
+                    "Comment": "Store new target pixel X with random offset",
                     "OperandType": 1
                 },
                 {
@@ -23946,6 +24035,7 @@
                 {
                     "Address": 772,
                     "ByteSize": 3,
+                    "Comment": "Used in the OffsetAxisRandomlyInto_HL function",
                     "OperandType": 1
                 },
                 {
@@ -23957,11 +24047,14 @@
                 {
                     "Address": 778,
                     "ByteSize": 3,
+                    "Comment": "Store new target pixel Y with random offset",
                     "OperandType": 1
                 },
                 {
                     "Address": 781,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Flashing,Bright,Yellow On Red",
+                    "OperandType": 5
                 },
                 {
                     "Address": 783,
@@ -23971,7 +24064,8 @@
                 {
                     "Address": 786,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "X=24,Y=10",
+                    "OperandType": 4
                 },
                 {
                     "Address": 789,
@@ -23996,7 +24090,9 @@
                 },
                 {
                     "Address": 799,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Flashing,Bright,CyanOnBlue",
+                    "OperandType": 5
                 },
                 {
                     "Address": 801,
@@ -24016,7 +24112,7 @@
                 {
                     "Address": 810,
                     "ByteSize": 2,
-                    "Comment": "Show Message 25h (37)"
+                    "Comment": "Show Message 25h (37) - '***ON***/*TARGET*'"
                 },
                 {
                     "Address": 812,
@@ -24554,29 +24650,50 @@
                     "Name": "ShotOffTarget"
                 },
                 {
+                    "Address": 639,
+                    "LabelType": 2,
+                    "Name": "CalculateFireTargetOffsetX"
+                },
+                {
+                    "Address": 651,
+                    "LabelType": 2,
+                    "Name": "TargetIsWest"
+                },
+                {
                     "Address": 656,
                     "LabelType": 2,
-                    "Name": "label_9A90"
+                    "Name": "TargetIsEast"
                 },
                 {
                     "Address": 669,
                     "LabelType": 2,
-                    "Name": "label_9A9D"
+                    "Name": "CalculateFireTargetOffsetY"
+                },
+                {
+                    "Address": 681,
+                    "LabelType": 2,
+                    "Name": "TargetIsNorth"
                 },
                 {
                     "Address": 686,
                     "LabelType": 2,
-                    "Name": "label_9AAE"
+                    "Name": "TargetIsSouth"
                 },
                 {
                     "Address": 699,
                     "LabelType": 2,
-                    "Name": "label_9ABB"
+                    "Name": "CalculateLengthOfFireLine"
+                },
+                {
+                    "Address": 711,
+                    "Comment": "Could be equal to as well as greater than",
+                    "LabelType": 2,
+                    "Name": "TargetOffsetYGreaterThanX"
                 },
                 {
                     "Address": 725,
                     "LabelType": 2,
-                    "Name": "label_9AD5"
+                    "Name": "TargetOffsetXGreaterThanY"
                 },
                 {
                     "Address": 737,
@@ -24597,7 +24714,7 @@
                 {
                     "Address": 815,
                     "LabelType": 2,
-                    "Name": "label_9B2F"
+                    "Name": "ExecuteShot"
                 },
                 {
                     "Address": 850,
