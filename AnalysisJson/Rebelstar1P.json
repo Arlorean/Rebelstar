@@ -3227,6 +3227,7 @@
                 {
                     "Address": 62,
                     "ByteSize": 2,
+                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
@@ -3267,6 +3268,7 @@
                 {
                     "Address": 78,
                     "ByteSize": 2,
+                    "Comment": "Get random number from [0-100)",
                     "DataType": 2
                 },
                 {
@@ -14259,6 +14261,10 @@
                     "OperandType": 3
                 },
                 {
+                    "Address": 576,
+                    "OperandType": 3
+                },
+                {
                     "Address": 696,
                     "Comment": "Y",
                     "OperandType": 3
@@ -14772,7 +14778,7 @@
                     "Address": 576,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_8240"
+                    "Name": "OffTargetByPercentageAmount"
                 },
                 {
                     "Address": 577,
@@ -23602,7 +23608,7 @@
                 {
                     "Address": 599,
                     "ByteSize": 2,
-                    "Comment": "A=71 decimal"
+                    "Comment": "White on Black"
                 },
                 {
                     "Address": 601,
@@ -23632,12 +23638,14 @@
                 {
                     "Address": 616,
                     "ByteSize": 3,
+                    "Comment": "Draw firing unit in white on black",
                     "Flags": 8,
                     "OperandType": 2
                 },
                 {
                     "Address": 619,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "OperandType": 3
                 },
                 {
                     "Address": 621,
@@ -23647,6 +23655,7 @@
                 {
                     "Address": 624,
                     "ByteSize": 3,
+                    "Comment": "Get random number from [0-100)",
                     "Flags": 8,
                     "OperandType": 2
                 },
@@ -23668,12 +23677,12 @@
                 {
                     "Address": 634,
                     "ByteSize": 1,
-                    "Comment": "Subtract chance to hit from random number"
+                    "Comment": "A=RNG-%ChanceOnTarget (Subtract chance to hit from random number), e.g. RND=83 , LaserGun 20% snap (40% aim) ChanceOnTarget = 63 snap"
                 },
                 {
                     "Address": 635,
                     "ByteSize": 1,
-                    "Comment": "A=RNG-%ChanceOnTarget+1"
+                    "Comment": "A=RNG-%ChanceOnTarget+1, e.g. RNG=83, LaserGun 20% snap (40% aim) OnTarget = 64 snap"
                 },
                 {
                     "Address": 636,
@@ -24538,6 +24547,11 @@
                     "Address": 528,
                     "LabelType": 2,
                     "Name": "FindObjectInUseSlotLoop"
+                },
+                {
+                    "Address": 634,
+                    "LabelType": 2,
+                    "Name": "ShotOffTarget"
                 },
                 {
                     "Address": 656,
