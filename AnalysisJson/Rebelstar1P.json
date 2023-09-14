@@ -3289,12 +3289,12 @@
                 {
                     "Address": 56,
                     "ByteSize": 2,
+                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
                     "Address": 58,
                     "ByteSize": 2,
-                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
@@ -3305,22 +3305,24 @@
                 {
                     "Address": 62,
                     "ByteSize": 2,
+                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
                     "Address": 64,
                     "ByteSize": 2,
-                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
                     "Address": 66,
                     "ByteSize": 2,
+                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
                     "Address": 68,
                     "ByteSize": 2,
+                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
@@ -9372,7 +9374,7 @@
                 {
                     "Address": 652,
                     "ByteSize": 1,
-                    "Comment": "HL=ActionPointsMax"
+                    "Comment": "HL=ActionPointsMax or DamageToUnit"
                 },
                 {
                     "Address": 653,
@@ -9385,7 +9387,7 @@
                 {
                     "Address": 655,
                     "ByteSize": 1,
-                    "Comment": "HL=8*ActionPointsMax"
+                    "Comment": "HL=8*(ActionPointsMax or DamageToUnit)"
                 },
                 {
                     "Address": 656,
@@ -9394,7 +9396,7 @@
                 {
                     "Address": 658,
                     "ByteSize": 1,
-                    "Comment": "DE=WeaponStat06 or WeaponStat07 (Aimed or Snap shot factor)"
+                    "Comment": "DE=(Aimed/Snap AP Factor Weapon[6/7]) or ConstitutionMax"
                 },
                 {
                     "Address": 659,
@@ -9566,7 +9568,7 @@
                 {
                     "Address": 739,
                     "ByteSize": 2,
-                    "Comment": "If the damage is less than the constitution jump forward",
+                    "Comment": "If still alive, jump forward (constitution>damage ?)",
                     "OperandType": 2
                 },
                 {
@@ -9624,11 +9626,13 @@
                 },
                 {
                     "Address": 766,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "Constitution Max"
                 },
                 {
                     "Address": 769,
                     "ByteSize": 3,
+                    "Comment": "C=INT((Damage*8)/ConsitutionMax)",
                     "Flags": 8,
                     "OperandType": 2
                 },
@@ -9650,11 +9654,13 @@
                 },
                 {
                     "Address": 779,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "A=16*INT((Damage*8)/ConstitutionMax)"
                 },
                 {
                     "Address": 781,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "Is A < Morale ?"
                 },
                 {
                     "Address": 784,
@@ -9662,20 +9668,29 @@
                     "OperandType": 2
                 },
                 {
+                    "Address": 786,
+                    "ByteSize": 3,
+                    "Comment": "Clamp morale loss to no more than morale (i.e. don't let it go negative)"
+                },
+                {
                     "Address": 789,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "B=MoraleLoss"
                 },
                 {
                     "Address": 790,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "A=Morale"
                 },
                 {
                     "Address": 793,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "A=Morale-MoraleLoss"
                 },
                 {
                     "Address": 794,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "Store new lower Morale value"
                 },
                 {
                     "Address": 797,
@@ -10347,13 +10362,14 @@
                 },
                 {
                     "Address": 650,
+                    "Comment": "C=INT((A*8)/B) - remainder is dropped and not rounded up",
                     "LabelType": 1,
-                    "Name": "CalculateShotActionPoints_APMax_A_WeaponShotFactor_B_Returns_C"
+                    "Name": "Calculate_A*8_/_B_Returns_C"
                 },
                 {
                     "Address": 662,
                     "LabelType": 2,
-                    "Name": "label_7A96"
+                    "Name": "DivisionLoop"
                 },
                 {
                     "Address": 668,
@@ -10392,7 +10408,7 @@
                 {
                     "Address": 789,
                     "LabelType": 2,
-                    "Name": "label_7B15"
+                    "Name": "LowerMorale"
                 },
                 {
                     "Address": 798,
@@ -10504,7 +10520,8 @@
                 },
                 {
                     "Address": 87,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Loop (Damage+1)/2 times"
                 },
                 {
                     "Address": 88,
@@ -12501,7 +12518,7 @@
                 {
                     "Address": 88,
                     "LabelType": 2,
-                    "Name": "label_7C58"
+                    "Name": "DamageAnimationAndSoundEffectLoop"
                 },
                 {
                     "Address": 142,
@@ -15091,12 +15108,12 @@
                     "Comment": "; Toggles between 0 and 1 so it flashes",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "DisplayFireModeCursor"
+                    "Name": "FlashFireModeCursor"
                 },
                 {
                     "Address": 138,
                     "LabelType": 2,
-                    "Name": "label_808A"
+                    "Name": "HandleFireModeCursorMovement(?)"
                 },
                 {
                     "Address": 163,
@@ -15907,7 +15924,7 @@
                 {
                     "Address": 261,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "OperandType": 3
                 },
                 {
                     "Address": 264,
@@ -15990,7 +16007,7 @@
                 {
                     "Address": 302,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "OperandType": 3
                 },
                 {
                     "Address": 305,
@@ -16060,7 +16077,8 @@
                 },
                 {
                     "Address": 331,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Show Selection Cursor and hide map element"
                 },
                 {
                     "Address": 333,
@@ -16095,7 +16113,7 @@
                 {
                     "Address": 347,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "OperandType": 3
                 },
                 {
                     "Address": 350,
@@ -16104,7 +16122,9 @@
                 },
                 {
                     "Address": 353,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Cyan on Black",
+                    "OperandType": 5
                 },
                 {
                     "Address": 355,
@@ -16113,7 +16133,8 @@
                 },
                 {
                     "Address": 358,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "4: S=SELECT,0=END TURN, N=NEXT UNIT, I=INFO, J=CENTRE"
                 },
                 {
                     "Address": 360,
@@ -16175,7 +16196,8 @@
                 },
                 {
                     "Address": 385,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Hide Selection Cursor and show map element"
                 },
                 {
                     "Address": 387,
@@ -17018,7 +17040,9 @@
                 },
                 {
                     "Address": 777,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Bright, White on Black",
+                    "OperandType": 5
                 },
                 {
                     "Address": 779,
@@ -17038,6 +17062,7 @@
                 {
                     "Address": 788,
                     "ByteSize": 3,
+                    "Comment": "Draw map cell selection cursor",
                     "Flags": 8,
                     "OperandType": 2
                 },
@@ -17095,6 +17120,7 @@
                 {
                     "Address": 815,
                     "ByteSize": 3,
+                    "Comment": "Draw the map element where the selection cursor was, making it flash between the two",
                     "Flags": 8,
                     "OperandType": 2
                 },
@@ -17720,6 +17746,20 @@
                     "Comment": "X"
                 },
                 {
+                    "Address": 229,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 231,
+                    "Comment": "0=Off (Draw Map element), 1=On (Draw cursor)"
+                },
+                {
+                    "Address": 573,
+                    "OperandType": 3
+                },
+                {
                     "Address": 574,
                     "Comment": "Set to A7h (167) when in fire mode"
                 },
@@ -17778,9 +17818,10 @@
                 },
                 {
                     "Address": 221,
+                    "Comment": "0=No, 1=Yes (Nothing selected, free moving cursor)",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_84DD"
+                    "Name": "IsSelectionCursorMode"
                 },
                 {
                     "Address": 222,
@@ -17817,16 +17858,16 @@
                 },
                 {
                     "Address": 229,
-                    "Comment": "Really not sure about this...",
+                    "Comment": "This decrements From 65000 until it gets to XXX and then the cursor flashes to/from the map element/selection cursor",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "ValueIs0001"
+                    "Name": "FlashSelectionCursorCounter"
                 },
                 {
                     "Address": 231,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "ValueIs00"
+                    "Name": "FlashSelectionCursor"
                 },
                 {
                     "Address": 232,
@@ -17904,7 +17945,7 @@
                 {
                     "Address": 401,
                     "LabelType": 1,
-                    "Name": "function_8591"
+                    "Name": "HandleMoveKeysBeingPressed"
                 },
                 {
                     "Address": 417,
@@ -17948,9 +17989,10 @@
                 },
                 {
                     "Address": 573,
+                    "Comment": "/0=?, 1=?",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_863D"
+                    "Name": "SomethingKeyPressRelatedFlag"
                 },
                 {
                     "Address": 574,
@@ -18007,7 +18049,7 @@
                 {
                     "Address": 710,
                     "LabelType": 1,
-                    "Name": "function_86C6"
+                    "Name": "MoveKeyWasPressed"
                 },
                 {
                     "Address": 734,
@@ -18022,12 +18064,12 @@
                 {
                     "Address": 758,
                     "LabelType": 2,
-                    "Name": "label_86F6"
+                    "Name": "FlashCursorPauseLoop"
                 },
                 {
                     "Address": 764,
                     "LabelType": 1,
-                    "Name": "function_86FC"
+                    "Name": "DrawSelectionCursor"
                 },
                 {
                     "Address": 792,
@@ -18037,7 +18079,7 @@
                 {
                     "Address": 806,
                     "LabelType": 1,
-                    "Name": "function_8726"
+                    "Name": "DrawMapElementAtCursor"
                 },
                 {
                     "Address": 819,
@@ -23795,6 +23837,7 @@
                 {
                     "Address": 448,
                     "ByteSize": 3,
+                    "Comment": "Report 'NOT ENOUGH ACTION POINTS' if needed",
                     "Flags": 8,
                     "OperandType": 2
                 },
@@ -25190,7 +25233,7 @@
                 {
                     "Address": 992,
                     "LabelType": 2,
-                    "Name": "label_9BE0"
+                    "Name": "PostDamagePauseLoop"
                 }
             ],
             "PageId": 54
@@ -25849,6 +25892,10 @@
                 }
             ],
             "DataInfo": [
+                {
+                    "Address": 38,
+                    "Comment": "0=Not Shooting, 1=Shooting"
+                },
                 {
                     "Address": 47,
                     "DataType": 5
@@ -26619,13 +26666,13 @@
                 {
                     "Address": 28,
                     "LabelType": 2,
-                    "Name": "label_9C1C"
+                    "Name": "StillExecutingShot"
                 },
                 {
                     "Address": 38,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_9C26"
+                    "Name": "ExecutingShotFlag"
                 },
                 {
                     "Address": 291,
@@ -28449,6 +28496,12 @@
                     "Name": "function_A551"
                 },
                 {
+                    "Address": 521,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "SoundHitOnTarget"
+                },
+                {
                     "Address": 631,
                     "Global": true,
                     "LabelType": 0,
@@ -28492,12 +28545,12 @@
                 {
                     "Address": 783,
                     "LabelType": 1,
-                    "Name": "PlaySoundAtAddress_HL"
+                    "Name": "PlaySoundCopiedIntoBufferFrom_HL"
                 },
                 {
                     "Address": 786,
                     "LabelType": 1,
-                    "Name": "function_A712"
+                    "Name": "PlaySoundInBuffer"
                 },
                 {
                     "Address": 790,
