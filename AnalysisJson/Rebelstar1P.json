@@ -1314,6 +1314,83 @@
             "Height": 1,
             "IgnoreCharacter": 0,
             "Width": 10
+        },
+        {
+            "AddressRef": 2974547971,
+            "CharacterSetRef": 65535,
+            "Height": 1,
+            "IgnoreCharacter": 0,
+            "Width": 8
+        },
+        {
+            "AddressRef": 2975072259,
+            "CharacterSetRef": 65535,
+            "Height": 1,
+            "IgnoreCharacter": 0,
+            "Width": 8
+        },
+        {
+            "AddressRef": 2975596547,
+            "CharacterSetRef": 65535,
+            "Height": 1,
+            "IgnoreCharacter": 0,
+            "Width": 8
+        },
+        {
+            "AddressRef": 2976120835,
+            "CharacterSetRef": 65535,
+            "Height": 1,
+            "IgnoreCharacter": 0,
+            "Width": 8
+        },
+        {
+            "AddressRef": 2976645123,
+            "CharacterSetRef": 65535,
+            "Height": 1,
+            "IgnoreCharacter": 0,
+            "Width": 8
+        },
+        {
+            "AddressRef": 2977169411,
+            "CharacterSetRef": 65535,
+            "Height": 1,
+            "IgnoreCharacter": 0,
+            "Width": 8
+        },
+        {
+            "AddressRef": 2977693699,
+            "CharacterSetRef": 65535,
+            "Height": 1,
+            "IgnoreCharacter": 0,
+            "Width": 8
+        },
+        {
+            "AddressRef": 2978217987,
+            "CharacterSetRef": 65535,
+            "Height": 1,
+            "IgnoreCharacter": 0,
+            "Width": 8
+        },
+        {
+            "AddressRef": 2978742275,
+            "CharacterSetRef": 65535,
+            "Height": 1,
+            "IgnoreCharacter": 0,
+            "Width": 8
+        },
+        {
+            "AddressRef": 2979266563,
+            "CharacterSetRef": 65535,
+            "Height": 1,
+            "IgnoreCharacter": 0,
+            "Width": 8
+        },
+        {
+            "AddressRef": 2979790851,
+            "CharacterSetRef": 65535,
+            "Height": 1,
+            "IgnoreCharacter": 0,
+            "Width": 8
         }
     ],
     "Pages": [
@@ -3239,7 +3316,6 @@
                 {
                     "Address": 66,
                     "ByteSize": 2,
-                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
@@ -9243,7 +9319,7 @@
                 {
                     "Address": 636,
                     "ByteSize": 1,
-                    "Comment": "A=Weapon stat 0Ch - e.g. Proton is 10"
+                    "Comment": "A=Weapon stat 0Ch (12) - e.g. LaserGun=2, Proton=10"
                 },
                 {
                     "Address": 637,
@@ -9256,7 +9332,7 @@
                 {
                     "Address": 639,
                     "ByteSize": 1,
-                    "Comment": "Multiply by 8 - e.g. Proton is 80"
+                    "Comment": "Multiply by 8 - e.g. LaserGun=16, Proton=80"
                 },
                 {
                     "Address": 640,
@@ -9264,7 +9340,8 @@
                 },
                 {
                     "Address": 642,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "DE=Hit Unit Stat 0Eh (14)"
                 },
                 {
                     "Address": 643,
@@ -9282,7 +9359,7 @@
                 {
                     "Address": 648,
                     "ByteSize": 1,
-                    "Comment": "For proton vs 0 protection = 1Ah (26)"
+                    "Comment": "For proton(10) vs human(0) = 1Ah (26)"
                 },
                 {
                     "Address": 649,
@@ -9355,7 +9432,8 @@
                 },
                 {
                     "Address": 676,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Get random number up to, and including, the max value from the table"
                 },
                 {
                     "Address": 677,
@@ -9366,17 +9444,19 @@
                 {
                     "Address": 680,
                     "ByteSize": 3,
-                    "Comment": "Random number from [0-MaxWeaponmDamage] inclusive",
+                    "Comment": "Random number from [0-MaxWeaponDamage] inclusive",
                     "Flags": 8,
                     "OperandType": 2
                 },
                 {
                     "Address": 683,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Random number from [0-MaxWeaponDamage] inclusive"
                 },
                 {
                     "Address": 684,
                     "ByteSize": 3,
+                    "Comment": "Random number from [0-MaxWeaponDamage] inclusive",
                     "Flags": 8,
                     "OperandType": 2
                 },
@@ -9414,7 +9494,7 @@
                 {
                     "Address": 704,
                     "ByteSize": 3,
-                    "Comment": "Reduce damage by unit Armour stat"
+                    "Comment": "Reduce damage by unit Armour stat, e.g. 12 for a combat droid"
                 },
                 {
                     "Address": 707,
@@ -9492,7 +9572,7 @@
                 {
                     "Address": 741,
                     "ByteSize": 3,
-                    "Comment": "Set damage to be equial to remaing constituion, since damage would have reduced it to below zero"
+                    "Comment": "Set damage to be equal to remaing constituion, since damage would have reduced it to below zero"
                 },
                 {
                     "Address": 744,
@@ -10263,7 +10343,7 @@
                 {
                     "Address": 634,
                     "LabelType": 1,
-                    "Name": "LookupWeaponVsProtecDamage_A"
+                    "Name": "LookupWeaponTypeVsUnitTypeMaxDamage_A"
                 },
                 {
                     "Address": 650,
@@ -24796,12 +24876,12 @@
                 {
                     "Address": 969,
                     "ByteSize": 3,
-                    "Comment": "WeaponDamage(?)"
+                    "Comment": "Weapon Type (2=LaserGun,...,9=Light Sabre,10=Photon)"
                 },
                 {
                     "Address": 972,
                     "ByteSize": 3,
-                    "Comment": "Get some unit stat (Protect?)"
+                    "Comment": "Unit Type (0=Human, 1=Robot)"
                 },
                 {
                     "Address": 975,
@@ -24816,11 +24896,13 @@
                 },
                 {
                     "Address": 981,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Subtract damage lost through distance bullet travelled"
                 },
                 {
                     "Address": 982,
                     "ByteSize": 2,
+                    "Comment": "Jump ahead if damage reduced to less than zero",
                     "OperandType": 2
                 },
                 {
@@ -30285,12 +30367,103 @@
             "PageId": 59
         },
         {
+            "DataInfo": [
+                {
+                    "Address": 332,
+                    "ByteSize": 8,
+                    "CharSetAddressRef": 65535,
+                    "Comment": "Weapon Type 0: ?",
+                    "DataType": 6,
+                    "EmptyCharNo": 0
+                },
+                {
+                    "Address": 340,
+                    "ByteSize": 8,
+                    "CharSetAddressRef": 65535,
+                    "Comment": "Weapon Type 1: ?",
+                    "DataType": 6,
+                    "EmptyCharNo": 0
+                },
+                {
+                    "Address": 348,
+                    "ByteSize": 8,
+                    "CharSetAddressRef": 65535,
+                    "Comment": "Weapon Type 2: Laser Gun",
+                    "DataType": 6,
+                    "EmptyCharNo": 0
+                },
+                {
+                    "Address": 356,
+                    "ByteSize": 8,
+                    "CharSetAddressRef": 65535,
+                    "Comment": "Weapon Type 3: ?",
+                    "DataType": 6,
+                    "EmptyCharNo": 0
+                },
+                {
+                    "Address": 364,
+                    "ByteSize": 8,
+                    "CharSetAddressRef": 65535,
+                    "Comment": "Weapon Type 4: ?",
+                    "DataType": 6,
+                    "EmptyCharNo": 0
+                },
+                {
+                    "Address": 372,
+                    "ByteSize": 8,
+                    "CharSetAddressRef": 65535,
+                    "Comment": "Weapon Type 5: ?",
+                    "DataType": 6,
+                    "EmptyCharNo": 0
+                },
+                {
+                    "Address": 380,
+                    "ByteSize": 8,
+                    "CharSetAddressRef": 65535,
+                    "Comment": "Weapon Type 6: ?",
+                    "DataType": 6,
+                    "EmptyCharNo": 0
+                },
+                {
+                    "Address": 388,
+                    "ByteSize": 8,
+                    "CharSetAddressRef": 65535,
+                    "Comment": "Weapon Type 7: ?",
+                    "DataType": 6,
+                    "EmptyCharNo": 0
+                },
+                {
+                    "Address": 396,
+                    "ByteSize": 8,
+                    "CharSetAddressRef": 65535,
+                    "Comment": "Weapon Type 8: ?",
+                    "DataType": 6,
+                    "EmptyCharNo": 0
+                },
+                {
+                    "Address": 404,
+                    "ByteSize": 8,
+                    "CharSetAddressRef": 65535,
+                    "Comment": "Weapon Type 9: Light Sabre",
+                    "DataType": 6,
+                    "EmptyCharNo": 0
+                },
+                {
+                    "Address": 412,
+                    "ByteSize": 8,
+                    "CharSetAddressRef": 65535,
+                    "Comment": "Weapon Type 10: Photon",
+                    "DataType": 6,
+                    "EmptyCharNo": 0
+                }
+            ],
             "LabelInfo": [
                 {
                     "Address": 332,
+                    "Comment": "[0]=Human, [1]=Robot, [2]=???? (8 bytes per weapon type)",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "WeaponMaxDamageTable"
+                    "Name": "WeaponTypeVsUnitTypeMaxDamageTable"
                 }
             ],
             "PageId": 60
@@ -63980,22 +64153,10 @@
                 },
                 {
                     "Address": 1000,
-                    "Comment": "Table of 10 bytes per map cell",
+                    "Comment": "[7]=Protection (10 bytes per map cell)",
                     "Global": true,
                     "LabelType": 0,
                     "Name": "MapCellStats"
-                },
-                {
-                    "Address": 1010,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F3F2"
-                },
-                {
-                    "Address": 1020,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F3FC"
                 }
             ],
             "PageId": 76
@@ -64743,180 +64904,6 @@
                 }
             ],
             "LabelInfo": [
-                {
-                    "Address": 6,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F406"
-                },
-                {
-                    "Address": 16,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F410"
-                },
-                {
-                    "Address": 26,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F41A"
-                },
-                {
-                    "Address": 36,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F424"
-                },
-                {
-                    "Address": 46,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F42E"
-                },
-                {
-                    "Address": 56,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F438"
-                },
-                {
-                    "Address": 66,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F442"
-                },
-                {
-                    "Address": 76,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F44C"
-                },
-                {
-                    "Address": 86,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F456"
-                },
-                {
-                    "Address": 96,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F460"
-                },
-                {
-                    "Address": 106,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F46A"
-                },
-                {
-                    "Address": 116,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F474"
-                },
-                {
-                    "Address": 126,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F47E"
-                },
-                {
-                    "Address": 136,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F488"
-                },
-                {
-                    "Address": 146,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F492"
-                },
-                {
-                    "Address": 156,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F49C"
-                },
-                {
-                    "Address": 166,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F4A6"
-                },
-                {
-                    "Address": 176,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F4B0"
-                },
-                {
-                    "Address": 186,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F4BA"
-                },
-                {
-                    "Address": 196,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F4C4"
-                },
-                {
-                    "Address": 206,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F4CE"
-                },
-                {
-                    "Address": 216,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F4D8"
-                },
-                {
-                    "Address": 226,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F4E2"
-                },
-                {
-                    "Address": 236,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F4EC"
-                },
-                {
-                    "Address": 246,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F4F6"
-                },
-                {
-                    "Address": 256,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F500"
-                },
-                {
-                    "Address": 266,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F50A"
-                },
-                {
-                    "Address": 276,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F514"
-                },
-                {
-                    "Address": 286,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_F51E"
-                },
                 {
                     "Address": 296,
                     "Global": true,
