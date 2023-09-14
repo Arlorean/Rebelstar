@@ -30688,12 +30688,7 @@
                     "Address": 600,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_B658"
-                },
-                {
-                    "Address": 602,
-                    "LabelType": 2,
-                    "Name": "label_B65A"
+                    "Name": "UnknownUnit2"
                 },
                 {
                     "Address": 640,
@@ -30705,13 +30700,13 @@
                     "Address": 680,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_B6A8"
+                    "Name": "UnknownUnit4"
                 },
                 {
                     "Address": 720,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "UnknownStats"
+                    "Name": "UnknownUnit5"
                 },
                 {
                     "Address": 760,
@@ -30792,13 +30787,13 @@
                     "Address": 920,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_B798"
+                    "Name": "UnknownUnit10"
                 },
                 {
                     "Address": 960,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_B7C0"
+                    "Name": "UnknownUnit11"
                 },
                 {
                     "Address": 1000,
@@ -30841,7 +30836,7 @@
                     "Address": 16,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_B810"
+                    "Name": "UnknownUnit13"
                 },
                 {
                     "Address": 56,
@@ -30853,13 +30848,13 @@
                     "Address": 96,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_B860"
+                    "Name": "UnknownUnit15"
                 },
                 {
                     "Address": 136,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_B888"
+                    "Name": "UnknownUnit16"
                 },
                 {
                     "Address": 176,
@@ -30871,7 +30866,7 @@
                     "Address": 216,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_B8D8"
+                    "Name": "UnknownUnit18"
                 },
                 {
                     "Address": 256,
@@ -30883,13 +30878,19 @@
                     "Address": 296,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_B928"
+                    "Name": "UnknownUnit20"
                 },
                 {
                     "Address": 336,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_B950"
+                    "Name": "UnknownUnit21"
+                },
+                {
+                    "Address": 376,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "UnknownUnit22"
                 }
             ],
             "PageId": 62
