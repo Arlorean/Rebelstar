@@ -27838,7 +27838,8 @@
                 {
                     "Address": 859,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "Initialize FireLineSoundCounter to 0",
+                    "OperandType": 3
                 },
                 {
                     "Address": 862,
@@ -27851,7 +27852,8 @@
                 },
                 {
                     "Address": 867,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Make a sound"
                 },
                 {
                     "Address": 869,
@@ -27901,7 +27903,7 @@
                 {
                     "Address": 889,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "OperandType": 3
                 },
                 {
                     "Address": 892,
@@ -27922,7 +27924,8 @@
                 },
                 {
                     "Address": 899,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Make a sound"
                 },
                 {
                     "Address": 901,
@@ -27965,6 +27968,20 @@
                     "OperandType": 2
                 },
                 {
+                    "Address": 917,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 919,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 922,
+                    "ByteSize": 2,
+                    "OperandType": 2
+                },
+                {
                     "Address": 924,
                     "ByteSize": 3,
                     "OperandType": 1
@@ -27976,9 +27993,48 @@
                 {
                     "Address": 929,
                     "ByteSize": 1
+                },
+                {
+                    "Address": 930,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 932,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 933,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 934,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 935,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 936,
+                    "ByteSize": 2,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 938,
+                    "ByteSize": 1
                 }
             ],
             "DataInfo": [
+                {
+                    "Address": 856,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 857,
+                    "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
                 {
                     "Address": 939,
                     "ByteSize": 2,
@@ -28337,38 +28393,44 @@
                     "Address": 856,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_A758"
+                    "Name": "FireLinePauseCounter"
                 },
                 {
                     "Address": 857,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_A759"
+                    "Name": "FireLineSoundCounter"
                 },
                 {
                     "Address": 859,
+                    "Comment": "This is called for each pixel in the fire line",
                     "LabelType": 1,
-                    "Name": "function_A75B"
+                    "Name": "PlaySoundForFireLinePixel"
                 },
                 {
                     "Address": 865,
                     "LabelType": 2,
-                    "Name": "label_A761"
+                    "Name": "FireSoundLoop1"
                 },
                 {
                     "Address": 873,
                     "LabelType": 2,
-                    "Name": "label_A769"
+                    "Name": "FireSoundPauseLoop1"
                 },
                 {
                     "Address": 905,
                     "LabelType": 2,
-                    "Name": "label_A789"
+                    "Name": "FireSoundPauseLoop2"
                 },
                 {
                     "Address": 924,
                     "LabelType": 2,
-                    "Name": "label_A79C"
+                    "Name": "FireSoundLoopCompletion"
+                },
+                {
+                    "Address": 932,
+                    "LabelType": 2,
+                    "Name": "FireSoundPauseLoop3"
                 },
                 {
                     "Address": 939,
