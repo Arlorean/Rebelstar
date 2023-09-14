@@ -3217,6 +3217,7 @@
                 {
                     "Address": 58,
                     "ByteSize": 2,
+                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
@@ -3227,23 +3228,23 @@
                 {
                     "Address": 62,
                     "ByteSize": 2,
-                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
                     "Address": 64,
                     "ByteSize": 2,
+                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
                     "Address": 66,
                     "ByteSize": 2,
+                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
                     "Address": 68,
                     "ByteSize": 2,
-                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
@@ -11276,7 +11277,7 @@
                 {
                     "Address": 618,
                     "ByteSize": 2,
-                    "Comment": "Is the X view pixel postion is another grid away exactly(?) (88*2=176)?"
+                    "Comment": "Is the X view pixel at the right edge of the grid"
                 },
                 {
                     "Address": 620,
@@ -11292,7 +11293,7 @@
                 {
                     "Address": 626,
                     "ByteSize": 2,
-                    "Comment": "Is the X view pixel postion 255 pixels away exactly(?) (88*?=???)?"
+                    "Comment": "Is the X view pixel at the left edge of the grid"
                 },
                 {
                     "Address": 628,
@@ -11308,7 +11309,7 @@
                 {
                     "Address": 634,
                     "ByteSize": 2,
-                    "Comment": "Is the Y view pixel postion is another grid away exactly(?) (88*2=176)?"
+                    "Comment": "Is the Y view pixel at the bottom edge of the grid"
                 },
                 {
                     "Address": 636,
@@ -11324,7 +11325,7 @@
                 {
                     "Address": 642,
                     "ByteSize": 2,
-                    "Comment": "Is the Y view pixel postion 255 pixels away exactly(?) (88*?=???)?"
+                    "Comment": "Is the Y view pixel at the top edge of the grid"
                 },
                 {
                     "Address": 644,
@@ -11409,6 +11410,7 @@
                 {
                     "Address": 685,
                     "ByteSize": 2,
+                    "Comment": "Explode bullet early if max range hit (Effectively only Blast Torch)",
                     "OperandType": 2
                 },
                 {
@@ -11585,7 +11587,8 @@
                 },
                 {
                     "Address": 764,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "NC if range action points run out, C flag set if weapon bullet action points remain"
                 },
                 {
                     "Address": 765,
@@ -11615,7 +11618,8 @@
                 },
                 {
                     "Address": 777,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Did we reach the end of the fire line buffer?"
                 },
                 {
                     "Address": 779,
@@ -12383,7 +12387,7 @@
                 {
                     "Address": 398,
                     "ByteSize": 2,
-                    "Comment": "The bullet pixel move costs for the firing weapon. Horiz/Vert pixel move=2 points, Diagonal=3 points",
+                    "Comment": "The bullet pixel move costs for the firing weapon (16*WeaponBulletActionPoints). Horiz/Vert pixel move=2 points, Diagonal=3 points",
                     "DataType": 2,
                     "OperandType": 3
                 },
@@ -12596,16 +12600,16 @@
                 },
                 {
                     "Address": 398,
-                    "Comment": "All weapons get 255 action points, apart from the blast torch which gets just 5 (The light sabre has 0 but isn't a range weapon)",
+                    "Comment": "All weapons get 255 action points, apart from the blast torch which gets just 5. Multiply this by 16 pixels to get the final total. (The light sabre has 0 but isn't a range weapon)",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "WeaponBulletActionPoints*16"
+                    "Name": "WeaponBulletPixelActionPoints"
                 },
                 {
                     "Address": 400,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireLineBulletActionPointsSpent"
+                    "Name": "FireLineBulletPixelActionPointsSpent"
                 },
                 {
                     "Address": 402,
@@ -12656,12 +12660,12 @@
                 {
                     "Address": 597,
                     "LabelType": 1,
-                    "Name": "ExecutingTheShotLogicOfSomeKind"
+                    "Name": "TraceFireLineUntilItCollidesOrHitsMaxRange"
                 },
                 {
                     "Address": 605,
                     "LabelType": 2,
-                    "Name": "label_7E5D"
+                    "Name": "DrawAndCollideFireLineLoop"
                 },
                 {
                     "Address": 676,
@@ -12686,7 +12690,7 @@
                 {
                     "Address": 754,
                     "LabelType": 1,
-                    "Name": "function_7EF2"
+                    "Name": "HasTheWeaponBulletMaxRangeBeenHit_NC"
                 },
                 {
                     "Address": 765,
@@ -12696,17 +12700,29 @@
                 {
                     "Address": 772,
                     "LabelType": 2,
-                    "Name": "label_7F04"
+                    "Name": "HitSomethingSoundLoop"
+                },
+                {
+                    "Address": 781,
+                    "LabelType": 2,
+                    "Name": "FireLineBufferEndReached"
                 },
                 {
                     "Address": 787,
                     "LabelType": 2,
-                    "Name": "label_7F13"
+                    "Name": "FireLineBufferEndNotReached"
+                },
+                {
+                    "Address": 792,
+                    "Comment": "This might just advance one more pixel for the blast torch?",
+                    "LabelType": 2,
+                    "Name": "NotExactlySureWhenThisFires(?)"
                 },
                 {
                     "Address": 806,
+                    "Comment": "Unwritten slots have values of 255",
                     "LabelType": 2,
-                    "Name": "label_7F26"
+                    "Name": "SlotsStillLeftInFireBuffer"
                 },
                 {
                     "Address": 818,
@@ -12728,7 +12744,7 @@
                 {
                     "Address": 834,
                     "LabelType": 1,
-                    "Name": "function_7F42"
+                    "Name": "ScrollViewToRight"
                 },
                 {
                     "Address": 847,
@@ -12738,7 +12754,7 @@
                 {
                     "Address": 896,
                     "LabelType": 1,
-                    "Name": "function_7F80"
+                    "Name": "ScrollViewToLeft"
                 },
                 {
                     "Address": 908,
@@ -12753,7 +12769,7 @@
                 {
                     "Address": 951,
                     "LabelType": 1,
-                    "Name": "function_7FB7"
+                    "Name": "ScrollViewDown"
                 },
                 {
                     "Address": 964,
@@ -12768,7 +12784,7 @@
                 {
                     "Address": 1018,
                     "LabelType": 1,
-                    "Name": "function_7FFA"
+                    "Name": "ScrollViewUp"
                 }
             ],
             "PageId": 47
@@ -14588,6 +14604,7 @@
                 },
                 {
                     "Address": 266,
+                    "Comment": "Calculated based on WeaponStats01 and bullet pixel action points spent. Almost always 0 apart from Weapon6",
                     "OperandType": 3
                 },
                 {
@@ -15193,7 +15210,7 @@
                 {
                     "Address": 577,
                     "LabelType": 1,
-                    "Name": "function_8241"
+                    "Name": "GetMapCellHitAddressInto_HL"
                 },
                 {
                     "Address": 616,
@@ -23924,7 +23941,7 @@
                 {
                     "Address": 550,
                     "ByteSize": 3,
-                    "Comment": "Get some weapon stat - 0 for light sabre, 5 for Weapon6 and 255 for all other weapons"
+                    "Comment": "Weapon Bullet Action Points (in map cells)"
                 },
                 {
                     "Address": 553,
@@ -23933,7 +23950,7 @@
                 {
                     "Address": 555,
                     "ByteSize": 1,
-                    "Comment": "HL=WeaponStat02"
+                    "Comment": "HL=WeaponBulletActionPoints"
                 },
                 {
                     "Address": 556,
@@ -23950,12 +23967,12 @@
                 {
                     "Address": 559,
                     "ByteSize": 1,
-                    "Comment": "Multiply Weapon Stat (IX+02h) by 16 - 00FF -> 0FF0 for Photon"
+                    "Comment": "HL=16*WeaponBulletActionPoints (convert to pixel space)"
                 },
                 {
                     "Address": 560,
                     "ByteSize": 3,
-                    "Comment": "Store this stat*16 in memory",
+                    "Comment": "Store the BulletPixelActionPoints in memory",
                     "OperandType": 1
                 },
                 {
@@ -24474,11 +24491,13 @@
                 },
                 {
                     "Address": 821,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Did the fire line terminate by hitting something?"
                 },
                 {
                     "Address": 822,
                     "ByteSize": 3,
+                    "Comment": "If it didn't hit anything jump ahead to NoDamage",
                     "OperandType": 2
                 },
                 {
@@ -24498,7 +24517,8 @@
                 },
                 {
                     "Address": 835,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "BulletAPDamageReduction"
                 },
                 {
                     "Address": 838,
@@ -24522,7 +24542,8 @@
                 },
                 {
                     "Address": 844,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "DE=8*BulletAPDamageReduction, e.g. 255*8 for most weapons = 2040"
                 },
                 {
                     "Address": 845,
@@ -24531,11 +24552,13 @@
                 },
                 {
                     "Address": 848,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Damage Reduction"
                 },
                 {
                     "Address": 850,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Zero carry flag for next operation"
                 },
                 {
                     "Address": 851,
@@ -24548,7 +24571,8 @@
                 },
                 {
                     "Address": 855,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "C=HL/DE - Only Weapon6 affects this as it's DE=6*8=48, so it's damage is reduced by 1 for every 48 Bullet Pixel AP spent or 24 pixels horizontal/vertical, 16 pixels diagonal"
                 },
                 {
                     "Address": 856,
@@ -24572,17 +24596,20 @@
                 },
                 {
                     "Address": 865,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Push map cell hit address onto stack"
                 },
                 {
                     "Address": 866,
                     "ByteSize": 3,
+                    "Comment": "Show cell hit animation",
                     "Flags": 8,
                     "OperandType": 2
                 },
                 {
                     "Address": 869,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Restore map cell hit address from stack"
                 },
                 {
                     "Address": 870,
@@ -24769,7 +24796,7 @@
                 {
                     "Address": 969,
                     "ByteSize": 3,
-                    "Comment": "Get some weapon stat"
+                    "Comment": "WeaponDamage(?)"
                 },
                 {
                     "Address": 972,
@@ -25060,7 +25087,7 @@
                 {
                     "Address": 850,
                     "LabelType": 2,
-                    "Name": "label_9B52"
+                    "Name": "DamageDivisionLoop"
                 },
                 {
                     "Address": 858,
@@ -35843,6 +35870,14 @@
                     "CharSetAddressRef": 65535,
                     "DataType": 6,
                     "EmptyCharNo": 0
+                }
+            ],
+            "LabelInfo": [
+                {
+                    "Address": 752,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "MapElementGraphicsTable"
                 }
             ],
             "PageId": 68
