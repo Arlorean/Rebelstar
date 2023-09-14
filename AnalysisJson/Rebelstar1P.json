@@ -10910,7 +10910,8 @@
                 },
                 {
                     "Address": 420,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Advance on both axes"
                 },
                 {
                     "Address": 421,
@@ -10919,7 +10920,8 @@
                 },
                 {
                     "Address": 424,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Only advance on the longest axis"
                 },
                 {
                     "Address": 425,
@@ -11433,15 +11435,18 @@
                 {
                     "Address": 698,
                     "ByteSize": 3,
+                    "Comment": "0 if shortest length, else +1 or -1 if longest length",
                     "OperandType": 1
                 },
                 {
                     "Address": 701,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Advance Pixel X IF it's the longest length"
                 },
                 {
                     "Address": 702,
                     "ByteSize": 3,
+                    "Comment": "Possibly update Pixel Y",
                     "OperandType": 1
                 },
                 {
@@ -11452,15 +11457,18 @@
                 {
                     "Address": 708,
                     "ByteSize": 3,
+                    "Comment": "0 if shortest length, else +1 or -1 if longest length",
                     "OperandType": 1
                 },
                 {
                     "Address": 711,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Advance Pixel X IF it's the longest length"
                 },
                 {
                     "Address": 712,
                     "ByteSize": 3,
+                    "Comment": "Possibly update Pixel X",
                     "OperandType": 1
                 },
                 {
@@ -11479,6 +11487,7 @@
                 {
                     "Address": 720,
                     "ByteSize": 3,
+                    "Comment": "Add 2 for a horizontal or vertical bullet move",
                     "OperandType": 1
                 },
                 {
@@ -11493,15 +11502,18 @@
                 {
                     "Address": 727,
                     "ByteSize": 3,
+                    "Comment": "+1 or -1 (65535)",
                     "OperandType": 1
                 },
                 {
                     "Address": 730,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Advance Pixel Y"
                 },
                 {
                     "Address": 731,
                     "ByteSize": 3,
+                    "Comment": "Update Pixel Y",
                     "OperandType": 1
                 },
                 {
@@ -11512,15 +11524,18 @@
                 {
                     "Address": 737,
                     "ByteSize": 3,
+                    "Comment": "+1 or -1 (65535)",
                     "OperandType": 1
                 },
                 {
                     "Address": 740,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Advance Pixel X"
                 },
                 {
                     "Address": 741,
                     "ByteSize": 3,
+                    "Comment": "Update Pixel X",
                     "OperandType": 1
                 },
                 {
@@ -11543,6 +11558,7 @@
                 {
                     "Address": 750,
                     "ByteSize": 3,
+                    "Comment": "Add 3 for a diagonal bullet move",
                     "OperandType": 1
                 },
                 {
@@ -12348,6 +12364,7 @@
                 {
                     "Address": 392,
                     "ByteSize": 2,
+                    "Comment": "Starts off at FireLengthLongest/2",
                     "DataType": 2,
                     "OperandType": 3
                 },
@@ -12360,6 +12377,13 @@
                 {
                     "Address": 396,
                     "ByteSize": 2,
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 398,
+                    "ByteSize": 2,
+                    "Comment": "The bullet pixel move costs for the firing weapon. Horiz/Vert pixel move=2 points, Diagonal=3 points",
                     "DataType": 2,
                     "OperandType": 3
                 },
@@ -12556,7 +12580,7 @@
                     "Address": 392,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireLineLengthLongest_Halved"
+                    "Name": "FireLineLengthLongestAccumulator"
                 },
                 {
                     "Address": 394,
@@ -12572,20 +12596,22 @@
                 },
                 {
                     "Address": 398,
+                    "Comment": "All weapons get 255 action points, apart from the blast torch which gets just 5 (The light sabre has 0 but isn't a range weapon)",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "SelectedWeaponStat02*16"
+                    "Name": "WeaponBulletActionPoints*16"
                 },
                 {
                     "Address": 400,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireLineLength(?)"
+                    "Name": "FireLineBulletActionPointsSpent"
                 },
                 {
                     "Address": 402,
+                    "Comment": "Test whether the next pixel in the fire line should advance in both axes or only the longest axis",
                     "LabelType": 1,
-                    "Name": "function_7D92"
+                    "Name": "ShouldFireLineAdvanceOnBothAxis_CF"
                 },
                 {
                     "Address": 425,
@@ -12645,12 +12671,17 @@
                 {
                     "Address": 690,
                     "LabelType": 1,
-                    "Name": "function_7EB2"
+                    "Name": "AdvanceFireLineToNextPixel"
+                },
+                {
+                    "Address": 695,
+                    "LabelType": 2,
+                    "Name": "AdvanceFireLineOnLongestAxisOnly"
                 },
                 {
                     "Address": 724,
                     "LabelType": 2,
-                    "Name": "label_7ED4"
+                    "Name": "AdvanceFireLineOnBothAxis"
                 },
                 {
                     "Address": 754,
