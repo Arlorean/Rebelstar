@@ -17831,12 +17831,6 @@
                     "Name": "ViewCursorPositionXY"
                 },
                 {
-                    "Address": 223,
-                    "Global": true,
-                    "LabelType": 0,
-                    "Name": "data_84DF"
-                },
-                {
                     "Address": 224,
                     "Global": true,
                     "LabelType": 0,
