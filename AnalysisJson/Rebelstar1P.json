@@ -10538,15 +10538,18 @@
                 },
                 {
                     "Address": 151,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "HL=Fire line view pixel Y"
                 },
                 {
                     "Address": 152,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "HL=FireLinePixelY lookup table offset (table of screen addresses)"
                 },
                 {
                     "Address": 153,
                     "ByteSize": 3,
+                    "Comment": "Y view pixel -> Screen address (For X=0)",
                     "OperandType": 1
                 },
                 {
@@ -10563,7 +10566,8 @@
                 },
                 {
                     "Address": 159,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "DE=Screen Address of pixel Y line "
                 },
                 {
                     "Address": 160,
@@ -10588,11 +10592,13 @@
                 },
                 {
                     "Address": 171,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "HL=FireLineViewCharacterX (PixelX/8)"
                 },
                 {
                     "Address": 172,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "HL=Screen address of view CharacterX,PixelY"
                 },
                 {
                     "Address": 173,
@@ -10601,36 +10607,46 @@
                 },
                 {
                     "Address": 176,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Get the bit to set in the screen address, A=[0-7]",
+                    "OperandType": 5
                 },
                 {
                     "Address": 178,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "A=[1-8]"
                 },
                 {
                     "Address": 179,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "B=[1-8]"
                 },
                 {
                     "Address": 180,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Set bit 8 of A to 1 (carry flag)"
                 },
                 {
                     "Address": 181,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "A=0"
                 },
                 {
                     "Address": 183,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Before:A+CF=%1,0000,0000, After: A=%1000,0000"
                 },
                 {
                     "Address": 184,
                     "ByteSize": 2,
+                    "Comment": "Move bit 7 of A into correct pixel position B",
                     "OperandType": 2
                 },
                 {
                     "Address": 186,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "B=Pixel pattern",
+                    "OperandType": 5
                 },
                 {
                     "Address": 187,
@@ -10657,15 +10673,18 @@
                 },
                 {
                     "Address": 198,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "A=Pixel pattern"
                 },
                 {
                     "Address": 199,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "AND pixel pattern with existing screen pixels"
                 },
                 {
                     "Address": 200,
                     "ByteSize": 3,
+                    "Comment": "Store bit pattern",
                     "OperandType": 1
                 },
                 {
@@ -10674,15 +10693,18 @@
                 },
                 {
                     "Address": 204,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "OR pixel pattern with screen pixels"
                 },
                 {
                     "Address": 205,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Store updated pixel back to the screen buffer"
                 },
                 {
                     "Address": 206,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Pixel updated and we're done, on to the next pixel"
                 },
                 {
                     "Address": 207,
@@ -10732,11 +10754,13 @@
                 },
                 {
                     "Address": 315,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Store View Pixel X in buffer"
                 },
                 {
                     "Address": 316,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Move HL to point to the Y value"
                 },
                 {
                     "Address": 317,
@@ -10745,11 +10769,13 @@
                 },
                 {
                     "Address": 320,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Store View Pixel Y in buffer"
                 },
                 {
                     "Address": 321,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Move HL to point to next pixel"
                 },
                 {
                     "Address": 322,
@@ -10758,11 +10784,13 @@
                 },
                 {
                     "Address": 325,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Get Next buffer X value (checking for end of buffer being 254)"
                 },
                 {
                     "Address": 326,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Are we at the end of the buffer (FireLineViewBufferTerminator)"
                 },
                 {
                     "Address": 328,
@@ -11245,7 +11273,8 @@
                 },
                 {
                     "Address": 618,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Is the X view pixel postion is another grid away exactly(?) (88*2=176)?"
                 },
                 {
                     "Address": 620,
@@ -11260,7 +11289,8 @@
                 },
                 {
                     "Address": 626,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Is the X view pixel postion 255 pixels away exactly(?) (88*?=???)?"
                 },
                 {
                     "Address": 628,
@@ -11275,7 +11305,8 @@
                 },
                 {
                     "Address": 634,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Is the Y view pixel postion is another grid away exactly(?) (88*2=176)?"
                 },
                 {
                     "Address": 636,
@@ -11290,7 +11321,8 @@
                 },
                 {
                     "Address": 642,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Is the Y view pixel postion 255 pixels away exactly(?) (88*?=???)?"
                 },
                 {
                     "Address": 644,
@@ -11345,11 +11377,13 @@
                 },
                 {
                     "Address": 672,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Did we hit an existing pixel when drawing the last one?"
                 },
                 {
                     "Address": 673,
                     "ByteSize": 3,
+                    "Comment": "If we didn't hit a pixel, jump forward",
                     "OperandType": 2
                 },
                 {
@@ -11685,6 +11719,33 @@
                     "ByteSize": 1
                 },
                 {
+                    "Address": 834,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 837,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 839,
+                    "ByteSize": 2,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 841,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 843,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 846,
+                    "ByteSize": 1
+                },
+                {
                     "Address": 896,
                     "ByteSize": 3,
                     "OperandType": 1
@@ -11832,6 +11893,24 @@
                     "OperandType": 2
                 },
                 {
+                    "Address": 973,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 975,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 978,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 979,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
                     "Address": 982,
                     "ByteSize": 3,
                     "OperandType": 1
@@ -11904,6 +11983,20 @@
                 {
                     "Address": 1017,
                     "ByteSize": 1
+                },
+                {
+                    "Address": 1018,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 1021,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 1022,
+                    "ByteSize": 2,
+                    "OperandType": 2
                 }
             ],
             "DataInfo": [
@@ -12160,8 +12253,17 @@
                     "OperandType": 1
                 },
                 {
+                    "Address": 305,
+                    "Comment": "Hardcoded check for 254 in loop"
+                },
+                {
+                    "Address": 306,
+                    "Comment": "Hardcoded check for 254 in loop"
+                },
+                {
                     "Address": 307,
                     "ByteSize": 2,
+                    "Comment": "Pointer to current x,y pixel in view space",
                     "DataType": 2,
                     "OperandType": 1
                 },
@@ -12264,7 +12366,16 @@
                 {
                     "Address": 400,
                     "ByteSize": 2,
-                    "DataType": 2
+                    "DataType": 2,
+                    "OperandType": 3
+                },
+                {
+                    "Address": 832,
+                    "Comment": "Starts at 11"
+                },
+                {
+                    "Address": 833,
+                    "Comment": "Starts at 0"
                 }
             ],
             "LabelInfo": [
@@ -12288,35 +12399,36 @@
                     "Address": 142,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7C8E"
+                    "Name": "FireLineViewPixelX"
                 },
                 {
                     "Address": 143,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7C8F"
+                    "Name": "FireLineViewPixelY"
                 },
                 {
                     "Address": 144,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7C90"
+                    "Name": "FireLineBitANDScreenBit"
                 },
                 {
                     "Address": 145,
+                    "Comment": "Starts at zero",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7C91"
+                    "Name": "FireLineDrawCount(?)"
                 },
                 {
                     "Address": 146,
                     "LabelType": 1,
-                    "Name": "function_7C92"
+                    "Name": "DrawNextFireLinePixelToScreen"
                 },
                 {
                     "Address": 183,
                     "LabelType": 2,
-                    "Name": "label_7CB7"
+                    "Name": "CreatePixelScreenByte"
                 },
                 {
                     "Address": 207,
@@ -12330,31 +12442,37 @@
                 },
                 {
                     "Address": 217,
+                    "Comment": "X,Y pixel positions of the line to draw in view space",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireLineBuffer"
+                    "Name": "FireLineViewBuffer"
                 },
                 {
                     "Address": 305,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7D31"
+                    "Name": "FireLineViewBufferTerminator"
                 },
                 {
                     "Address": 307,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "FireLineBufferPointer"
+                    "Name": "FireLineBufferCurrentPixelPointer"
                 },
                 {
                     "Address": 309,
                     "LabelType": 1,
-                    "Name": "function_7D35"
+                    "Name": "StorePixelXYInFireLineViewBuffer"
+                },
+                {
+                    "Address": 330,
+                    "LabelType": 2,
+                    "Name": "AtEndOfFireLineBuffer"
                 },
                 {
                     "Address": 336,
                     "LabelType": 2,
-                    "Name": "label_7D50"
+                    "Name": "NotAtEndOfFireLineBuffer"
                 },
                 {
                     "Address": 368,
@@ -12462,7 +12580,7 @@
                     "Address": 400,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7D90"
+                    "Name": "FireLineLength(?)"
                 },
                 {
                     "Address": 402,
@@ -12520,6 +12638,11 @@
                     "Name": "label_7E5D"
                 },
                 {
+                    "Address": 676,
+                    "LabelType": 2,
+                    "Name": "FireLinePixelHitNothing"
+                },
+                {
                     "Address": 690,
                     "LabelType": 1,
                     "Name": "function_7EB2"
@@ -12537,7 +12660,7 @@
                 {
                     "Address": 765,
                     "LabelType": 2,
-                    "Name": "label_7EFD"
+                    "Name": "FireLinePixelHitSomething"
                 },
                 {
                     "Address": 772,
@@ -12563,18 +12686,23 @@
                     "Address": 832,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7F40"
+                    "Name": "FireCharactersLengthX(?)"
                 },
                 {
                     "Address": 833,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_7F41"
+                    "Name": "FireCharactersLengthY(?)"
                 },
                 {
                     "Address": 834,
                     "LabelType": 1,
                     "Name": "function_7F42"
+                },
+                {
+                    "Address": 847,
+                    "LabelType": 2,
+                    "Name": "label_7F4F"
                 },
                 {
                     "Address": 896,
@@ -12616,6 +12744,97 @@
         },
         {
             "CodeInfo": [
+                {
+                    "Address": 0,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 2,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 5,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 6,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 8,
+                    "ByteSize": 2,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 10,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 13,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 16,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 19,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 22,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 23,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 26,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 29,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 31,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 33,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 35,
+                    "ByteSize": 2
+                },
+                {
+                    "Address": 37,
+                    "ByteSize": 3,
+                    "OperandType": 1
+                },
+                {
+                    "Address": 40,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 41,
+                    "ByteSize": 1
+                },
+                {
+                    "Address": 42,
+                    "ByteSize": 3,
+                    "Flags": 8,
+                    "OperandType": 2
+                },
                 {
                     "Address": 138,
                     "ByteSize": 3,
@@ -14703,6 +14922,16 @@
                 }
             ],
             "LabelInfo": [
+                {
+                    "Address": 6,
+                    "LabelType": 2,
+                    "Name": "label_8006"
+                },
+                {
+                    "Address": 16,
+                    "LabelType": 2,
+                    "Name": "label_8010"
+                },
                 {
                     "Address": 131,
                     "Global": true,
@@ -30612,6 +30841,266 @@
                     "DataType": 5
                 },
                 {
+                    "Address": 712,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 714,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 716,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 718,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 720,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 722,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 724,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 726,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 728,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 730,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 732,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 734,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 736,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 738,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 740,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 742,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 744,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 746,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 748,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 750,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 752,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 754,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 756,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 758,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 760,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 762,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 764,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 766,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 768,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 770,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 772,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 774,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 776,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 778,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 780,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 782,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 784,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 786,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 788,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 790,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 792,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 794,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 796,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 798,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 800,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 802,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 804,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 806,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 808,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 810,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 812,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
+                    "Address": 814,
+                    "ByteSize": 2,
+                    "DataType": 2
+                },
+                {
                     "Address": 816,
                     "Comment": "The first 8 bits of the 00 character",
                     "DataType": 5
@@ -31446,6 +31935,12 @@
                 }
             ],
             "LabelInfo": [
+                {
+                    "Address": 712,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "ScreenPixelLookupTable"
+                },
                 {
                     "Address": 816,
                     "Global": true,
