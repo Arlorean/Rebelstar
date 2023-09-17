@@ -3311,13 +3311,11 @@
                 {
                     "Address": 64,
                     "ByteSize": 2,
-                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
                     "Address": 66,
                     "ByteSize": 2,
-                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
@@ -3329,7 +3327,6 @@
                 {
                     "Address": 70,
                     "ByteSize": 2,
-                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
@@ -28312,7 +28309,7 @@
                 {
                     "Address": 951,
                     "ByteSize": 2,
-                    "Comment": "3:DROID MEND",
+                    "Comment": "3: DROID MEND",
                     "DataType": 2
                 },
                 {
@@ -29492,7 +29489,7 @@
                 {
                     "Address": 259,
                     "ByteSize": 2,
-                    "Comment": "BILLY BRAGG",
+                    "Comment": "86: BILLY BRAGG",
                     "DataType": 2
                 },
                 {
@@ -29504,7 +29501,7 @@
                 {
                     "Address": 263,
                     "ByteSize": 2,
-                    "Comment": "ELANE FREUYH",
+                    "Comment": "87: ELANE FREUYH",
                     "DataType": 2
                 },
                 {
@@ -29516,7 +29513,7 @@
                 {
                     "Address": 267,
                     "ByteSize": 2,
-                    "Comment": "JIM DIGRIZ",
+                    "Comment": "88: JIM DIGRIZ",
                     "DataType": 2
                 },
                 {
@@ -29528,7 +29525,7 @@
                 {
                     "Address": 271,
                     "ByteSize": 2,
-                    "Comment": "JILL",
+                    "Comment": "89: JILL",
                     "DataType": 2
                 },
                 {
@@ -29540,7 +29537,7 @@
                 {
                     "Address": 275,
                     "ByteSize": 2,
-                    "Comment": "KURT LEVINE",
+                    "Comment": "90: KURT LEVINE",
                     "DataType": 2
                 },
                 {
@@ -29552,7 +29549,7 @@
                 {
                     "Address": 279,
                     "ByteSize": 2,
-                    "Comment": "JOEY",
+                    "Comment": "91: JOEY",
                     "DataType": 2
                 },
                 {
@@ -29564,7 +29561,7 @@
                 {
                     "Address": 283,
                     "ByteSize": 2,
-                    "Comment": "TOPPER HENLEY",
+                    "Comment": "92: TOPPER HENLEY",
                     "DataType": 2
                 },
                 {
@@ -29576,7 +29573,7 @@
                 {
                     "Address": 287,
                     "ByteSize": 2,
-                    "Comment": "OBIWAN KENOBI",
+                    "Comment": "93: OBIWAN KENOBI",
                     "DataType": 2
                 },
                 {
@@ -29588,7 +29585,7 @@
                 {
                     "Address": 291,
                     "ByteSize": 2,
-                    "Comment": "JASPER PRUNE",
+                    "Comment": "94: JASPER PRUNE",
                     "DataType": 2
                 },
                 {
@@ -29600,7 +29597,7 @@
                 {
                     "Address": 295,
                     "ByteSize": 2,
-                    "Comment": "NESLSON SMITH",
+                    "Comment": "95: NELSON SMITH",
                     "DataType": 2
                 },
                 {
@@ -29612,7 +29609,7 @@
                 {
                     "Address": 299,
                     "ByteSize": 2,
-                    "Comment": "ZEERA CAMAY",
+                    "Comment": "96: ZEERA CAMAY",
                     "DataType": 2
                 },
                 {
@@ -29624,7 +29621,7 @@
                 {
                     "Address": 303,
                     "ByteSize": 2,
-                    "Comment": "SLARTY BARTFAST",
+                    "Comment": "97: SLARTY BARTFAST",
                     "DataType": 2
                 },
                 {
@@ -29636,6 +29633,7 @@
                 {
                     "Address": 307,
                     "ByteSize": 2,
+                    "Comment": "98: DON CALONI",
                     "DataType": 2
                 },
                 {
@@ -29647,6 +29645,7 @@
                 {
                     "Address": 311,
                     "ByteSize": 2,
+                    "Comment": "99: RITA RUMPOLE",
                     "DataType": 2
                 },
                 {
@@ -29658,6 +29657,7 @@
                 {
                     "Address": 315,
                     "ByteSize": 2,
+                    "Comment": "100: NED NARKY",
                     "DataType": 2
                 },
                 {
@@ -29669,6 +29669,7 @@
                 {
                     "Address": 319,
                     "ByteSize": 2,
+                    "Comment": "101: ZAC DOLITTLE",
                     "DataType": 2
                 },
                 {
@@ -29680,6 +29681,7 @@
                 {
                     "Address": 323,
                     "ByteSize": 2,
+                    "Comment": "102: LUKE SOLO",
                     "DataType": 2
                 },
                 {
@@ -29691,6 +29693,7 @@
                 {
                     "Address": 327,
                     "ByteSize": 2,
+                    "Comment": "103: RATFACE FLANIGAN",
                     "DataType": 2
                 },
                 {
@@ -29702,6 +29705,7 @@
                 {
                     "Address": 331,
                     "ByteSize": 2,
+                    "Comment": "104: BASIL MCNEE",
                     "DataType": 2
                 },
                 {
@@ -29713,6 +29717,7 @@
                 {
                     "Address": 335,
                     "ByteSize": 2,
+                    "Comment": "105: SHONA SPARK",
                     "DataType": 2
                 },
                 {
@@ -29724,6 +29729,7 @@
                 {
                     "Address": 339,
                     "ByteSize": 2,
+                    "Comment": "106: DICK TURVEY",
                     "DataType": 2
                 },
                 {
@@ -29735,6 +29741,7 @@
                 {
                     "Address": 343,
                     "ByteSize": 2,
+                    "Comment": "107: CRIMSON PLUCK",
                     "DataType": 2
                 },
                 {
@@ -29746,6 +29753,7 @@
                 {
                     "Address": 347,
                     "ByteSize": 2,
+                    "Comment": "108: STIKE VOMIT",
                     "DataType": 2
                 },
                 {
@@ -29757,6 +29765,7 @@
                 {
                     "Address": 351,
                     "ByteSize": 2,
+                    "Comment": "109: SID VICIOUS",
                     "DataType": 2
                 },
                 {
@@ -29768,6 +29777,7 @@
                 {
                     "Address": 355,
                     "ByteSize": 2,
+                    "Comment": "110: WHAT DIFFICULTY LEVEL",
                     "DataType": 2
                 },
                 {
@@ -29779,6 +29789,7 @@
                 {
                     "Address": 359,
                     "ByteSize": 2,
+                    "Comment": "111: DO YOU WANT?(PRESS 1 TO 8)",
                     "DataType": 2
                 },
                 {
