@@ -3311,6 +3311,7 @@
                 {
                     "Address": 64,
                     "ByteSize": 2,
+                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
@@ -3328,6 +3329,7 @@
                 {
                     "Address": 70,
                     "ByteSize": 2,
+                    "Comment": "Push 4818h",
                     "DataType": 2
                 },
                 {
@@ -8373,7 +8375,9 @@
                 },
                 {
                     "Address": 136,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Cyan on Black",
+                    "OperandType": 5
                 },
                 {
                     "Address": 138,
@@ -8383,7 +8387,8 @@
                 {
                     "Address": 141,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "X=24,Y=11",
+                    "OperandType": 4
                 },
                 {
                     "Address": 144,
@@ -8392,7 +8397,8 @@
                 },
                 {
                     "Address": 147,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "4: S=SELECT,0=END TURN, N=NEXT UNIT, I=INFO, J=CENTRE"
                 },
                 {
                     "Address": 149,
@@ -16610,7 +16616,8 @@
                 },
                 {
                     "Address": 582,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Are we at the right edge of the screen in X?"
                 },
                 {
                     "Address": 583,
@@ -16624,7 +16631,8 @@
                 },
                 {
                     "Address": 588,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Are we at the far right of the map?"
                 },
                 {
                     "Address": 590,
@@ -16632,7 +16640,8 @@
                 },
                 {
                     "Address": 591,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "If we are at the far right then return, don't scroll view"
                 },
                 {
                     "Address": 592,
@@ -16667,7 +16676,8 @@
                 },
                 {
                     "Address": 607,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Add 1 to X cursor position"
                 },
                 {
                     "Address": 608,
@@ -16818,7 +16828,8 @@
                 },
                 {
                     "Address": 674,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Subtract 1 from Y cursor position"
                 },
                 {
                     "Address": 675,
@@ -17146,7 +17157,9 @@
                 },
                 {
                     "Address": 823,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Bright Green on Black",
+                    "OperandType": 5
                 },
                 {
                     "Address": 825,
@@ -17156,7 +17169,8 @@
                 {
                     "Address": 828,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "X=24,Y=0",
+                    "OperandType": 4
                 },
                 {
                     "Address": 831,
@@ -17165,7 +17179,8 @@
                 },
                 {
                     "Address": 834,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "MAP:,,OBJECT:,,OBJECT IN USE:"
                 },
                 {
                     "Address": 836,
@@ -17270,7 +17285,9 @@
                 },
                 {
                     "Address": 877,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Bright Yellow on Black",
+                    "OperandType": 5
                 },
                 {
                     "Address": 879,
@@ -17302,16 +17319,19 @@
                 },
                 {
                     "Address": 891,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Is the map element under the cursor another unit?"
                 },
                 {
                     "Address": 893,
                     "ByteSize": 2,
+                    "Comment": "Jump forward if it is a unit under the cursor (Map Element Id >= 200)",
                     "OperandType": 2
                 },
                 {
                     "Address": 895,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "Is it a destructible scenery element(?) - not sure about this"
                 },
                 {
                     "Address": 897,
@@ -17321,7 +17341,8 @@
                 {
                     "Address": 899,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "X=24,Y=1",
+                    "OperandType": 4
                 },
                 {
                     "Address": 902,
@@ -17336,7 +17357,8 @@
                 {
                     "Address": 906,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "X=24,Y=9",
+                    "OperandType": 4
                 },
                 {
                     "Address": 909,
@@ -17357,12 +17379,14 @@
                 },
                 {
                     "Address": 918,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "Unit Object in use"
                 },
                 {
                     "Address": 921,
                     "ByteSize": 3,
-                    "OperandType": 1
+                    "Comment": "X=24,Y=14",
+                    "OperandType": 4
                 },
                 {
                     "Address": 924,
@@ -17372,7 +17396,8 @@
                 },
                 {
                     "Address": 927,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "Map cell under unit"
                 },
                 {
                     "Address": 930,
@@ -17384,9 +17409,33 @@
                     "OperandType": 2
                 },
                 {
-                    "Address": 946,
+                    "Address": 934,
+                    "ByteSize": 3,
+                    "Comment": "X=24,Y=5",
+                    "OperandType": 4
+                },
+                {
+                    "Address": 937,
+                    "ByteSize": 3,
+                    "Flags": 8,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 940,
+                    "ByteSize": 3,
+                    "Flags": 8,
+                    "OperandType": 2
+                },
+                {
+                    "Address": 943,
                     "ByteSize": 3,
                     "OperandType": 1
+                },
+                {
+                    "Address": 946,
+                    "ByteSize": 3,
+                    "Comment": "X=24,Y=1",
+                    "OperandType": 4
                 },
                 {
                     "Address": 949,
@@ -17452,7 +17501,7 @@
                 {
                     "Address": 980,
                     "ByteSize": 1,
-                    "Comment": "E=Weapon Id (154=Photon)"
+                    "Comment": "E=MapElementId (154=PHOTON, 61=AIRLOCK DOOR)"
                 },
                 {
                     "Address": 981,
@@ -17761,11 +17810,11 @@
                 },
                 {
                     "Address": 574,
-                    "Comment": "Set to A7h (167) when in fire mode"
+                    "Comment": "FireMode=167, CursorMode=10"
                 },
                 {
                     "Address": 575,
-                    "Comment": "Set to 8 when in fire mode"
+                    "Comment": "FireMode=8, CursorMode=0"
                 }
             ],
             "LabelInfo": [
@@ -17871,17 +17920,17 @@
                 {
                     "Address": 236,
                     "LabelType": 2,
-                    "Name": "label_84EC"
+                    "Name": "FlashCursor"
                 },
                 {
                     "Address": 269,
                     "LabelType": 2,
-                    "Name": "label_850D"
+                    "Name": "SwapCursorForMapElement"
                 },
                 {
                     "Address": 283,
                     "LabelType": 2,
-                    "Name": "label_851B"
+                    "Name": "CheckForKeyPresses"
                 },
                 {
                     "Address": 315,
@@ -17891,7 +17940,7 @@
                 {
                     "Address": 320,
                     "LabelType": 1,
-                    "Name": "function_8540"
+                    "Name": "UpdateMenuIfCursorMoved"
                 },
                 {
                     "Address": 364,
@@ -17901,7 +17950,7 @@
                 {
                     "Address": 378,
                     "LabelType": 2,
-                    "Name": "label_857A"
+                    "Name": "HandleFireModeCursor"
                 },
                 {
                     "Address": 380,
@@ -17922,7 +17971,7 @@
                     "Address": 398,
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "data_858E"
+                    "Name": "ViewHasAlsoScrolled(?)"
                 },
                 {
                     "Address": 399,
@@ -17983,37 +18032,45 @@
                 },
                 {
                     "Address": 573,
-                    "Comment": "/0=?, 1=?",
+                    "Comment": "0=View Hasn't scrolled, 1=View has scrolled - due to cursor movement",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "SomethingKeyPressRelatedFlag"
+                    "Name": "ViewHasScrolled"
                 },
                 {
                     "Address": 574,
+                    "Comment": "The Max X/Y pixel or character value depending on fire or cusor mode",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "InFireMode_167"
+                    "Name": "ScreenMaxCoord"
                 },
                 {
                     "Address": 575,
+                    "Comment": "The Min X/Y pixel or character value depending on fire or cusor mode",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "InFireMode_0"
+                    "Name": "ScreenMinCoord"
                 },
                 {
                     "Address": 576,
+                    "Comment": "'D' key pressed",
                     "LabelType": 1,
-                    "Name": "MoveSelectedUnitCursor"
+                    "Name": "MoveSelectedUnitCursorEast"
+                },
+                {
+                    "Address": 585,
+                    "LabelType": 2,
+                    "Name": "AtEdgeOfScreenMaxX"
                 },
                 {
                     "Address": 607,
                     "LabelType": 2,
-                    "Name": "label_865F"
+                    "Name": "NotAtEdgeOfScreenMaxX"
                 },
                 {
                     "Address": 612,
                     "LabelType": 1,
-                    "Name": "function_8664"
+                    "Name": "MoveSelectedUnitCursorWest"
                 },
                 {
                     "Address": 643,
@@ -18022,8 +18079,9 @@
                 },
                 {
                     "Address": 648,
+                    "Comment": "'W' key pressed",
                     "LabelType": 1,
-                    "Name": "function_8688"
+                    "Name": "MoveSelectedUnitCursorNorth"
                 },
                 {
                     "Address": 674,
@@ -18033,7 +18091,7 @@
                 {
                     "Address": 679,
                     "LabelType": 1,
-                    "Name": "function_86A7"
+                    "Name": "MoveSelectedUnitCursorSouth"
                 },
                 {
                     "Address": 705,
@@ -18078,7 +18136,7 @@
                 {
                     "Address": 819,
                     "LabelType": 1,
-                    "Name": "function_8733"
+                    "Name": "DrawCursorHighlightMenuText"
                 },
                 {
                     "Address": 844,
@@ -18095,12 +18153,12 @@
                 {
                     "Address": 870,
                     "LabelType": 1,
-                    "Name": "function_8766"
+                    "Name": "DrawMapCellDescriptionText"
                 },
                 {
                     "Address": 906,
                     "LabelType": 2,
-                    "Name": "label_878A"
+                    "Name": "DrawUnitDescriptionText"
                 },
                 {
                     "Address": 946,
@@ -18115,7 +18173,7 @@
                 {
                     "Address": 975,
                     "LabelType": 1,
-                    "Name": "DisplayWeaponName_A_Pos_HL"
+                    "Name": "DisplayMapElementName_A_Pos_HL"
                 },
                 {
                     "Address": 990,
@@ -28230,6 +28288,7 @@
                 {
                     "Address": 943,
                     "ByteSize": 2,
+                    "Comment": "1: WALL",
                     "DataType": 2
                 },
                 {
@@ -28241,6 +28300,7 @@
                 {
                     "Address": 947,
                     "ByteSize": 2,
+                    "Comment": "2: DROID BAY",
                     "DataType": 2
                 },
                 {
@@ -28252,6 +28312,7 @@
                 {
                     "Address": 951,
                     "ByteSize": 2,
+                    "Comment": "3:DROID MEND",
                     "DataType": 2
                 },
                 {
@@ -28263,6 +28324,7 @@
                 {
                     "Address": 955,
                     "ByteSize": 2,
+                    "Comment": "4: PILLAR",
                     "DataType": 2
                 },
                 {
@@ -28274,6 +28336,7 @@
                 {
                     "Address": 959,
                     "ByteSize": 2,
+                    "Comment": "5: DEFENSE LASER",
                     "DataType": 2
                 },
                 {
@@ -28285,6 +28348,7 @@
                 {
                     "Address": 963,
                     "ByteSize": 2,
+                    "Comment": "6: SUIT RACK",
                     "DataType": 2
                 },
                 {
@@ -28296,6 +28360,7 @@
                 {
                     "Address": 967,
                     "ByteSize": 2,
+                    "Comment": "7: GAS CANNISTERS",
                     "DataType": 2
                 },
                 {
@@ -28307,6 +28372,7 @@
                 {
                     "Address": 971,
                     "ByteSize": 2,
+                    "Comment": "8: FUEL DRUMS",
                     "DataType": 2
                 },
                 {
@@ -28318,6 +28384,7 @@
                 {
                     "Address": 975,
                     "ByteSize": 2,
+                    "Comment": "9: MOON ROVER",
                     "DataType": 2
                 },
                 {
@@ -28329,6 +28396,7 @@
                 {
                     "Address": 979,
                     "ByteSize": 2,
+                    "Comment": "10: LOO",
                     "DataType": 2
                 },
                 {
@@ -28340,6 +28408,7 @@
                 {
                     "Address": 983,
                     "ByteSize": 2,
+                    "Comment": "11: SPARE ENGINE",
                     "DataType": 2
                 },
                 {
@@ -28351,6 +28420,7 @@
                 {
                     "Address": 987,
                     "ByteSize": 2,
+                    "Comment": "12: SPARE TYRES",
                     "DataType": 2
                 },
                 {
@@ -28362,6 +28432,7 @@
                 {
                     "Address": 991,
                     "ByteSize": 2,
+                    "Comment": "13: WALL CONTROLS",
                     "DataType": 2
                 },
                 {
@@ -28373,6 +28444,7 @@
                 {
                     "Address": 995,
                     "ByteSize": 2,
+                    "Comment": "14: SMALL CRATER",
                     "DataType": 2
                 },
                 {
@@ -28384,6 +28456,7 @@
                 {
                     "Address": 999,
                     "ByteSize": 2,
+                    "Comment": "15: LARGE CRATER",
                     "DataType": 2
                 },
                 {
@@ -28395,6 +28468,7 @@
                 {
                     "Address": 1003,
                     "ByteSize": 2,
+                    "Comment": "16: AIRLOCK DOOR",
                     "DataType": 2
                 },
                 {
@@ -28406,6 +28480,7 @@
                 {
                     "Address": 1007,
                     "ByteSize": 2,
+                    "Comment": "17: SLIDING DOOR",
                     "DataType": 2
                 },
                 {
@@ -28417,6 +28492,7 @@
                 {
                     "Address": 1011,
                     "ByteSize": 2,
+                    "Comment": "18: SECURITY DOOR",
                     "DataType": 2
                 },
                 {
@@ -28428,6 +28504,7 @@
                 {
                     "Address": 1015,
                     "ByteSize": 2,
+                    "Comment": "19: DESK",
                     "DataType": 2
                 },
                 {
@@ -28439,6 +28516,7 @@
                 {
                     "Address": 1019,
                     "ByteSize": 2,
+                    "Comment": "20: CHAIR",
                     "DataType": 2
                 },
                 {
@@ -28450,6 +28528,7 @@
                 {
                     "Address": 1023,
                     "ByteSize": 2,
+                    "Comment": "21: WORKBENCH",
                     "DataType": 2
                 }
             ],
@@ -28629,6 +28708,12 @@
             "PageId": 57
         },
         {
+            "CommentBlocks": [
+                {
+                    "Address": 119,
+                    "Comment": "51: CUPBOARD"
+                }
+            ],
             "DataInfo": [
                 {
                     "Address": 1,
@@ -28639,6 +28724,7 @@
                 {
                     "Address": 3,
                     "ByteSize": 2,
+                    "Comment": "22: ANALYSER",
                     "DataType": 2
                 },
                 {
@@ -28650,6 +28736,7 @@
                 {
                     "Address": 7,
                     "ByteSize": 2,
+                    "Comment": "23: CHAIRS",
                     "DataType": 2
                 },
                 {
@@ -28661,6 +28748,7 @@
                 {
                     "Address": 11,
                     "ByteSize": 2,
+                    "Comment": "24: COFFEE MACHINE",
                     "DataType": 2
                 },
                 {
@@ -28672,6 +28760,7 @@
                 {
                     "Address": 15,
                     "ByteSize": 2,
+                    "Comment": "25: WINDOW",
                     "DataType": 2
                 },
                 {
@@ -28683,6 +28772,7 @@
                 {
                     "Address": 19,
                     "ByteSize": 2,
+                    "Comment": "26: WATER TANK",
                     "DataType": 2
                 },
                 {
@@ -28694,6 +28784,7 @@
                 {
                     "Address": 23,
                     "ByteSize": 2,
+                    "Comment": "27: WATER PUMP",
                     "DataType": 2
                 },
                 {
@@ -28705,6 +28796,7 @@
                 {
                     "Address": 27,
                     "ByteSize": 2,
+                    "Comment": "28: PROCESS REDUCER",
                     "DataType": 2
                 },
                 {
@@ -28716,6 +28808,7 @@
                 {
                     "Address": 31,
                     "ByteSize": 2,
+                    "Comment": "29: CONVEYOR BELT",
                     "DataType": 2
                 },
                 {
@@ -28727,6 +28820,7 @@
                 {
                     "Address": 35,
                     "ByteSize": 2,
+                    "Comment": "30: EXTRACT MACHINE",
                     "DataType": 2
                 },
                 {
@@ -28738,6 +28832,7 @@
                 {
                     "Address": 39,
                     "ByteSize": 2,
+                    "Comment": "31: ALGA TANK",
                     "DataType": 2
                 },
                 {
@@ -28749,6 +28844,7 @@
                 {
                     "Address": 43,
                     "ByteSize": 2,
+                    "Comment": "32: CONTROL SYSTEM",
                     "DataType": 2
                 },
                 {
@@ -28760,6 +28856,7 @@
                 {
                     "Address": 47,
                     "ByteSize": 2,
+                    "Comment": "33: VID-SCREEN",
                     "DataType": 2
                 },
                 {
@@ -28771,6 +28868,7 @@
                 {
                     "Address": 51,
                     "ByteSize": 2,
+                    "Comment": "34: ISAAC COMP",
                     "DataType": 2
                 },
                 {
@@ -28782,6 +28880,7 @@
                 {
                     "Address": 55,
                     "ByteSize": 2,
+                    "Comment": "35: BUSH",
                     "DataType": 2
                 },
                 {
@@ -28793,6 +28892,7 @@
                 {
                     "Address": 59,
                     "ByteSize": 2,
+                    "Comment": "36: TREE",
                     "DataType": 2
                 },
                 {
@@ -28804,6 +28904,7 @@
                 {
                     "Address": 63,
                     "ByteSize": 2,
+                    "Comment": "37: FOUNTAIN",
                     "DataType": 2
                 },
                 {
@@ -28815,6 +28916,7 @@
                 {
                     "Address": 67,
                     "ByteSize": 2,
+                    "Comment": "38: FLOWER",
                     "DataType": 2
                 },
                 {
@@ -28826,6 +28928,7 @@
                 {
                     "Address": 71,
                     "ByteSize": 2,
+                    "Comment": "39: GRASS",
                     "DataType": 2
                 },
                 {
@@ -28837,6 +28940,7 @@
                 {
                     "Address": 75,
                     "ByteSize": 2,
+                    "Comment": "40: REACTOR",
                     "DataType": 2
                 },
                 {
@@ -28848,6 +28952,7 @@
                 {
                     "Address": 79,
                     "ByteSize": 2,
+                    "Comment": "41: ACCESS WAY",
                     "DataType": 2
                 },
                 {
@@ -28859,6 +28964,7 @@
                 {
                     "Address": 83,
                     "ByteSize": 2,
+                    "Comment": "42: GENERATOR",
                     "DataType": 2
                 },
                 {
@@ -28870,6 +28976,7 @@
                 {
                     "Address": 87,
                     "ByteSize": 2,
+                    "Comment": "43: BED",
                     "DataType": 2
                 },
                 {
@@ -28881,6 +28988,7 @@
                 {
                     "Address": 91,
                     "ByteSize": 2,
+                    "Comment": "44: SHOWER",
                     "DataType": 2
                 },
                 {
@@ -28892,6 +29000,7 @@
                 {
                     "Address": 95,
                     "ByteSize": 2,
+                    "Comment": "45: BATH",
                     "DataType": 2
                 },
                 {
@@ -28903,6 +29012,7 @@
                 {
                     "Address": 99,
                     "ByteSize": 2,
+                    "Comment": "46: TABLE",
                     "DataType": 2
                 },
                 {
@@ -28914,6 +29024,7 @@
                 {
                     "Address": 103,
                     "ByteSize": 2,
+                    "Comment": "47: LOCKERS",
                     "DataType": 2
                 },
                 {
@@ -28925,6 +29036,7 @@
                 {
                     "Address": 107,
                     "ByteSize": 2,
+                    "Comment": "48: FOOD MACHINE",
                     "DataType": 2
                 },
                 {
@@ -28936,6 +29048,7 @@
                 {
                     "Address": 111,
                     "ByteSize": 2,
+                    "Comment": "49: MEDI-BED",
                     "DataType": 2
                 },
                 {
@@ -28947,6 +29060,7 @@
                 {
                     "Address": 115,
                     "ByteSize": 2,
+                    "Comment": "50: LIFE MONITORS",
                     "DataType": 2
                 },
                 {
@@ -28958,6 +29072,7 @@
                 {
                     "Address": 119,
                     "ByteSize": 2,
+                    "Comment": "51: CUPBOARD",
                     "DataType": 2
                 },
                 {
@@ -28969,6 +29084,7 @@
                 {
                     "Address": 123,
                     "ByteSize": 2,
+                    "Comment": "52: PILE OF RUBBLE",
                     "DataType": 2
                 },
                 {
@@ -28980,6 +29096,7 @@
                 {
                     "Address": 127,
                     "ByteSize": 2,
+                    "Comment": "53: MAP:,,OBJECT:,,UNIT:,,OBJECT IN USE:",
                     "DataType": 2
                 },
                 {
@@ -28991,6 +29108,7 @@
                 {
                     "Address": 131,
                     "ByteSize": 2,
+                    "Comment": "54: (empty menu)",
                     "DataType": 2
                 },
                 {
@@ -29002,6 +29120,7 @@
                 {
                     "Address": 135,
                     "ByteSize": 2,
+                    "Comment": "55: OPEN DOOR",
                     "DataType": 2
                 },
                 {
@@ -29013,6 +29132,7 @@
                 {
                     "Address": 139,
                     "ByteSize": 2,
+                    "Comment": "56: LASER GUN",
                     "DataType": 2
                 },
                 {
@@ -29024,6 +29144,7 @@
                 {
                     "Address": 143,
                     "ByteSize": 2,
+                    "Comment": "57: LASER PISTOL",
                     "DataType": 2
                 },
                 {
@@ -29035,6 +29156,7 @@
                 {
                     "Address": 147,
                     "ByteSize": 2,
+                    "Comment": "58: LASER HEAD",
                     "DataType": 2
                 },
                 {
@@ -29046,6 +29168,7 @@
                 {
                     "Address": 151,
                     "ByteSize": 2,
+                    "Comment": "59: PISTOL",
                     "DataType": 2
                 },
                 {
@@ -29057,6 +29180,7 @@
                 {
                     "Address": 155,
                     "ByteSize": 2,
+                    "Comment": "60: AUTO-RIFLE",
                     "DataType": 2
                 },
                 {
@@ -29068,6 +29192,7 @@
                 {
                     "Address": 159,
                     "ByteSize": 2,
+                    "Comment": "61: ZEEKER",
                     "DataType": 2
                 },
                 {
@@ -29079,6 +29204,7 @@
                 {
                     "Address": 163,
                     "ByteSize": 2,
+                    "Comment": "62: BLAST TORCH",
                     "DataType": 2
                 },
                 {
@@ -29090,6 +29216,7 @@
                 {
                     "Address": 167,
                     "ByteSize": 2,
+                    "Comment": "63: LIGHT SABRE",
                     "DataType": 2
                 },
                 {
@@ -29101,6 +29228,7 @@
                 {
                     "Address": 171,
                     "ByteSize": 2,
+                    "Comment": "64: PHOTON",
                     "DataType": 2
                 },
                 {
@@ -29112,6 +29240,7 @@
                 {
                     "Address": 175,
                     "ByteSize": 2,
+                    "Comment": "65: DEAD BODY",
                     "DataType": 2
                 },
                 {
@@ -29123,6 +29252,7 @@
                 {
                     "Address": 179,
                     "ByteSize": 2,
+                    "Comment": "66: SENTRY DROID",
                     "DataType": 2
                 },
                 {
@@ -29134,6 +29264,7 @@
                 {
                     "Address": 183,
                     "ByteSize": 2,
+                    "Comment": "67: ANDROID",
                     "DataType": 2
                 },
                 {
@@ -29145,6 +29276,7 @@
                 {
                     "Address": 187,
                     "ByteSize": 2,
+                    "Comment": "68: MASTER DROID",
                     "DataType": 2
                 },
                 {
@@ -29156,6 +29288,7 @@
                 {
                     "Address": 191,
                     "ByteSize": 2,
+                    "Comment": "69: PATROL DROID",
                     "DataType": 2
                 },
                 {
@@ -29167,6 +29300,7 @@
                 {
                     "Address": 195,
                     "ByteSize": 2,
+                    "Comment": "70: COMBAT DROID",
                     "DataType": 2
                 },
                 {
@@ -29178,6 +29312,7 @@
                 {
                     "Address": 199,
                     "ByteSize": 2,
+                    "Comment": "71: COFFEE TOKEN",
                     "DataType": 2
                 },
                 {
@@ -29189,6 +29324,7 @@
                 {
                     "Address": 203,
                     "ByteSize": 2,
+                    "Comment": "72: CRATES",
                     "DataType": 2
                 },
                 {
@@ -29200,6 +29336,7 @@
                 {
                     "Address": 207,
                     "ByteSize": 2,
+                    "Comment": "73: DROID PROBE",
                     "DataType": 2
                 },
                 {
@@ -29211,6 +29348,7 @@
                 {
                     "Address": 211,
                     "ByteSize": 2,
+                    "Comment": "74: MEDI PROBE",
                     "DataType": 2
                 },
                 {
@@ -29222,6 +29360,7 @@
                 {
                     "Address": 215,
                     "ByteSize": 2,
+                    "Comment": "75: DROID KEY",
                     "DataType": 2
                 },
                 {
@@ -29233,6 +29372,7 @@
                 {
                     "Address": 219,
                     "ByteSize": 2,
+                    "Comment": "76: LAWN MOWER",
                     "DataType": 2
                 },
                 {
@@ -29244,6 +29384,7 @@
                 {
                     "Address": 223,
                     "ByteSize": 2,
+                    "Comment": "77: LASER PACK-1",
                     "DataType": 2
                 },
                 {
@@ -29255,6 +29396,7 @@
                 {
                     "Address": 227,
                     "ByteSize": 2,
+                    "Comment": "78: LASER PACK-2",
                     "DataType": 2
                 },
                 {
@@ -29266,6 +29408,7 @@
                 {
                     "Address": 231,
                     "ByteSize": 2,
+                    "Comment": "79: PISTOL CLIP",
                     "DataType": 2
                 },
                 {
@@ -29277,6 +29420,7 @@
                 {
                     "Address": 235,
                     "ByteSize": 2,
+                    "Comment": "80: RIFLE CLIP",
                     "DataType": 2
                 },
                 {
@@ -29288,6 +29432,7 @@
                 {
                     "Address": 239,
                     "ByteSize": 2,
+                    "Comment": "81: KEY",
                     "DataType": 2
                 },
                 {
@@ -29299,6 +29444,7 @@
                 {
                     "Address": 243,
                     "ByteSize": 2,
+                    "Comment": "82: LASER PACK-3",
                     "DataType": 2
                 },
                 {
@@ -29310,6 +29456,7 @@
                 {
                     "Address": 247,
                     "ByteSize": 2,
+                    "Comment": "83: COFFEE",
                     "DataType": 2
                 },
                 {
@@ -29321,6 +29468,7 @@
                 {
                     "Address": 251,
                     "ByteSize": 2,
+                    "Comment": "84: LEEDER KRENON",
                     "DataType": 2
                 },
                 {
@@ -29332,6 +29480,7 @@
                 {
                     "Address": 255,
                     "ByteSize": 2,
+                    "Comment": "85: LEON TROTSKY",
                     "DataType": 2
                 },
                 {
@@ -29343,6 +29492,7 @@
                 {
                     "Address": 259,
                     "ByteSize": 2,
+                    "Comment": "BILLY BRAGG",
                     "DataType": 2
                 },
                 {
@@ -29354,6 +29504,7 @@
                 {
                     "Address": 263,
                     "ByteSize": 2,
+                    "Comment": "ELANE FREUYH",
                     "DataType": 2
                 },
                 {
@@ -29365,6 +29516,7 @@
                 {
                     "Address": 267,
                     "ByteSize": 2,
+                    "Comment": "JIM DIGRIZ",
                     "DataType": 2
                 },
                 {
@@ -29376,6 +29528,7 @@
                 {
                     "Address": 271,
                     "ByteSize": 2,
+                    "Comment": "JILL",
                     "DataType": 2
                 },
                 {
@@ -29387,6 +29540,7 @@
                 {
                     "Address": 275,
                     "ByteSize": 2,
+                    "Comment": "KURT LEVINE",
                     "DataType": 2
                 },
                 {
@@ -29398,6 +29552,7 @@
                 {
                     "Address": 279,
                     "ByteSize": 2,
+                    "Comment": "JOEY",
                     "DataType": 2
                 },
                 {
@@ -29409,6 +29564,7 @@
                 {
                     "Address": 283,
                     "ByteSize": 2,
+                    "Comment": "TOPPER HENLEY",
                     "DataType": 2
                 },
                 {
@@ -29420,6 +29576,7 @@
                 {
                     "Address": 287,
                     "ByteSize": 2,
+                    "Comment": "OBIWAN KENOBI",
                     "DataType": 2
                 },
                 {
@@ -29431,6 +29588,7 @@
                 {
                     "Address": 291,
                     "ByteSize": 2,
+                    "Comment": "JASPER PRUNE",
                     "DataType": 2
                 },
                 {
@@ -29442,6 +29600,7 @@
                 {
                     "Address": 295,
                     "ByteSize": 2,
+                    "Comment": "NESLSON SMITH",
                     "DataType": 2
                 },
                 {
@@ -29453,6 +29612,7 @@
                 {
                     "Address": 299,
                     "ByteSize": 2,
+                    "Comment": "ZEERA CAMAY",
                     "DataType": 2
                 },
                 {
@@ -29464,6 +29624,7 @@
                 {
                     "Address": 303,
                     "ByteSize": 2,
+                    "Comment": "SLARTY BARTFAST",
                     "DataType": 2
                 },
                 {
@@ -29625,6 +29786,11 @@
                     "ByteSize": 2,
                     "DataType": 2,
                     "OperandType": 3
+                },
+                {
+                    "Address": 363,
+                    "ByteSize": 26,
+                    "DataType": 4
                 },
                 {
                     "Address": 389,
@@ -29889,102 +30055,16 @@
                 },
                 {
                     "Address": 873,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 882,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 891,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 900,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 909,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 918,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 927,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 936,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 945,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 954,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 963,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 972,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 981,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 990,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 999,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 1008,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 1017,
-                    "ByteSize": 9,
+                    "ByteSize": 153,
                     "DataType": 4
                 }
             ],
             "LabelInfo": [
                 {
                     "Address": 363,
+                    "Comment": "The first set of text messages in the game",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "EmptyScreen"
-                },
-                {
-                    "Address": 389,
-                    "Comment": "All text message in the game",
-                    "Global": true,
-                    "LabelType": 3,
                     "Name": "TextMessages"
                 }
             ],
@@ -29994,127 +30074,13 @@
             "DataInfo": [
                 {
                     "Address": 2,
-                    "ByteSize": 9,
+                    "ByteSize": 215,
                     "DataType": 4
                 },
                 {
-                    "Address": 11,
+                    "Address": 217,
                     "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 20,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 29,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 38,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 47,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 56,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 65,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 74,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 83,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 92,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 101,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 110,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 119,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 128,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 137,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 146,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 155,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 164,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 173,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 182,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 191,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 200,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 209,
-                    "ByteSize": 9,
-                    "DataType": 4
-                },
-                {
-                    "Address": 218,
-                    "ByteSize": 8,
+                    "Comment": "Unused?",
                     "DataType": 4
                 },
                 {
@@ -30401,14 +30367,35 @@
                     "Address": 818,
                     "ByteSize": 26,
                     "DataType": 4
+                },
+                {
+                    "Address": 844,
+                    "Comment": "<Empty>"
+                },
+                {
+                    "Address": 845,
+                    "Comment": "WALL"
+                },
+                {
+                    "Address": 996,
+                    "Comment": "152: BLAST TORCH"
+                },
+                {
+                    "Address": 997,
+                    "Comment": "153: LIGHT SABRE"
+                },
+                {
+                    "Address": 998,
+                    "Comment": "154: PHOTON"
                 }
             ],
             "LabelInfo": [
                 {
                     "Address": 844,
+                    "Comment": "Index into the string table for each of the 256 map element ids",
                     "Global": true,
                     "LabelType": 0,
-                    "Name": "MapItemDescriptions"
+                    "Name": "MapItemDescriptionStringIndices"
                 }
             ],
             "PageId": 59
@@ -30511,6 +30498,66 @@
                     "Global": true,
                     "LabelType": 0,
                     "Name": "WeaponTypeVsUnitTypeMaxDamageTable"
+                },
+                {
+                    "Address": 340,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_B154"
+                },
+                {
+                    "Address": 348,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_B15C"
+                },
+                {
+                    "Address": 356,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_B164"
+                },
+                {
+                    "Address": 364,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_B16C"
+                },
+                {
+                    "Address": 372,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_B174"
+                },
+                {
+                    "Address": 380,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_B17C"
+                },
+                {
+                    "Address": 388,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_B184"
+                },
+                {
+                    "Address": 396,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_B18C"
+                },
+                {
+                    "Address": 404,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_B194"
+                },
+                {
+                    "Address": 412,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_B19C"
                 }
             ],
             "PageId": 60
@@ -64204,6 +64251,18 @@
                     "Global": true,
                     "LabelType": 0,
                     "Name": "MapCellStats"
+                },
+                {
+                    "Address": 1010,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F3F2"
+                },
+                {
+                    "Address": 1020,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F3FC"
                 }
             ],
             "PageId": 76
@@ -64951,6 +65010,180 @@
                 }
             ],
             "LabelInfo": [
+                {
+                    "Address": 6,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F406"
+                },
+                {
+                    "Address": 16,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F410"
+                },
+                {
+                    "Address": 26,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F41A"
+                },
+                {
+                    "Address": 36,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F424"
+                },
+                {
+                    "Address": 46,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F42E"
+                },
+                {
+                    "Address": 56,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F438"
+                },
+                {
+                    "Address": 66,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F442"
+                },
+                {
+                    "Address": 76,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F44C"
+                },
+                {
+                    "Address": 86,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F456"
+                },
+                {
+                    "Address": 96,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F460"
+                },
+                {
+                    "Address": 106,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F46A"
+                },
+                {
+                    "Address": 116,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F474"
+                },
+                {
+                    "Address": 126,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F47E"
+                },
+                {
+                    "Address": 136,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F488"
+                },
+                {
+                    "Address": 146,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F492"
+                },
+                {
+                    "Address": 156,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F49C"
+                },
+                {
+                    "Address": 166,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F4A6"
+                },
+                {
+                    "Address": 176,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F4B0"
+                },
+                {
+                    "Address": 186,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F4BA"
+                },
+                {
+                    "Address": 196,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F4C4"
+                },
+                {
+                    "Address": 206,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F4CE"
+                },
+                {
+                    "Address": 216,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F4D8"
+                },
+                {
+                    "Address": 226,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F4E2"
+                },
+                {
+                    "Address": 236,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F4EC"
+                },
+                {
+                    "Address": 246,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F4F6"
+                },
+                {
+                    "Address": 256,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F500"
+                },
+                {
+                    "Address": 266,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F50A"
+                },
+                {
+                    "Address": 276,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F514"
+                },
+                {
+                    "Address": 286,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_F51E"
+                },
                 {
                     "Address": 296,
                     "Global": true,
