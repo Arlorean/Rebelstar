@@ -1668,6 +1668,12 @@
                     "Name": "data_5C51"
                 },
                 {
+                    "Address": 83,
+                    "Global": true,
+                    "LabelType": 0,
+                    "Name": "data_5C53"
+                },
+                {
                     "Address": 85,
                     "Global": true,
                     "LabelType": 0,
@@ -23810,7 +23816,8 @@
                 },
                 {
                     "Address": 896,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Is it a light sabre?"
                 },
                 {
                     "Address": 897,
@@ -24251,7 +24258,7 @@
                 {
                     "Address": 858,
                     "LabelType": 1,
-                    "Name": "function_975A"
+                    "Name": "SetChanceToHitPlusWeaponSkill_IsLightSabre_A_WeaponPower_B"
                 },
                 {
                     "Address": 898,
@@ -24471,21 +24478,25 @@
                 },
                 {
                     "Address": 90,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Push A=IsLightSabre?"
                 },
                 {
                     "Address": 91,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "A=ActionPointsMax"
                 },
                 {
                     "Address": 94,
                     "ByteSize": 3,
+                    "Comment": "C=ActionPointsMax*8/WeaponPower[13]",
                     "Flags": 8,
                     "OperandType": 2
                 },
                 {
                     "Address": 97,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "A=ActionPoints"
                 },
                 {
                     "Address": 100,
@@ -24494,6 +24505,7 @@
                 {
                     "Address": 101,
                     "ByteSize": 2,
+                    "Comment": "Enough action points left to perform hit",
                     "OperandType": 2
                 },
                 {
@@ -24502,7 +24514,8 @@
                 },
                 {
                     "Address": 104,
-                    "ByteSize": 2
+                    "ByteSize": 2,
+                    "Comment": "2=NO COMBAT, YOU ARE MOVING PAST A FRIENDLY UNIT"
                 },
                 {
                     "Address": 106,
@@ -24511,27 +24524,33 @@
                 },
                 {
                     "Address": 109,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "A=ActionPoints-ActionPointCost"
                 },
                 {
                     "Address": 110,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "Store new ActionPoints"
                 },
                 {
                     "Address": 113,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "Get ActionPointsSpentThisTurn"
                 },
                 {
                     "Address": 116,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Add ActionPointCost"
                 },
                 {
                     "Address": 117,
-                    "ByteSize": 3
+                    "ByteSize": 3,
+                    "Comment": "Set ActionPointsSpentThisTurn"
                 },
                 {
                     "Address": 120,
-                    "ByteSize": 1
+                    "ByteSize": 1,
+                    "Comment": "Pop A=IsLightSabre?"
                 },
                 {
                     "Address": 121,
@@ -26354,7 +26373,7 @@
                 {
                     "Address": 109,
                     "LabelType": 2,
-                    "Name": "label_986D"
+                    "Name": "DoMeleeDamage"
                 },
                 {
                     "Address": 179,
